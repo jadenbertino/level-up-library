@@ -28,9 +28,9 @@ export default function Nav() {
               Books
             </Link>
           </li>
-          <li className="nav__list--item btn__menu">
+          <li className="nav__list--item btn__menu--wrapper">
             <button className="btn__menu" onClick={ toggleMenu }>
-              <FontAwesomeIcon icon={ faBars } />
+              <FontAwesomeIcon icon={ faBars } className="btn__menu--icon" />
             </button>
           </li>
           <li className="nav__list--item nav__icon">

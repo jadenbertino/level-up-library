@@ -27,13 +27,10 @@
 }
 
 .nav__list--link,
-.nav__list--link:visited {
+.nav__list--link:visited,
+.btn__menu {
   text-decoration: none;
   color: #7342d6;
-}
-
-.nav__list--item.btn__menu {
-  display: none;
 }
 
 .nav__link--primary {
@@ -45,3 +42,26 @@
   font-size: 20px;
 }
 
+/*
+
+    Mobile
+
+*/
+
+.btn__menu--wrapper {
+  display: none;
+}
+
+.btn__menu {
+  border: none;
+}
+
+.btn__menu--icon {
+  font-size: 1.5rem;
+}
+
+@media (max-width:760px) {
+  .btn__menu--wrapper {
+    display: block;
+  }
+}
