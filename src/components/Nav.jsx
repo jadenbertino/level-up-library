@@ -29,7 +29,7 @@ export default function Nav() {
             </Link>
           </li>
           <li className="nav__list--item btn__menu">
-            <button className="btn__menu">
+            <button className="btn__menu" onClick={ toggleMenu }>
               <FontAwesomeIcon icon={ faBars } />
             </button>
           </li>
