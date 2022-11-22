@@ -1,0 +1,46 @@
+.nav__container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  padding: 0 24px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 160px;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav__list--item {
+  padding: 8px;
+  margin-left: 24px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.nav__list--link,
+.nav__list--link:visited {
+  text-decoration: none;
+  color: #7342d6;
+}
+
+.nav__list--item.btn__menu {
+  display: none;
+}
+
+.nav__link--primary {
+  border: 2px solid #7342d6;
+  border-radius: 4px;
+}
+
+.nav__cart-icon {
+  font-size: 20px;
+}
