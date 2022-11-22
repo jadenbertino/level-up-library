@@ -50,34 +50,45 @@
 
 */
 
-.popup--backdrop {
-  z-index: -1;
+
+.popup {
   visibility: hidden;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-}
-
-.menu--open .popup--backdrop {
-  z-index: 1;
-  visibility: visible;
-}
-
-.popup {
-  visibility: hidden;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  background-color: #242424;
 }
 
 .menu--open .popup {
   visibility: visible;
-  width: 100px;
-  height: 100px;
-  background-color: red;
+}
+
+.popup__x-icon {
+  color: white;
+  font-size: 48px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.popup__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 100vh;
+}
+
+.popup__menu-item {
+  margin: 32px 0;
+}
+
+.popup__menu-link {
+  font-size: 2.5rem;
+  color: white;
 }
 
 /*

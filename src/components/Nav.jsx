@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faCartShopping } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faCartShopping, faXmark } from "@fortawesome/free-solid-svg-icons"
 import './Nav.css'
 
 export default function Nav() {
@@ -40,8 +40,26 @@ export default function Nav() {
           </li>
         </ul>
 
-        <div className="popup--backdrop"></div>
-        <div className="popup"></div>
+        <div className="popup">
+          <FontAwesomeIcon icon={ faXmark } className="popup__x-icon" onClick={ toggleMenu } />
+          <ul className="popup__menu">
+            <li className="popup__menu-item">
+              <a href="#about" className="popup__menu-link" onClick={ toggleMenu }>
+                About
+              </a>
+            </li>
+            <li className="popup__menu-item">
+              <a href="#books" className="popup__menu-link" onClick={ toggleMenu }>
+                Books
+              </a>
+            </li>
+            <li className="popup__menu-item">
+              <Link to="/cart" className="popup__menu-link" onClick={ toggleMenu }>
+                Cart
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   )
