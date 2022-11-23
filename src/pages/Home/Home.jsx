@@ -1,12 +1,20 @@
-import './Home.css';
+import './Home.css'; /* single css file for all Home components */
 import Landing from './Landing'
-// import Highlights from '../components/Highlights'
-// import Features from '../components/Featured'
-// import CheapestBooks from '../components/CheapestBooks'
-// import Explore from '../components/Explore'
+import Highlights from './Highlights'
+// import Featured from './Featured'
+// import CheapestBooks from './CheapestBooks'
+// import Explore from './Explore'
 
 export default function Home() {
   return (
+    <>
     <Landing />
+    <main>
+      <Highlights />
+      {/* <Featured />
+      <CheapestBooks />
+      <Explore /> */}
+    </main>
+    </>
   )
 }

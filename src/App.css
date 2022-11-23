@@ -60,6 +60,15 @@ h5 {
   color: #7342D6;
 }
 
+.container {
+  padding: 56px 0;
+}
+
+.row {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
 .btn {
   background-color: #7342D6;
   margin-bottom: 24px;

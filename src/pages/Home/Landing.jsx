@@ -9,7 +9,7 @@ export default function Landing() {
             <h1 className="header__title">America's most awarded online library platform</h1>
             <h2 className="header__sub-title">Find your dream book with <span className="text--purple">Library</span></h2>
             <a href="features">
-              <button className="btn">Browse Books</button>
+              <button className="btn">Browse Books Now</button>
             </a>
           </div>
           <img src={ require("assets/undraw-books.svg").default } alt="" className="header__img" />
