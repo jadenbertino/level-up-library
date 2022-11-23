@@ -1,0 +1,26 @@
+.header__container {
+  height: calc(100vh - 100px);
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.header__title {
+  font-size: 3.5rem;
+  color: #7342D6;
+  margin-bottom: 24px;
+}
+
+.header__sub-title {
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+}
+
+.header__img {
+  max-height: 50vh;
+  padding: 20px;
+}
