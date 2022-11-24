@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
+
 export default function Featured() {
   return (
     <section id="featured">
@@ -12,10 +15,16 @@ export default function Featured() {
                 <img src={ require('assets/featured-1.png')} alt="" className="book__img" />
               </figure>
               <h3 className="book__title">Cracking The Coding Interview</h3>
-              <div className="book_rating">Rating Placeholder</div>
+              <div className="book__rating--wrapper">
+                <FontAwesomeIcon icon={ faStar } className="book__rating--star"/>
+                <FontAwesomeIcon icon={ faStar } className="book__rating--star"/>
+                <FontAwesomeIcon icon={ faStar } className="book__rating--star"/>
+                <FontAwesomeIcon icon={ faStar } className="book__rating--star"/>
+                <FontAwesomeIcon icon={ faStarHalf } className="book__rating--star"/>
+              </div>
               <div className="book__price">
-                <span className="book__price--original"></span>
-                <span className="book__price--sale"></span>
+                <span className="book__price--original">$59.95</span>
+                <span className="book__price--sale">$14.95</span>
               </div>
             </div>
           </div>

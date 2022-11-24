@@ -131,8 +131,26 @@
 
 .book__img {
   width: 100%;
+  transition: transform 300ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book__img--wrapper:hover .book__img {
+  transform: scale(1.05)
 }
 
 .book__title {
   font-size: 1.25rem;
+}
+
+.book__rating--wrapper {
+  color: #fabf2a;
+}
+
+.book__price--original {
+  text-decoration: line-through;
+  color: #BFBFBF;
+  margin-right: 6px;
 }
