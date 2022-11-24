@@ -1,4 +1,4 @@
-import { Book } from 'components/components'
+import { BestBooks} from 'components/components'
 export default function Featured() {
   return (
     <section id="featured">
@@ -8,7 +8,7 @@ export default function Featured() {
             Featured <span className="text--purple">Books</span>
           </h2>
           <div className="books">
-            <Book />
+            <BestBooks />
           </div>
         </div>
       </div>

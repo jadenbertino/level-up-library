@@ -1,5 +1,5 @@
 // FAKE DATA
-export const books = [
+export const bookData = [
   {
     id: 1,
     title: "Crack the Coding Interview",
