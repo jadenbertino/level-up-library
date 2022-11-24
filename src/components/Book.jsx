@@ -1,4 +1,4 @@
-import { Rating, Price} from 'components/components'
+import { Rating, Price } from 'components/components'
 
 export default function Book() {
   return(
