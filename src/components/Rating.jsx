@@ -6,18 +6,16 @@ export default function Ratings({ rating }) {
 
   return (
     <div className="book__rating--wrapper">
+      {/* 
+      -  new Array(stars) -> creates empty array, length of stars
+      - .fill("") -> sets every index  equal to "", important so map works
+      - map -> appends icon to array for every elem in the array, and gives it a unique key
+      */}
       {new Array(stars).fill("").map((elem, index) => (
         <FontAwesomeIcon icon={faStar} key={index} />
       ))}
+      {/* rating -  stars will be 0.5 if there is a half star */}
       {rating - stars !== 0 ? <FontAwesomeIcon icon={faStarHalf} /> : null}
     </div>
   );
 }
-
-/*
-  <FontAwesomeIcon icon={ faStar } className="book__rating--star"/>
-  <FontAwesomeIcon icon={ faStar } className="book__rating--star"/>
-  <FontAwesomeIcon icon={ faStar } className="book__rating--star"/>
-  <FontAwesomeIcon icon={ faStar } className="book__rating--star"/>
-  <FontAwesomeIcon icon={ faStarHalf } className="book__rating--star"/>
-*/
