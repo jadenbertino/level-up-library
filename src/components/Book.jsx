@@ -1,6 +1,6 @@
 import { Rating, Price } from 'components/components'
 
-export default function Book() {
+export default function Book(book) {
   return(
     <div className="book">
       <figure className="book__img--wrapper">

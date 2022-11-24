@@ -8,7 +8,7 @@ export default function BestBooks({ currentID }) {
       {bookData
         .filter((book) => book.rating === 5 && book.id !== currentID) // ensure you show only new books (when they are on a book info page)
         .slice(0, 4)
-        .map((book) => (<Book />))}
+        .map((book) => (<Book book={book} key={book.id} />))}
     </div>
   );
 }
