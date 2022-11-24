@@ -3,7 +3,7 @@ import { faBolt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Highlights() {
   return (
-    <section id="features">
+    <section id="highlights">
       <div className="container">
         <div className="row">
           <h2 className="section__title">

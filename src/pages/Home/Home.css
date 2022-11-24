@@ -7,6 +7,7 @@
 .section__title {
   margin-bottom: 40px;
   font-size: 2rem;
+  text-align: center;
 }
 
 /*
@@ -37,9 +38,13 @@
   margin-bottom: 32px;
 }
 
-.header__img {
+.header__img--wrapper {
   max-height: 50vh;
   padding: 20px;
+}
+
+.header__img {
+  height: 100%;
 }
 
 /*
@@ -48,7 +53,7 @@
 
 */
 
-#features {
+#highlights {
   text-align: center;
 }
 
@@ -89,4 +94,45 @@
   margin-bottom: 24px;
   max-width: 280px;
   margin: 0 auto;
+}
+
+/*
+
+    Featured Books
+
+*/
+#featured {
+  text-align: start;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book {
+  flex-basis: 25%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.book > * {
+  /* all book elems (img, title, rating, etc) should take up full width */
+  width: 100%;
+}
+
+.book__img--wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.book__img {
+  width: 100%;
+}
+
+.book__title {
+  font-size: 1.25rem;
 }

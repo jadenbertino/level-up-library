@@ -12,7 +12,9 @@ export default function Landing() {
               <button className="btn">Browse Books Now</button>
             </a>
           </div>
-          <img src={ require("assets/undraw-books.svg").default } alt="" className="header__img" />
+          <figure className="header__img--wrapper">
+            <img src={ require("assets/undraw-books.svg").default } alt="" className="header__img" />
+          </figure>
         </div>
       </header>
     </section>
