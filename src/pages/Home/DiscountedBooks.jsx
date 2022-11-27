@@ -23,11 +23,3 @@ export default function DiscountedBooks() {
     </section>
   )
 }
-
-
-/*
-
-
-
-
-  */
