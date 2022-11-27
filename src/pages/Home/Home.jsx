@@ -3,7 +3,7 @@ import Landing from './Landing'
 import Highlights from './Highlights'
 import Featured from './Featured'
 import DiscountedBooks from './DiscountedBooks'
-// import Explore from './Explore'
+import Explore from './Explore'
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Highlights />
       <Featured />
       <DiscountedBooks />
-      {/* <Explore /> */}
+      <Explore />
     </main>
     </>
   )
