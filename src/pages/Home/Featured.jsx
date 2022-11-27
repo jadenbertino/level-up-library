@@ -5,7 +5,7 @@ export default function Featured() {
       <div className="container">
         <div className="row">
           <h2 className="section__title">
-            Featured <span className="text--purple">Books</span>
+            Popular <span className="text--purple">Books</span>
           </h2>
           <div className="books">
             <BestBooks />

@@ -113,10 +113,11 @@
 .book {
   flex-basis: 25%;
   padding: 24px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 8px; */
 }
 
 .book > * {
@@ -125,20 +126,23 @@
 }
 
 .book__img--wrapper {
-  border-radius: 12px;
-  overflow: hidden;
+  height: 450px;
+  display: flex;
+  align-items: center;
 }
 
 .book__img {
+  object-fit: contain;
+  border-radius: 12px;
   width: 100%;
   transition: transform 300ms ease;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .book__img--wrapper:hover .book__img {
-  transform: scale(1.05)
+  transform: scale(1.03)
 }
 
 .book__title {
@@ -147,6 +151,7 @@
 
 .book__rating--wrapper {
   color: #fabf2a;
+  margin: 8px 0;
 }
 
 .book__price--original {
