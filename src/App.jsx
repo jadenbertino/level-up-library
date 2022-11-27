@@ -1,6 +1,6 @@
 import './App.css';
 import { Home } from './pages/pages.js'
-import { Nav } from './components/components.js'
+import { Nav, Footer } from './components/components.js'
 // import Home from './pages/Home'
 // import Books from './pages/Books'
 // import BookInfo from './pages/BookInfo'
@@ -19,6 +19,7 @@ export default function App() {
           <Route path="/books/:id" element={<BookInfo /> } />
           <Route path="/cart" element={<Cart /> } /> */}
         </Routes>
+        <Footer />
       </Router>
     </>
   )

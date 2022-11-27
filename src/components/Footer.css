@@ -1,0 +1,16 @@
+#footer {
+  background-color: #242424;
+}
+
+.footer__logo,
+.footer__links,
+.footer__link,
+.footer__copyright {
+  color: white;
+  margin: 16px;
+}
+
+.footer__logo {
+  width: 160px;
+  filter: grayscale(1) invert(1); /* turns to black then inverts colors */
+}
