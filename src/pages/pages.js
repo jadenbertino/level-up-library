@@ -1,3 +1,3 @@
 import Home from './Home/Home.jsx'
-
-export { Home }
+import Books from './Books/Books.jsx'
+export { Home, Books }
