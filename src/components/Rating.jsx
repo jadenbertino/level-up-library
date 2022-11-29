@@ -1,12 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
 
-export default function Ratings({ rating }) {
+export default function Rating({ rating }) {
   const stars = Math.floor(rating);
 
   return (
     <div className="book__rating--wrapper">
-      {/* 
+      {/*
       -  new Array(stars) -> creates empty array, length of stars
       - .fill("") -> sets every index  equal to "", important so map works
       - map -> appends icon to array for every elem in the array, and gives it a unique key

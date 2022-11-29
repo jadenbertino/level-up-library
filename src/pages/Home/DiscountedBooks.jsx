@@ -10,7 +10,7 @@ export default function DiscountedBooks() {
           <h2 className="section__title">
             Discounted <span className="text--purple">Books</span>
           </h2>
-          <div className="books">
+          <div className="books__container">
             {bookData
               .filter((book) => book.salePrice > 0)
               .slice(0, 8)

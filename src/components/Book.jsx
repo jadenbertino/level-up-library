@@ -1,7 +1,7 @@
 import { Rating, Price } from 'components/components'
 import React, { useState, useEffect, useRef }  from 'react';
 import { Link } from 'react-router-dom'
-
+import './Book.css'
 export default function Book({book}) {
   return(
     <div className="book">
@@ -12,8 +12,8 @@ export default function Book({book}) {
         <h3 className="book__title">
           {book.title}
         </h3>
-        <Rating rating={4.5} />
-        <Price originalPrice={book.originalPrice} salePrice={14.95} />
+        <Rating rating={book.rating} />
+        <Price originalPrice={book.originalPrice} salePrice={book.salePrice} />
       </div>
     </div>
   )

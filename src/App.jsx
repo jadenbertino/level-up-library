@@ -1,6 +1,6 @@
 import './App.css';
-import { Home, Books } from './pages/pages.js'
-import { Nav, Footer } from './components/components.js'
+import { Home, Books, BookInfo } from './pages/pages'
+import { Nav, Footer } from './components/components'
 import { bookData } from 'assets/data';
 // import Home from './pages/Home'
 // import Books from './pages/Books'
@@ -17,8 +17,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home /> } />
           <Route path="/books" element={<Books books={bookData} /> } />
-          {/* <Route path="/books/:id" element={<BookInfo /> } />
-          <Route path="/cart" element={<Cart /> } /> */}
+          <Route path="/books/:id" element={<BookInfo books={bookData} /> } />
+          {/* <Route path="/cart" element={<Cart /> } /> */}
         </Routes>
         <Footer />
       </Router>

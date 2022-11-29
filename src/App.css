@@ -64,3 +64,8 @@ button {
 .btn:hover {
   opacity: 0.9;
 }
+
+.books__container {
+  display: flex;
+  flex-wrap: wrap;
+}
