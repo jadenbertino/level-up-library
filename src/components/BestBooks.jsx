@@ -1,6 +1,6 @@
 import { bookData } from "assets/data";
 import { Book } from "components/components";
-import Books from "pages/Books";
+import { Books } from "pages/pages";
 
 export default function BestBooks({ currentID }) {
   return (
