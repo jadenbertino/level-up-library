@@ -1,11 +1,14 @@
 .home-links {
   display: flex;
   align-items: center;
+}
+
+.home-link {
   font-size: 1.5rem;
 }
 
 .home-link:first-child {
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 /*
@@ -17,6 +20,7 @@
 .book-selected__container {
   margin-top: 24px;
   display: flex;
+  align-items: start;
 }
 
 .book-selected__img {
@@ -46,4 +50,9 @@
 
 .summary__para {
   margin-top: 12px
+}
+
+.recc-books__title {
+  margin-top: 60px;
+  font-size: 2rem;
 }

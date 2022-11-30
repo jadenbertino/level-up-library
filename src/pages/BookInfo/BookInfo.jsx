@@ -24,6 +24,10 @@ export default function BookInfo({ books, addItemToCart }) {
             </Link>
             <BookSelected book={book} addItemToCart={addItemToCart} />
           </div>
+          <div className="row recc-books">
+            <h2 className="recc-books__title">Recommended Books</h2>
+            <BestBooks id={id} />
+          </div>
         </div>
       </main>
     </div>
