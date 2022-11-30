@@ -1,0 +1,49 @@
+.home-links {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.home-link:first-child {
+  margin-right: 8px;
+}
+
+/*
+
+    BOOK SELECTED
+
+*/
+
+.book-selected__container {
+  margin-top: 24px;
+  display: flex;
+}
+
+.book-selected__img {
+  border-radius: 12px;
+  object-fit: contain;
+  height: auto;
+  flex-basis: calc(100% / 3);
+  min-width: 300px;
+}
+
+.book-selected__info {
+  flex-basis: calc(100% * 2 / 3);
+  padding-left: 48px;
+}
+
+.book-selected__title {
+  font-size: 1.75rem;
+}
+
+.book__rating--wrapper {
+  margin: 8px 0 12px;
+}
+
+.summary__wrapper {
+  margin: 20px 0;
+}
+
+.summary__para {
+  margin-top: 12px
+}

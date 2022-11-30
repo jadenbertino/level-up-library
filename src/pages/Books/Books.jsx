@@ -65,10 +65,10 @@ export default function Books({ books: initialBooks }) {
                   </option>
                   <option value="LOW_TO_HIGH">Price, Low to High</option>
                   <option value="HIGH_TO_LOW">Price, High to Low</option>
-                  <option value="RATING">Rating</option>
+                  <option value="RATING">Top Rated</option>
                 </select>
               </div>
-              <div className="books">
+              <div className="books__container">
                 {books &&
                   books.map((book) => <Book book={book} key={book.id} />)}
               </div>

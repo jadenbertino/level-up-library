@@ -10,6 +10,10 @@ import { bookData } from 'assets/data';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 export default function App() {
+  function addItemToCart() {
+    return null
+  }
+
   return (
     <>
       <Router>
@@ -17,7 +21,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home /> } />
           <Route path="/books" element={<Books books={bookData} /> } />
-          <Route path="/books/:id" element={<BookInfo books={bookData} /> } />
+          <Route path="/books/:id" element={<BookInfo books={bookData} addItemToCart={addItemToCart} /> } />
           {/* <Route path="/cart" element={<Cart /> } /> */}
         </Routes>
         <Footer />

@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom';
 import { BestBooks } from 'components/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-
 import BookSelected from './BookSelected'
 
-export default function BookInfo({ books }) {
+export default function BookInfo({ books, addItemToCart }) {
   // Get information on current book
   const { id } = useParams();
   const book = books.find((book) => book.id === +id);
@@ -19,15 +18,11 @@ export default function BookInfo({ books }) {
       <main id="books__main">
         <div className="container">
           <div className="row">
-            <div className="home-links">
-              <Link to="/books" className="book__link">
-                <FontAwesomeIcon icon={ faArrowLeft } />
-              </Link>
-              <Link to="/books" className="book__link">
-                <h2 className="book__selected--title-top">Books</h2>
-              </Link>
-            </div>
-            < BookSelected books={book} />
+            <Link to="/books" className="home-links">
+              <FontAwesomeIcon icon={ faArrowLeft } className="home-link"/>
+              <h2 className="home-link">Books</h2>
+            </Link>
+            <BookSelected book={book} addItemToCart={addItemToCart} />
           </div>
         </div>
       </main>

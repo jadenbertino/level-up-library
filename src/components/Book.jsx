@@ -2,6 +2,7 @@ import { Rating, Price } from 'components/components'
 import React, { useState, useEffect, useRef }  from 'react';
 import { Link } from 'react-router-dom'
 import './Book.css'
+
 export default function Book({book}) {
   return(
     <div className="book">
