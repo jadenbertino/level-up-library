@@ -9,13 +9,13 @@ export default function Book({book}) {
       <Link to={`/books/${book.id}`} className="book__img--wrapper">
         <img src={book.url} alt="" className="book__img" />
       </Link>
-      <div className="book__info">
+      <Link to={`/books/${book.id}`} className="book__info">
         <h3 className="book__title">
           {book.title}
         </h3>
         <Rating rating={book.rating} />
         <Price originalPrice={book.originalPrice} salePrice={book.salePrice} />
-      </div>
+      </Link>
     </div>
   )
 }
