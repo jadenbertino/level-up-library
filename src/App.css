@@ -70,4 +70,5 @@ button {
 .books__container {
   display: flex;
   flex-wrap: wrap;
+  gap: 48px;
 }

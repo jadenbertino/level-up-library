@@ -1,6 +1,5 @@
 .book {
-  flex-basis: 25%;
-  padding: 0 24px 24px;
+  flex-basis: calc(25% - (48px * 3 / 4));
 }
 
 .book__img--wrapper {
@@ -8,12 +7,15 @@
   min-height: 400px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .book__img {
   object-fit: contain;
+  max-height: 360px;
+  max-width: 100%;
+
   border-radius: 12px;
-  width: 100%;
   transition: transform 300ms ease;
   /* display: flex;
   align-items: center;
