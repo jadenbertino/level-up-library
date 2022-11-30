@@ -12,19 +12,25 @@ export default function App() {
 
   function addItemToCart(book) {
     const dupeItem = cart.find((item) => item.id === book.id); // returns dupe object or null
-
-    // update cart + reload page
     setCart((oldCart) => {
-      if (dupeItem) {
+      if (dupeItem) {  // if dupe exists, then update quantity of dupe by 1
         return oldCart.map((item) => {
           return item.id === dupeItem.id
           ? {...item, quantity: item.quantity + 1 }
           : item
         })
-      } else {
+      } else {  // if dupe doesn't exist, then set quantity prop to 1
         return [...oldCart, { ...book, quantity: 1}];
       }
     })
+  }
+
+  function updateCart(item, newQuantity) {
+    setCart((oldCart) => oldCart.map((oldItem) => (
+      oldItem.id === item.id
+      ? { ...oldItem, quantity: newQuantity }
+      : oldItem
+    )))
   }
 
   return (
