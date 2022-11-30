@@ -6,31 +6,31 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 export default function App() {
-
   /* ------------------ CART ------------------ */
   const [cart, setCart] = useState([]);
 
   function addItemToCart(book) {
     const dupeItem = cart.find((item) => item.id === book.id); // returns dupe object or null
-    setCart((oldCart) => {
-      if (dupeItem) {  // if dupe exists, then update quantity of dupe by 1
-        return oldCart.map((item) => {
-          return item.id === dupeItem.id
-          ? {...item, quantity: item.quantity + 1 }
-          : item
-        })
-      } else {  // if dupe doesn't exist, then set quantity prop to 1
-        return [...oldCart, { ...book, quantity: 1}];
-      }
-    })
+
+    setCart((oldCart) =>
+      dupeItem
+        // item already in cart -> add 1 to quantity
+        ? oldCart.map((item) =>
+            item.id === dupeItem.id
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
+          )
+        // item not in cart -> set quantity to 1
+        : [...oldCart, { ...book, quantity: 1 }]
+    );
   }
 
   function updateCart(item, newQuantity) {
-    setCart((oldCart) => oldCart.map((oldItem) => (
-      oldItem.id === item.id
-      ? { ...oldItem, quantity: newQuantity }
-      : oldItem
-    )))
+    setCart((oldCart) =>
+      oldCart.map((oldItem) =>
+        oldItem.id === item.id ? { ...oldItem, quantity: newQuantity } : oldItem
+      )
+    );
   }
 
   return (
