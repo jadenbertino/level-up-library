@@ -6,9 +6,9 @@ import './Book.css'
 export default function Book({book}) {
   return(
     <div className="book">
-      <figure className="book__img--wrapper">
+      <Link to={`/books/${book.id}`} className="book__img--wrapper">
         <img src={book.url} alt="" className="book__img" />
-      </figure>
+      </Link>
       <div className="book__info">
         <h3 className="book__title">
           {book.title}

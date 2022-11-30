@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { BestBooks } from 'components/components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
 import BookSelected from './BookSelected'
 
 export default function BookInfo({ books, addItemToCart }) {
@@ -13,10 +14,15 @@ export default function BookInfo({ books, addItemToCart }) {
   const book = books.find((book) => book.id === +id);
   // the + next to id converts it to a number (it is currently a string)
 
+  // scroll to top of page upon mount
+  useEffect(() => {
+    window.scrollTo(0,0)
+  });
+
   return (
     <div id="books__body">
       <main id="books__main">
-        <div className="container">
+        <div className="container container--book-info">
           <div className="row">
             <Link to="/books" className="home-links">
               <FontAwesomeIcon icon={ faArrowLeft } className="home-link"/>
