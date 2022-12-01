@@ -69,11 +69,14 @@ export default function App() {
           />
           <Route
             path="/cart"
-            element={<Cart />}
-            cart={cart}
-            updateCart={updateCart}
-            removeItem={removeItem}
-            totals={calcPrices()}
+            element={
+              <Cart
+                cart={cart}
+                updateCart={updateCart}
+                removeItem={removeItem}
+                totals={calcPrices()}
+              />
+            }
           />
         </Routes>
         <Footer />
