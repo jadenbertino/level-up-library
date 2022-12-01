@@ -11,7 +11,6 @@ export default function App() {
 
   function addItemToCart(book) {
     const dupeItem = cart.find((item) => item.id === book.id); // returns dupe object or null
-
     setCart((oldCart) =>
       dupeItem
         ? // item already in cart -> add 1 to quantity
@@ -37,10 +36,16 @@ export default function App() {
     setCart((oldCart) => oldCart.filter((cartItem) => cartItem.id !== item.id));
   }
 
+  function getNumBooks() {
+    let numBooks = 0;
+    cart.forEach((item) => numBooks += item.quantity);
+    return numBooks;
+  }
+
   return (
     <>
       <Router>
-        <Nav />
+        <Nav numBooks={ getNumBooks() } />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books books={bookData} />} />
