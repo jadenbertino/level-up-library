@@ -107,7 +107,7 @@
 }
 
 .cart-item__quantity-select {
-  width: 80px;
+  width: 140px;
   height: 48px;
   padding-left: 4px;
 }
@@ -123,7 +123,6 @@
 */
 
 .cart-item__price {
-  width: 100px;
   padding-right: 16px;
   display: flex;
   justify-content: end;
