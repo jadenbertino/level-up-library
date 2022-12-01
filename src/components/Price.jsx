@@ -1,13 +1,6 @@
+import { formatPrice } from "components/components";
+
 export default function Price({ originalPrice, salePrice }) {
-  function formatPrice(price) {
-    if (Number.isInteger(price)) {
-      return price;
-    } else if (Number) {
-      return (Math.round(price * 100) / 100).toFixed(2);
-    } else {
-      return null;
-    }
-  }
   const originalPriceFormatted = formatPrice(originalPrice);
   const salePriceFormatted = formatPrice(salePrice);
   // Display

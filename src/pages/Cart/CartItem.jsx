@@ -1,4 +1,4 @@
-import { Price } from "components/components";
+import { Price, formatPrice } from "components/components";
 
 export default function CartItem({ item, updateCart, removeItem }) {
   return (
@@ -31,7 +31,11 @@ export default function CartItem({ item, updateCart, removeItem }) {
           onChange={(e) => updateCart(item, e.target.value)}
         />
       </div>
-      <div className="cart-item__price"></div>
+      <div className="cart-item__price">
+        <span>
+          ${ formatPrice((item.salePrice || item.originalPrice) * item.quantity) }
+        </span>
+      </div>
     </div>
   );
 }
