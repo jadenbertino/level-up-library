@@ -106,10 +106,14 @@
   align-items: center;
 }
 
-.cart-item__quantity-input {
-  width: 60px;
-  height: 32px;
+.cart-item__quantity-select {
+  width: 80px;
+  height: 48px;
   padding-left: 4px;
+}
+
+.cart-item__quantity-select-option {
+  padding: 8px 0;
 }
 
 /*

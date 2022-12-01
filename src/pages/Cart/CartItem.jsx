@@ -22,18 +22,35 @@ export default function CartItem({ item, updateCart, removeItem }) {
         </div>
       </div>
       <div className="cart-item__quantity">
-        <input
+        {/* <input
           type="number"
           className="cart-item__quantity-input"
           value={item.quantity}
           min={0}
           max={99}
           onChange={(e) => updateCart(item, e.target.value)}
-        />
+        /> */}
+        <select
+          value={String(item.quantity)}
+          defaultValue={"1"}
+          className="cart-item__quantity-select"
+          onChange={(e) => updateCart(item, e.target.value)}
+        >
+          <option className="cart-item__quantity-select-option" value={"1"}>1</option>
+          <option className="cart-item__quantity-select-option" value={"2"}>2</option>
+          <option className="cart-item__quantity-select-option" value={"3"}>3</option>
+          <option className="cart-item__quantity-select-option" value={"4"}>4</option>
+          <option className="cart-item__quantity-select-option" value={"5"}>5</option>
+          <option className="cart-item__quantity-select-option" value={"6"}>6</option>
+          <option className="cart-item__quantity-select-option" value={"7"}>7</option>
+          <option className="cart-item__quantity-select-option" value={"8"}>8</option>
+          <option className="cart-item__quantity-select-option" value={"9"}>9</option>
+          <option className="cart-item__quantity-select-option" value={"10"}>10</option>
+        </select>
       </div>
       <div className="cart-item__price">
         <span>
-          ${ formatPrice((item.salePrice || item.originalPrice) * item.quantity) }
+          ${formatPrice((item.salePrice || item.originalPrice) * item.quantity)}
         </span>
       </div>
     </div>
