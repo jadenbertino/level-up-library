@@ -27,9 +27,10 @@ export default function App() {
   function updateCart(item, newQuantity) {
     setCart((oldCart) =>
       oldCart.map((oldItem) =>
-        oldItem.id === item.id ? { ...oldItem, quantity: newQuantity } : oldItem
+        oldItem.id === item.id ? { ...oldItem, quantity: +newQuantity } : oldItem
       )
     );
+    console.log(cart)
   }
 
   function removeItem(item) {

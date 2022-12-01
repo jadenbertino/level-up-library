@@ -1,16 +1,37 @@
-export default function CartItem({ item }) {
+import { Price } from "components/components";
+
+export default function CartItem({ item, updateCart, removeItem }) {
   return (
     <div className="cart-item">
       <div className="cart-item__info">
         <img src={item.url} alt="" className="cart-item__img" />
         <div className="cart-item__description">
           <h4 className="cart-item__title">{item.title}</h4>
-          <span className="cart-item__price">
-            ${item.salePrice || item.originalPrice}
-          </span>
-          <button className="cart-item__remove-btn">Remove</button>
+          <div className="cart-item__info-price">
+            <Price
+              originalPrice={item.originalPrice}
+              salePrice={item.salePrice}
+            />
+          </div>
+          <button
+            className="cart-item__remove-btn"
+            onClick={() => removeItem(item)}
+          >
+            Remove
+          </button>
         </div>
       </div>
+      <div className="cart-item__quantity">
+        <input
+          type="number"
+          className="cart-item__quantity-input"
+          value={item.quantity}
+          min={0}
+          max={99}
+          onChange={(e) => updateCart(item, e.target.value)}
+        />
+      </div>
+      <div className="cart-item__price"></div>
     </div>
-  )
+  );
 }

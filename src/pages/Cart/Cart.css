@@ -2,14 +2,14 @@
   font-size: 2rem;
 }
 
-.cart__display-bar {
+.cart__header {
   margin-top: 16px;
   display: flex;
   justify-content: space-between;
   background-color: #7342D6;
   color: white;
   font-size: 1.1rem;
-  padding: 12px;
+  padding: 12px 16px;
 }
 
 .cart__contents {
@@ -20,15 +20,34 @@
   margin-top: 24px;
 }
 
-/*
-
-    Cart Item
-
-*/
-
 .cart-item {
   margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
 }
+
+.cart__header-books,
+.cart__header-quantity,
+.cart__header-price,
+.cart-item__info,
+.cart-item__quantity,
+.cart-item__price {
+  flex-basis: calc(100%/3);
+}
+
+.cart__header-quantity {
+  text-align: center;
+}
+
+.cart__header-price {
+  text-align:end
+}
+
+/*
+
+    Cart Item Info
+
+*/
 
 .cart-item__info {
   display: inline-flex;
@@ -45,23 +64,53 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .cart-item__title {
   font-size: 1.25rem;
 }
 
-.cart-item__price {
+.cart-item__info-price {
   margin-top: 12px;
   font-weight: bold;
 }
 
 .cart-item__remove-btn {
   border: none;
-  background-color: #fff;
-  padding: 12px 0;
+  background-color: white;
+  margin-top: 8px;
+  padding: 4px 4px 4px 0;
+  display: inline;
   text-align: left;
   color: crimson;
   font-weight: 500;
   font-size: 0.8rem;
+}
+
+/*
+
+    Cart Item Quantity
+
+*/
+.cart-item__quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item__quantity-input {
+  width: 60px;
+  height: 32px;
+  padding-left: 4px;
+}
+
+/*
+
+    Cart Item Price
+
+*/
+
+.cart-item__price {
+  width: 100px;
 }
