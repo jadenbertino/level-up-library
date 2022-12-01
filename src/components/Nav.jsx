@@ -46,7 +46,9 @@ export default function Nav({ numBooks }) {
                 icon={faCartShopping}
                 className="nav__cart-icon"
               />
-              {numBooks > 0 && <span className="cart__length">{numBooks}</span>}
+              { numBooks > 0
+              ? <span className="cart__length">{numBooks}</span>
+              : null }
             </Link>
           </li>
         </ul>

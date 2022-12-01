@@ -12,7 +12,6 @@ export default function Cart({ cart, updateCart, removeItem, totals }) {
             <span className="cart__display-bar-item">Price</span>
           </div>
         </div>
-        { }
       </div>
     </main>
   );
