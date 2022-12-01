@@ -1,0 +1,13 @@
+.cart__title {
+  font-size: 2rem;
+}
+
+.cart__display-bar {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #7342D6;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px;
+}

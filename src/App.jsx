@@ -1,5 +1,5 @@
 import "./App.css";
-import { Home, Books, BookInfo } from "./pages/pages";
+import { Home, Books, BookInfo, Cart } from "./pages/pages";
 import { Nav, Footer, useLocalStorage } from "./components/components";
 import { bookData } from "assets/data";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 
 export default function App() {
   /* ------------------ CART ------------------ */
-  const [cart, setCart] = useLocalStorage('cartLocalStorage', []);
+  const [cart, setCart] = useLocalStorage("cartLocalStorage", []);
 
   function addItemToCart(book) {
     const dupeItem = cart.find((item) => item.id === book.id); // returns dupe object or null
@@ -32,20 +32,32 @@ export default function App() {
     );
   }
 
-  function removeItemFromCart(item) {
+  function removeItem(item) {
     setCart((oldCart) => oldCart.filter((cartItem) => cartItem.id !== item.id));
   }
 
   function getNumBooks() {
     let numBooks = 0;
-    cart.forEach((item) => numBooks += item.quantity);
+    cart.forEach((item) => (numBooks += item.quantity));
     return numBooks;
+  }
+
+  function calcPrices() {
+    let total = 0;
+    cart.forEach((item) => {
+      total += (item.salePrice || item.originalPrice) * item.quantity;
+    });
+    return {
+      subtotal: total * 0.9,
+      tax: total * 0.1,
+      total,
+    };
   }
 
   return (
     <>
       <Router>
-        <Nav numBooks={ getNumBooks() } />
+        <Nav numBooks={getNumBooks()} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books books={bookData} />} />
@@ -55,7 +67,14 @@ export default function App() {
               <BookInfo books={bookData} addItemToCart={addItemToCart} />
             }
           />
-          {/* <Route path="/cart" element={<Cart /> } /> */}
+          <Route
+            path="/cart"
+            element={<Cart />}
+            cart={cart}
+            updateCart={updateCart}
+            removeItem={removeItem}
+            totals={calcPrices()}
+          />
         </Routes>
         <Footer />
       </Router>
