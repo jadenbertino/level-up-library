@@ -1,8 +1,13 @@
 import "./Cart.css";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
+import { formatPrice } from "components/components";
 
 export default function Cart({ cart, updateCart, removeItem, totals }) {
+  let { subtotal, tax, total } = totals;
+  [subtotal, tax, total] = [subtotal, tax, total].map((amount) =>
+    formatPrice(amount)
+  );
   return (
     <main>
       <div className="container">
@@ -23,15 +28,35 @@ export default function Cart({ cart, updateCart, removeItem, totals }) {
                   key={item.id}
                 />
               ))
-            ) : ( <>
-              <p className="cart__empty-message">
-                Your cart is currently empty.
-              </p>
-              <Link to="/books">
-                <button className="btn btn--cart-empty">Continue Shopping</button>
-              </Link>
+            ) : (
+              <>
+                <p className="cart__empty-message">
+                  Your cart is currently empty.
+                </p>
+                <Link to="/books">
+                  <button className="btn btn--cart-empty">
+                    Continue Shopping
+                  </button>
+                </Link>
               </>
             )}
+          </div>
+          <div className="cart__totals">
+            <div className="cart__totals--wrapper">
+              <div className="cart__row">
+                <span>Subtotal</span>
+                <span>${subtotal}</span>
+              </div>
+              <div className="cart__row">
+                <span>Tax</span>
+                <span>${tax}</span>
+              </div>
+              <div className="cart__row">
+                <span>Total</span>
+                <span>${total}</span>
+              </div>
+              <button className="btn">Proceed to checkout</button>
+            </div>
           </div>
         </div>
       </div>

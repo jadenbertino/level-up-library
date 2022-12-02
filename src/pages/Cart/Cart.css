@@ -135,3 +135,18 @@
     Totals
 
 */
+
+.cart__totals {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.cart__row:nth-child(3) {
+  font-weight: 900;
+}
