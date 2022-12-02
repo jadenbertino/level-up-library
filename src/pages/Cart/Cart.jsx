@@ -41,23 +41,26 @@ export default function Cart({ cart, updateCart, removeItem, totals }) {
               </>
             )}
           </div>
-          <div className="cart__totals">
-            <div className="cart__totals--wrapper">
-              <div className="cart__row">
-                <span>Subtotal</span>
-                <span>${subtotal}</span>
+          {subtotal > 0
+            ? <div className="cart__totals">
+                <div className="cart__totals--wrapper">
+                  <div className="cart__row">
+                    <span>Subtotal</span>
+                    <span>${subtotal}</span>
+                  </div>
+                  <div className="cart__row">
+                    <span>Tax</span>
+                    <span>${tax}</span>
+                  </div>
+                  <div className="cart__row">
+                    <span>Total</span>
+                    <span>${total}</span>
+                  </div>
+                  <button className="btn">Proceed to checkout</button>
+                </div>
               </div>
-              <div className="cart__row">
-                <span>Tax</span>
-                <span>${tax}</span>
-              </div>
-              <div className="cart__row">
-                <span>Total</span>
-                <span>${total}</span>
-              </div>
-              <button className="btn">Proceed to checkout</button>
-            </div>
-          </div>
+            : null
+          }
         </div>
       </div>
     </main>
