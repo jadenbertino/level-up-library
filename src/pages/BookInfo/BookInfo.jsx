@@ -26,7 +26,7 @@ export default function BookInfo({ books, addItemToCart }) {
           <div className="row">
             <Link to="/books" className="home-links">
               <FontAwesomeIcon icon={ faArrowLeft } className="home-link"/>
-              <h2 className="home-link">Books</h2>
+              <h2 className="home-link">All Books</h2>
             </Link>
             <BookSelected book={book} addItemToCart={addItemToCart} />
           </div>
