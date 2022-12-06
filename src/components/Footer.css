@@ -12,5 +12,5 @@
 
 .footer__logo {
   width: 160px;
-  filter: grayscale(1) invert(1); /* turns to black then inverts colors */
+  filter: grayscale(1) brightness(0) invert(1); /* turns to black then inverts colors */
 }

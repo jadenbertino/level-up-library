@@ -18,7 +18,7 @@ export default function Nav({ numBooks }) {
       <div className="nav__container">
         <Link to="/">
           <img
-            src={require("assets/library-logo.svg").default}
+            src={require("assets/library-logo.png")}
             alt=""
             className="nav__logo"
           />

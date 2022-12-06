@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="row row--center">
           <figure className="footer__logo--wrapper">
-            <img src={require('assets/library-logo.svg').default} alt="" className="footer__logo" />
+            <img src={require('assets/library-logo.png')} alt="" className="footer__logo" />
           </figure>
           <div className="footer__links">
             <Link to="/" className="footer__link">Home</Link>
