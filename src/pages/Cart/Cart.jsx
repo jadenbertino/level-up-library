@@ -30,6 +30,7 @@ export default function Cart({ cart, updateCart, removeItem, totals }) {
               ))
             ) : (
               <>
+                <img src={require("assets/empty_cart.svg").default} className="cart__empty-img" alt="" />
                 <p className="cart__empty-message">
                   Your cart is currently empty.
                 </p>
