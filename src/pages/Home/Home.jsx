@@ -1,17 +1,18 @@
-import './Home.css'; /* single css file for all Home components */
 import Landing from './Landing'
-import Highlights from './Highlights'
-import Featured from './Featured'
+import FeatureShowcase from './FeatureShowcase'
+import PopularBooks from './PopularBooks'
 import DiscountedBooks from './DiscountedBooks'
 import Explore from './Explore'
+
+import './Home.css';
 
 export default function Home() {
   return (
     <>
     <Landing />
     <main>
-      <Highlights />
-      <Featured />
+      <FeatureShowcase />
+      <PopularBooks />
       <DiscountedBooks />
       <Explore />
     </main>

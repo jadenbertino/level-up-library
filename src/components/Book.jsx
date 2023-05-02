@@ -3,10 +3,11 @@ import React, { useState, useEffect, useRef }  from 'react';
 import { Link } from 'react-router-dom'
 import './Book.css'
 
-export default function Book({book}) {
+export default function Book({ book }) {
 
   const [bookImg, setBookImg] = useState();
   const mountedRef = useRef(true);
+  
   useEffect(() => {
     const image = new Image();
     image.src = book.url;

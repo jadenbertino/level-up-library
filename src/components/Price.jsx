@@ -3,7 +3,7 @@ import { formatPrice } from "components/components";
 export default function Price({ originalPrice, salePrice }) {
   const originalPriceFormatted = formatPrice(originalPrice);
   const salePriceFormatted = formatPrice(salePrice);
-  // Display
+  
   return (
     <div className="book__price">
       { salePrice ? (

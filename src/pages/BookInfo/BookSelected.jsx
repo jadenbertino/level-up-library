@@ -1,6 +1,7 @@
 import { Rating, Price } from "components/components";
 
 export default function BookSelected({ book, addItemToCart }) {
+  
   return (
     <div className="book-selected__container">
       <img src={book.url} alt="" className="book-selected__img" />

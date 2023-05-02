@@ -1,12 +1,9 @@
 import "./App.css";
 import { Home, Books, BookInfo, Cart } from "./pages/pages";
 import { Nav, Footer, useLocalStorage } from "./components/components";
-import { useCollection } from "hooks/useCollection";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
-  const { docs: bookData } = useCollection('books')
-  /* ------------------ CART ------------------ */
   const [cart, setCart] = useLocalStorage("cartLocalStorage", []);
 
   function addItemToCart(book) {
@@ -60,11 +57,11 @@ export default function App() {
         <Nav numBooks={getNumBooks()} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/books" element={<Books books={bookData} />} />
+          <Route path="/books" element={<Books />} />
           <Route
             path="/books/:id"
             element={
-              <BookInfo books={bookData} addItemToCart={addItemToCart} />
+              <BookInfo addItemToCart={addItemToCart} />
             }
           />
           <Route

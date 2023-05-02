@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBolt, faBookOpen, faTags } from "@fortawesome/free-solid-svg-icons";
 
-export default function Highlights() {
+export default function FeatureShowcase() {
   return (
     <section id="highlights">
       <div className="container">

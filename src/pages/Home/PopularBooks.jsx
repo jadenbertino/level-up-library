@@ -1,5 +1,6 @@
-import { BestBooks} from 'components/components'
-export default function Featured() {
+import { DisplayFourBooks} from 'components/components'
+
+export default function PopularBooks() {
   return (
     <section id="featured">
       <div className="container">
@@ -8,7 +9,7 @@ export default function Featured() {
             Popular <span className="text--purple">Books</span>
           </h2>
           <div className="books">
-            <BestBooks />
+            <DisplayFourBooks />
           </div>
         </div>
       </div>
