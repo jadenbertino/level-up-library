@@ -1,10 +1,8 @@
-import Nav from "./Nav.jsx";
-import Rating from "./Rating.jsx";
-import Book from "./Book.jsx";
-import Price from "./Price";
-import DisplayFourBooks from "./DisplayFourBooks.jsx";
-import Footer from "./Footer"
-import useLocalStorage from "./useLocalStorageHook.jsx";
-import formatPrice from "./formatPrice.jsx";
+import Book from './Book.jsx';
+import DisplayFourBooks from './DisplayFourBooks.jsx';
+import Footer from './Footer';
+import Nav from './Nav.jsx';
+import Price from './Price';
+import Rating from './Rating.jsx';
 
-export { Nav, Rating, Book, Price, DisplayFourBooks, Footer, useLocalStorage, formatPrice };
+export { Nav, Rating, Book, Price, DisplayFourBooks, Footer };

@@ -1,5 +1,6 @@
-import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// styles
+import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Rating({ rating }) {
   const numFullStars = Math.floor(rating);
@@ -7,8 +8,10 @@ export default function Rating({ rating }) {
   const fullStarsArr = new Array(numFullStars).fill('');
 
   return (
-    <div className="book__rating--wrapper">
-      {fullStarsArr.map((_, i) => <FontAwesomeIcon icon={faStar} key={i} />)}
+    <div className='book__rating--wrapper'>
+      {fullStarsArr.map((_, i) => (
+        <FontAwesomeIcon icon={faStar} key={i} />
+      ))}
       {hasHalfStar && <FontAwesomeIcon icon={faStarHalf} />}
     </div>
   );

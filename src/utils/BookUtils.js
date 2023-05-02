@@ -1,4 +1,4 @@
-export default function formatPrice(price) {
+export function formatPrice(price) {
   if (Number.isInteger(price)) {
     return price;
   } else if (Number) {
