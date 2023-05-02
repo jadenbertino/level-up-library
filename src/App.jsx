@@ -1,11 +1,11 @@
 import "./App.css";
 import { Home, Books, BookInfo, Cart } from "./pages/pages";
 import { Nav, Footer, useLocalStorage } from "./components/components";
-import { bookData } from "assets/data";
+import { useCollection } from "hooks/useCollection";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
-
+  const { docs: bookData } = useCollection('books')
   /* ------------------ CART ------------------ */
   const [cart, setCart] = useLocalStorage("cartLocalStorage", []);
 

@@ -1,8 +1,9 @@
-import { bookData } from "assets/data";
-import React from "react";
 import Book from "components/Book";
+import { useCollection } from "../../hooks/useCollection";
 
 export default function DiscountedBooks() {
+  const { docs: bookData } = useCollection('books');
+
   return (
     <section id="recent">
       <div className="container">
@@ -11,7 +12,7 @@ export default function DiscountedBooks() {
             Discounted <span className="text--purple">Books</span>
           </h2>
           <div className="books__container">
-            {bookData
+            {bookData && bookData
               .filter((book) => book.salePrice > 0)
               .slice(0, 8)
               .map((book) => (

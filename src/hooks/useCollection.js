@@ -17,7 +17,7 @@ export function useCollection(collectionName) {
     });
 
     return unsub;
-  }, [collectionName, userQuery]);
+  }, [collectionName]);
 
   return { docs, pending };
 }
