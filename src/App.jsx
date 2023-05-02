@@ -3,9 +3,9 @@ import { Home, Books, BookInfo, Cart } from "./pages/pages";
 import { Nav, Footer, useLocalStorage } from "./components/components";
 import { bookData } from "assets/data";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useState, useEffect } from "react";
 
 export default function App() {
+
   /* ------------------ CART ------------------ */
   const [cart, setCart] = useLocalStorage("cartLocalStorage", []);
 
