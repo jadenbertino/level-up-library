@@ -2,6 +2,7 @@ import useLocalStorage from 'hooks/useLocalStorage';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Footer, Nav } from './components/components';
 import { BookInfo, Books, Cart, Home } from './pages/pages';
+import Data from 'pages/Data';
 
 // styles
 import './App.css';
@@ -71,6 +72,7 @@ export default function App() {
               />
             }
           />
+          <Route path='/data' element={<Data />} />
         </Routes>
         <Footer />
       </Router>
