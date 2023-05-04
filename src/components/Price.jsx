@@ -1,16 +1,14 @@
-import { formatPrice } from "components/components";
+import { formatPrice } from '../utils/BookUtils';
 
 export default function Price({ originalPrice, salePrice }) {
   const originalPriceFormatted = formatPrice(originalPrice);
   const salePriceFormatted = formatPrice(salePrice);
-  // Display
+
   return (
-    <div className="book__price">
-      { salePrice ? (
+    <div className='book__price'>
+      {salePrice ? (
         <>
-          <span className="book__price--strikethrough">
-            ${originalPriceFormatted}
-          </span>
+          <span className='book__price--strikethrough'>${originalPriceFormatted}</span>
           <span>${salePriceFormatted}</span>
         </>
       ) : (

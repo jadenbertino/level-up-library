@@ -1,13 +1,13 @@
-import "./App.css";
-import { Home, Books, BookInfo, Cart } from "./pages/pages";
-import { Nav, Footer, useLocalStorage } from "./components/components";
-import { bookData } from "assets/data";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import useLocalStorage from 'hooks/useLocalStorage';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Footer, Nav } from './components/components';
+import { BookInfo, Books, Cart, Home } from './pages/pages';
+
+// styles
+import './App.css';
 
 export default function App() {
-
-  /* ------------------ CART ------------------ */
-  const [cart, setCart] = useLocalStorage("cartLocalStorage", []);
+  const [cart, setCart] = useLocalStorage('cartLocalStorage', []);
 
   function addItemToCart(book) {
     const dupeItem = cart.find((item) => item.id === book.id); // returns dupe object or null
@@ -15,9 +15,7 @@ export default function App() {
       dupeItem
         ? // item already in cart -> add 1 to quantity
           oldCart.map((item) =>
-            item.id === dupeItem.id
-              ? { ...item, quantity: item.quantity + 1 }
-              : item
+            item.id === dupeItem.id ? { ...item, quantity: item.quantity + 1 } : item
           )
         : // item not in cart -> set quantity to 1
           [...oldCart, { ...book, quantity: 1 }]
@@ -59,16 +57,11 @@ export default function App() {
       <Router>
         <Nav numBooks={getNumBooks()} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/books" element={<Books books={bookData} />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/books' element={<Books />} />
+          <Route path='/books/:id' element={<BookInfo addItemToCart={addItemToCart} />} />
           <Route
-            path="/books/:id"
-            element={
-              <BookInfo books={bookData} addItemToCart={addItemToCart} />
-            }
-          />
-          <Route
-            path="/cart"
+            path='/cart'
             element={
               <Cart
                 cart={cart}

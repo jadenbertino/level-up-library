@@ -1,20 +1,21 @@
-import './Home.css'; /* single css file for all Home components */
-import Landing from './Landing'
-import Highlights from './Highlights'
-import Featured from './Featured'
-import DiscountedBooks from './DiscountedBooks'
-import Explore from './Explore'
+import DiscountedBooks from './DiscountedBooks';
+import Explore from './Explore';
+import FeatureShowcase from './FeatureShowcase';
+import Landing from './Landing';
+import PopularBooks from './PopularBooks';
+
+import './Home.css';
 
 export default function Home() {
   return (
     <>
-    <Landing />
-    <main>
-      <Highlights />
-      <Featured />
-      <DiscountedBooks />
-      <Explore />
-    </main>
+      <Landing />
+      <main>
+        <FeatureShowcase />
+        <PopularBooks />
+        <DiscountedBooks />
+        <Explore />
+      </main>
     </>
-  )
+  );
 }
