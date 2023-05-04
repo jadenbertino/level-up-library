@@ -37,15 +37,7 @@ input, select, textarea, button {
 
 */
 
-.text--purple {
-  color: var(--purple-color);
-}
-
-.text--left {
-  text-align: left !important;
-}
-
-.container {
+/* .container {
   padding: 56px 0;
 }
 
@@ -54,7 +46,48 @@ input, select, textarea, button {
   margin: 0 auto;
   width: 100%;
   padding: 0 24px;
+} */
+
+.container {
+  margin: 0 auto;
+	width: 100%;
+  max-width: 1200px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -16px;
+	margin-left: -16px;
+}
+
+.col {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 16px;
+	padding-left: 16px
+}
+
+.col-padding {
+  padding: 56px 0;
+}
+
+.fc {
+  flex-direction: column;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+/*  */
 
 .btn {
   background-color: var(--purple-color);
@@ -75,4 +108,12 @@ input, select, textarea, button {
   display: flex;
   flex-wrap: wrap;
   gap: 48px;
+}
+
+.text--purple {
+  color: var(--purple-color);
+}
+
+.text--left {
+  text-align: left !important;
 }

@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <section id='footer'>
       <div className='container'>
-        <div className='row row--center'>
+        <div className='row fc aic'>
           <figure className='footer__logo--wrapper'>
             <img src={logo} alt='' className='footer__logo' />
           </figure>

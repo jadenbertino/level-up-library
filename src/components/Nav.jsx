@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 // styles & assets
 import { faBars, faCartShopping, faXmark } from '@fortawesome/free-solid-svg-icons';
+import logo from 'assets/library-logo.png';
 import './Nav.css';
-import logo from 'assets/library-logo.png'
 
 export default function Nav({ numBooks }) {
   function toggleMenu() {
@@ -13,11 +13,10 @@ export default function Nav({ numBooks }) {
 
   return (
     <nav>
-      <div className='nav__container'>
+      <div className='container'>
         <Link to='/'>
           <img src={logo} alt='' className='nav__logo' />
         </Link>
-
         <ul className='nav__list'>
           <li className='nav__list--item'>
             <Link to='/' className='nav__list--link'>
@@ -41,7 +40,6 @@ export default function Nav({ numBooks }) {
             </Link>
           </li>
         </ul>
-
         <div className='popup'>
           <FontAwesomeIcon icon={faXmark} className='popup__x-icon' onClick={toggleMenu} />
           <ul className='popup__menu'>
