@@ -4,6 +4,7 @@ import CartItem from './CartItem';
 
 // styles
 import './Cart.css';
+import cartIcon from 'assets/empty_cart.svg'
 
 export default function Cart({ cart, updateCart, removeItem, totals }) {
   let { subtotal, tax, total } = totals;
@@ -31,7 +32,7 @@ export default function Cart({ cart, updateCart, removeItem, totals }) {
             ) : (
               <>
                 <img
-                  src={require('assets/empty_cart.svg').default}
+                  src={cartIcon}
                   className='cart__empty-img'
                   alt=''
                 />

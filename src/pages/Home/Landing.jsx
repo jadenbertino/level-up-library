@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 
+// styles
+import landingImg from 'assets/undraw-books.svg'
+
 export default function Landing() {
   return (
     <section id='landing'>
@@ -14,9 +17,7 @@ export default function Landing() {
               <button className='btn'>Browse Books Now</button>
             </Link>
           </div>
-          <figure className='header__img--wrapper'>
-            <img src={require('assets/undraw-books.svg').default} alt='' className='header__img' />
-          </figure>
+          <img src={landingImg} alt='' className='header__img' />
         </div>
       </header>
     </section>

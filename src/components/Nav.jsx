@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // styles & assets
 import { faBars, faCartShopping, faXmark } from '@fortawesome/free-solid-svg-icons';
 import './Nav.css';
+import logo from 'assets/library-logo.png'
 
 export default function Nav({ numBooks }) {
   function toggleMenu() {
@@ -14,7 +15,7 @@ export default function Nav({ numBooks }) {
     <nav>
       <div className='nav__container'>
         <Link to='/'>
-          <img src={require('assets/library-logo.png')} alt='' className='nav__logo' />
+          <img src={logo} alt='' className='nav__logo' />
         </Link>
 
         <ul className='nav__list'>
