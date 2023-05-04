@@ -5,10 +5,14 @@ export default function PopularBooks() {
     <section id='featured'>
       <div className='container'>
         <div className='row'>
-          <h2 className='section__title'>
-            Popular <span className='text--purple'>Books</span>
-          </h2>
-          <div className='books'>
+          <div className='col'>
+            <h2 className='section__title'>
+              Popular <span className='text--purple'>Books</span>
+            </h2>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col'>
             <DisplayFourBooks />
           </div>
         </div>

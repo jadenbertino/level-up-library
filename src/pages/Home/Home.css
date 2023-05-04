@@ -23,11 +23,9 @@
 
 */
 
-.header__container {
+header .container {
   height: calc(100vh - 100px);
   max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
 
   display: flex;
   flex-direction: column;
@@ -57,8 +55,9 @@
 
 */
 
-#highlights {
-  text-align: center;
+#highlights .row {
+  display: flex;
+  justify-content: center;
 }
 
 .highlights__wrapper {
@@ -106,6 +105,7 @@
     Featured Books
 
 */
+
 #featured {
   text-align: start;
 }

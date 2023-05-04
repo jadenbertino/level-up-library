@@ -7,7 +7,7 @@ export default function Landing() {
   return (
     <section id='landing'>
       <header>
-        <div className='header__container'>
+        <div className='container text--center'>
           <div className='header__description'>
             <h1 className='header__title'>America's most awarded online library platform</h1>
             <h2 className='header__sub-title'>
