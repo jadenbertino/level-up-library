@@ -4,8 +4,6 @@ import FeatureShowcase from './FeatureShowcase';
 import Landing from './Landing';
 import PopularBooks from './PopularBooks';
 
-import './Home.css';
-
 export default function Home() {
   return (
     <>

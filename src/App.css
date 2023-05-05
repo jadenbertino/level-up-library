@@ -32,17 +32,6 @@ input, select, textarea, button {
 
 */
 
-/* .container {
-  padding: 56px 0;
-}
-
-.row {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0 24px;
-} */
-
 .container {
   margin: 0 auto;
 	width: 100%;
@@ -116,4 +105,17 @@ section > .container {
 
 .text--center {
   text-align: center;
+}
+
+.section__title {
+  margin-bottom: 32px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.row--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
