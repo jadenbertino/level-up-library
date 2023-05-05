@@ -1,6 +1,9 @@
-import { DisplayFourBooks } from 'components/components';
+import Book from 'components/Book';
+import { useCollection } from '../../hooks/useCollection';
 
 export default function PopularBooks() {
+  const { docs: books } = useCollection('books');
+
   return (
     <section id='featured'>
       <div className='container'>
@@ -13,7 +16,13 @@ export default function PopularBooks() {
         </div>
         <div className='row'>
           <div className='col'>
-            <DisplayFourBooks />
+            <div className='books__container'>
+              {books &&
+                books
+                  .filter((book) => book.rating === 5)
+                  .slice(0, 4)
+                  .map((book) => <Book book={book} key={book.id} />)}
+            </div>
           </div>
         </div>
       </div>

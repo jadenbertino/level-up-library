@@ -1,4 +1,4 @@
-import { Book } from 'components/components';
+import Book from 'components/Book'
 import { useCollection } from 'hooks/useCollection';
 import { useEffect, useState } from 'react';
 

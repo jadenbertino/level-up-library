@@ -1,13 +1,14 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import { Footer, Nav } from './components/components';
-import { BookInfo, Books, Cart, Home } from './pages/pages';
 import useCart from 'hooks/useCart';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
+import { BookInfo, Books, Cart, Home } from './pages/pages';
 
 // styles
 import './App.css';
 
 export default function App() {
-  const { cart, addItemToCart, updateCart, removeItem, calcPrices, getNumBooks } = useCart()
+  const { cart, addItemToCart, updateCart, removeItem, calcPrices, getNumBooks } = useCart();
 
   return (
     <div className='app'>

@@ -17,9 +17,6 @@
 
   border-radius: 12px;
   transition: transform 300ms ease;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
 }
 
 .book__img--wrapper:hover .book__img {

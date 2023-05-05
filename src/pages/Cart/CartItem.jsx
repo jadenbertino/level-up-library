@@ -1,4 +1,4 @@
-import { Price } from 'components/components';
+import Price from 'components/Price'
 import Select from 'react-select';
 import { formatPrice } from 'utils/BookUtils';
 

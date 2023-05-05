@@ -28,7 +28,7 @@ input, select, textarea, button {
 
 /*
 
-  REUSABLES
+  LAYOUT
 
 */
 
@@ -67,12 +67,26 @@ input, select, textarea, button {
   justify-content: space-between;
 }
 
-section > .container {
-  padding-top: 56px;
-  padding-bottom: 56px;
+.text--left {
+  text-align: left !important;
 }
 
-/*  */
+.text--center {
+  text-align: center;
+}
+
+.row--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+
+    GLOBAL STYLES
+
+*/
 
 .btn {
   background-color: var(--purple-color);
@@ -95,27 +109,12 @@ section > .container {
   gap: 48px;
 }
 
-.text--purple {
-  color: var(--purple-color);
-}
-
-.text--left {
-  text-align: left !important;
-}
-
-.text--center {
-  text-align: center;
-}
-
 .section__title {
   margin-bottom: 32px;
   font-size: 2rem;
   text-align: center;
 }
 
-.row--center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.text--purple {
+  color: var(--purple-color);
 }

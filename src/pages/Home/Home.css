@@ -1,0 +1,11 @@
+section > .container {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+@media screen and (max-width: 576px) {
+  section > .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}

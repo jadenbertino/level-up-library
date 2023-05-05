@@ -1,5 +1,5 @@
 // styles
-import './FeatureShowcase.css'
+import './WhyChooseLibrary.css'
 import { faBolt, faBookOpen, faTags } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

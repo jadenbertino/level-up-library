@@ -1,4 +1,5 @@
-import { Price, Rating } from 'components/components';
+import Price from 'components/Price'
+import Rating from 'components/Rating'
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 

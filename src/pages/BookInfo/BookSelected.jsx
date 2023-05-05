@@ -1,4 +1,5 @@
-import { Price, Rating } from 'components/components';
+import Price from 'components/Price'
+import Rating from 'components/Rating'
 
 export default function BookSelected({ book, addItemToCart }) {
   return (
