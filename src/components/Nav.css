@@ -16,7 +16,7 @@ nav .container {
 }
 
 .nav__list--item,
-.nav__icon  {
+.shopping-cart {
   padding: 8px;
   margin-left: 24px;
   font-size: 1.25rem;
@@ -35,7 +35,7 @@ nav .container {
   border-radius: 4px;
 }
 
-.nav__icon {
+.shopping-cart {
   position: relative;
 }
 
@@ -60,12 +60,11 @@ nav .container {
 
 /*
 
-    Popup
+    Mobile Nav Menu
 
 */
 
-
-.popup {
+.modal {
   visibility: hidden;
   position: absolute;
   left: 0;
@@ -75,11 +74,11 @@ nav .container {
   background-color: #242424;
 }
 
-.menu--open .popup {
+.menu--open .modal {
   visibility: visible;
 }
 
-.popup__x-icon {
+.modal__x-icon {
   color: white;
   font-size: 48px;
   position: absolute;
@@ -87,22 +86,29 @@ nav .container {
   top: 24px;
 }
 
-.popup__menu {
+.modal__menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   list-style-type: none;
   height: 100vh;
+  color: #fff;
 }
 
-.popup__menu-item {
+.modal__menu-item {
   margin: 32px 0;
+  display: flex;
+  align-items: center;
 }
 
-.popup__menu-link {
+.modal .fa-solid {
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.modal__menu-link {
   font-size: 2.5rem;
-  color: white;
 }
 
 /*
@@ -123,7 +129,7 @@ nav .container {
   font-size: 1.5rem;
 }
 
-@media (max-width:760px) {
+@media (max-width: 760px) {
   .nav__list--item {
     display: none;
   }
