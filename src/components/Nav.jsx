@@ -6,7 +6,7 @@ import './Nav.css';
 
 export default function Nav({ numBooks }) {
   function toggleMenu() {
-    document.body.classList.toggle('menu--open');
+    document.body.classList.toggle('modal--open');
   }
 
   return (
@@ -28,7 +28,7 @@ export default function Nav({ numBooks }) {
           </li>
           <li className='btn__menu--wrapper'>
             <button className='btn__menu' onClick={toggleMenu}>
-              <i className="fa-solid fa-bars btn__menu--icon"></i>
+              <i className='fa-solid fa-bars btn__menu--icon'></i>
             </button>
           </li>
           <li className='shopping-cart'>
@@ -39,7 +39,7 @@ export default function Nav({ numBooks }) {
           </li>
         </ul>
         <div className='modal'>
-          <i className="fa-solid fa-x modal__x-icon" onClick={toggleMenu}></i>
+          <i className='fa-solid fa-x modal__x-icon' onClick={toggleMenu}></i>
           <ul className='modal__menu'>
             <li className='modal__menu-item'>
               <i className='fa-solid fa-house'></i>
