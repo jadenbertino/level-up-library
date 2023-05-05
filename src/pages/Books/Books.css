@@ -1,14 +1,15 @@
 .books__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  align-items: center;
 }
 
 .books__header--title {
   margin: 0;
+  font-size: 40px;
 }
 
-select {
+.books__header select {
   background-color: #fff;
   border-radius: 4px;
   border: 1px solid #dcdfe6;
@@ -19,4 +20,20 @@ select {
   padding: 0 16px;
   width: 100%;
   max-width: 200px;
+}
+
+@media screen and (max-width: 576px) {
+  select {
+    max-width: 160px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .books__header {
+    flex-direction: column;
+  }
+
+  .books__header select {
+    margin-top: 16px;
+  }
 }

@@ -129,7 +129,27 @@
 }
 
 @media screen and (max-width: 480px) {
+  :root {
+    --book-gap: 8px;
+  }
+
+  .books__container {
+    margin-bottom: -20px;
+  }
+
   .book__img--wrapper {
     height: 50vw;
+  }
+
+  .book {
+    margin-bottom: 20px;
+  }
+
+  .book__title {
+    font-size: 18px;
+  }
+
+  .book__info {
+    margin-top: 12px;
   }
 }

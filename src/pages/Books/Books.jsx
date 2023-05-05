@@ -1,4 +1,4 @@
-import Book from 'components/Book'
+import Book from 'components/Book';
 import { useCollection } from 'hooks/useCollection';
 import { useEffect, useState } from 'react';
 
@@ -40,15 +40,16 @@ export default function Books() {
         <section>
           <div className='container'>
             <div className='row'>
-              <div className='books__header'>
-                <h2 className='section__title books__header--title'>
-                  All <span className='text--purple'>Books</span>
-                </h2>
-                {filteredBooks && (
+              <div className='col'>
+                <div className='section__title books__header'>
+                  <h2 className='books__header--title'>
+                    All <span className='text--purple'>Books</span>
+                  </h2>
                   <select
                     id='filter'
-                    onChange={(event) => filterBooks(event.target.value)}
+                    onChange={(e) => filterBooks(e.target.value)}
                     defaultValue={'DEFAULT'}
+                    className='filter-books'
                   >
                     <option value='DEFAULT' disabled>
                       Sort
@@ -57,10 +58,14 @@ export default function Books() {
                     <option value='HIGH_TO_LOW'>Price, High to Low</option>
                     <option value='RATING'>Top Rated</option>
                   </select>
-                )}
+                </div>
               </div>
-              <div className='books__container'>
-                {filteredBooks && filteredBooks.map((book) => <Book book={book} key={book.id} />)}
+            </div>
+            <div className='row'>
+              <div className='col'>
+                <div className='books__container'>
+                  {filteredBooks && filteredBooks.map((book) => <Book book={book} key={book.id} />)}
+                </div>
               </div>
             </div>
           </div>

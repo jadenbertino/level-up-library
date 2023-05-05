@@ -1,6 +1,6 @@
 section > .container {
-  padding-top: 56px;
-  padding-bottom: 56px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 @media screen and (max-width: 576px) {
