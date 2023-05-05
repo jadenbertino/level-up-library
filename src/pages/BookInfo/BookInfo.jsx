@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // components
 import BookSelected from './BookSelected';
+import Book from 'components/Book';
 
 // styles & assets
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -18,13 +19,8 @@ export default function BookInfo({ addItemToCart }) {
 
   useEffect(() => {
     if (!books) return;
-    setBook(books.find((book) => book.id === id));
-  }, [books, id]);
-
-  // scroll to top of page upon mount
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
+    setBook(books.find((book) => book.id === currentBookID));
+  }, [books, currentBookID]);
 
   return (
     <div id='books__body'>

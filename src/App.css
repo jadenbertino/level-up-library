@@ -103,12 +103,6 @@ input, select, textarea, button {
   opacity: 0.9;
 }
 
-.books__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px;
-}
-
 .section__title {
   margin-bottom: 32px;
   font-size: 2rem;

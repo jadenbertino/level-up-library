@@ -12,7 +12,6 @@ export default function Books() {
   useEffect(() => {
     setFilteredBooks(books);
   }, [books]);
-  console.log('books:', books);
 
   function filterBooks(filter) {
     switch (filter) {
