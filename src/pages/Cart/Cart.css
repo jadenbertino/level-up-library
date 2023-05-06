@@ -1,11 +1,14 @@
+/* 
+
+    LAYOUT
+
+*/
+
 #cart {
   min-height: calc(100vh - var(--nav-height) - var(--footer-height));
 }
 
-#cart,
-#cart .container,
-.row.cart,
-.col.cart {
+.expand-vertically {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -63,22 +66,6 @@
   padding-right: 48px;
 }
 
-.cart-item {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid gray;
-  padding: 24px 0;
-}
-
-.cart__header-books,
-.cart__header-quantity,
-.cart__header-price,
-.cart-item__info,
-.cart-item__quantity,
-.cart-item__price {
-  flex-basis: calc(100%/3);
-}
-
 .cart__header-quantity {
   text-align: center;
 }
@@ -89,22 +76,34 @@
 
 /*
 
-    Cart Item Info
+    CART-ITEM
 
 */
 
-.cart-item__info {
-  display: inline-flex;
+
+.cart-item {
+  padding: 24px 0;
+  border-bottom: 1px solid gray;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr 1fr;
 }
+
+.cart-item > * {
+  grid-row: 1 / span 2;
+}
+
+/* INFO */
 
 .cart-item__img {
   object-fit: contain;
   width: 100px;
   border-radius: 8px;
+  margin-right: 20px;
 }
 
 .cart-item__description {
-  margin-left: 24px;
+  grid-column: 2 / span 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,7 +114,7 @@
   font-size: 1.25rem;
 }
 
-.cart-item__info-price {
+.cart-item__description .cart-item__price {
   margin-top: 12px;
   font-weight: bold;
 }
@@ -132,11 +131,14 @@
   font-size: 0.8rem;
 }
 
-/*
+/* QUANTITY */
 
-    Cart Item Quantity
-
-*/
+.cart-item__quantity {
+  grid-column: 4 / span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .btn.adjust-quantity {
   margin-bottom: 0;
@@ -152,29 +154,10 @@
   text-align: center;
 }
 
-.cart-item__quantity {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cart-item__quantity-select {
-  width: 140px;
-  height: 48px;
-  padding-left: 4px;
-}
-
-.cart-item__quantity-select-option {
-  padding: 8px 0;
-}
-
-/*
-
-    Cart Item Price
-
-*/
+/* PRICE */
 
 .cart-item__price {
+  grid-column: 7 / span 3;
   padding-right: 16px;
   display: flex;
   justify-content: flex-end;
@@ -188,17 +171,17 @@
 
 */
 
-.cart__totals {
+.totals {
   display: flex;
   justify-content: flex-end;
 }
 
-.cart__row {
+.totals__row {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
 
-.cart__row:nth-child(3) {
+.totals__row:nth-child(3) {
   font-weight: 900;
 }
