@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
+:root {
+  --purple-color: #7342D6;
+  --nav-height: 100px;
+  --footer-height: 300px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,11 +26,6 @@ button {
 
 input, select, textarea, button {
   font-family: inherit;
-}
-
-:root {
-  --purple-color: #7342D6;
-  --nav-height: 100px;
 }
 
 /*

@@ -7,7 +7,6 @@ import cartIcon from 'assets/empty_cart.svg';
 import './Cart.css';
 
 export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
-
   let { subtotal, tax, total } = totals;
   [subtotal, tax, total] = [subtotal, tax, total].map((amount) => formatPrice(amount));
 
@@ -28,10 +27,10 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
             </div>
           </div>
         </div>
-        <div className='row'>
-          <div className='col'>
+        <div className='row cart'>
+          <div className={`col cart${cart.length < 1 ? ' empty' : ''}`}>
             <div className='cart__contents'>
-              {cart.length ? (
+              {cart.length > 0 ? (
                 cart.map((item) => (
                   <CartItem
                     item={item}
@@ -41,7 +40,7 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
                   />
                 ))
               ) : (
-                <div className='cart-empty'>
+                <div className='cart__empty'>
                   <img src={cartIcon} className='cart__empty-img' alt='' />
                   <p className='cart__empty-message'>Your cart is currently empty.</p>
                   <Link to='/books'>

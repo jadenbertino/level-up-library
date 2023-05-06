@@ -2,6 +2,10 @@
   background-color: #242424;
 }
 
+#footer > .container {
+  height: var(--footer-height);
+}
+
 .footer__logo,
 .footer__links,
 .footer__link,
