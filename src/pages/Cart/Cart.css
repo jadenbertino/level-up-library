@@ -117,6 +117,21 @@
     Cart Item Quantity
 
 */
+
+.btn.adjust-quantity {
+  margin-bottom: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+
+.current-quantity {
+  font-weight: bold;
+  width: 50px;
+  text-align: center;
+}
+
 .cart-item__quantity {
   display: flex;
   justify-content: center;

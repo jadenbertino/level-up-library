@@ -8,7 +8,7 @@ import { BookInfo, Books, Cart, Home } from './pages/pages';
 import './App.css';
 
 export default function App() {
-  const { cart, addItemToCart, updateCart, removeItem, calcPrices, getNumBooks } = useCart();
+  const { cart, addItemToCart, updateCartQuantity, removeItem, calcPrices, getNumBooks } = useCart();
 
   return (
     <div className='app'>
@@ -23,7 +23,7 @@ export default function App() {
             element={
               <Cart
                 cart={cart}
-                updateCart={updateCart}
+                updateCartQuantity={updateCartQuantity}
                 removeItem={removeItem}
                 totals={calcPrices()}
               />

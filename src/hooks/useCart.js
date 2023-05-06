@@ -16,7 +16,7 @@ export default function useCart() {
     );
   }
   
-  function updateCart(item, newQuantity) {
+  function updateCartQuantity(item, newQuantity) {
     setCart((oldCart) =>
       oldCart.map((oldItem) =>
         oldItem.id === item.id ? { ...oldItem, quantity: +newQuantity } : oldItem
@@ -46,5 +46,5 @@ export default function useCart() {
     };
   }
   
-  return { cart, setCart, addItemToCart, updateCart, removeItem, getNumBooks, calcPrices}
+  return { cart, setCart, addItemToCart, updateCartQuantity, removeItem, getNumBooks, calcPrices}
 }
