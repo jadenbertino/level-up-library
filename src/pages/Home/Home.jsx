@@ -1,7 +1,8 @@
 import Explore from './Explore';
 import Highlights from './WhyChooseLibrary';
 import Landing from './Landing';
-import FeaturedBooks from './PopularBooks'
+import PopularBooks from './PopularBooks'
+import DiscountedBooks from './DiscountedBooks';
 
 import './Home.css'
 
@@ -11,7 +12,8 @@ export default function Home() {
       <Landing />
       <main>
         <Highlights />
-        <FeaturedBooks />
+        <PopularBooks />
+        <DiscountedBooks />
         <Explore />
       </main>
     </>

@@ -3,6 +3,10 @@ section > .container {
   padding-bottom: 48px;
 }
 
+#explore > .container {
+  padding-bottom: 96px;
+}
+
 @media screen and (max-width: 576px) {
   section > .container {
     padding-top: 32px;

@@ -35,44 +35,40 @@ export default function Books() {
   }
 
   return (
-    <div id='books__body'>
-      <main id='books__main'>
-        <section>
-          <div className='container'>
-            <div className='row'>
-              <div className='col'>
-                <div className='section__title books__header'>
-                  <h2 className='books__header--title'>
-                    All <span className='text--purple'>Books</span>
-                  </h2>
-                  <select
-                    id='filter'
-                    onChange={(e) => filterBooks(e.target.value)}
-                    defaultValue={'DEFAULT'}
-                    className='filter-books'
-                  >
-                    <option value='DEFAULT' disabled>
-                      Sort
-                    </option>
-                    <option value='LOW_TO_HIGH'>Price, Low to High</option>
-                    <option value='HIGH_TO_LOW'>Price, High to Low</option>
-                    <option value='RATING'>Top Rated</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div className='row'>
-              <div className='col'>
-                <div className='books__container'>
-                  {filteredBooks.length
-                    ? <BooksGrid books={filteredBooks} />
-                    : null}
-                </div>
+    <main>
+      <section id='books__main'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <div className='section__title books__header'>
+                <h2 className='books__header--title'>
+                  All <span className='text--purple'>Books</span>
+                </h2>
+                <select
+                  id='filter'
+                  onChange={(e) => filterBooks(e.target.value)}
+                  defaultValue={'DEFAULT'}
+                  className='filter-books'
+                >
+                  <option value='DEFAULT' disabled>
+                    Sort
+                  </option>
+                  <option value='LOW_TO_HIGH'>Price, Low to High</option>
+                  <option value='HIGH_TO_LOW'>Price, High to Low</option>
+                  <option value='RATING'>Top Rated</option>
+                </select>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+          <div className='row'>
+            <div className='col'>
+              <div className='books__container'>
+                {filteredBooks.length ? <BooksGrid books={filteredBooks} /> : null}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

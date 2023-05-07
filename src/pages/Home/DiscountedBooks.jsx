@@ -1,9 +1,16 @@
-import Book from 'components/Book';
 import { useCollection } from '../../hooks/useCollection';
+import { useEffect, useState } from 'react';
+import BooksGrid from 'components/BooksGrid';
 
 export default function DiscountedBooks() {
   const { docs: books } = useCollection('books');
-
+  const [discountedBooks, setDiscountedBooks] = useState([])
+  useEffect(() => {
+    if (books.length < 1) return;
+    setDiscountedBooks(books
+      .filter((book) => book.salePrice > 0)
+      .slice(0, 8))
+  }, [books])
   return (
     <section id='recent'>
       <div className='container'>
@@ -16,14 +23,10 @@ export default function DiscountedBooks() {
         </div>
         <div className='row'>
           <div className='col'>
-            <div className='books__container'>
-              {books.length
-                ? books
-                    .filter((book) => book.salePrice > 0)
-                    .slice(0, 8)
-                    .map((book) => <Book book={book} key={book.id} />)
-                : null}
-            </div>
+            {books.length
+              ? <BooksGrid books={discountedBooks} />
+              : null
+            }
           </div>
         </div>
       </div>
