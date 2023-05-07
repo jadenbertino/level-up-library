@@ -14,8 +14,8 @@
 
 .modal {
   border-radius: 8px;
-  background-color: #31343f;
-  color: #eaf2ef;
+  background-color: #fff;
+  color: var(--purple-color);
   padding: 24px;
   position: relative;
   z-index: 102;

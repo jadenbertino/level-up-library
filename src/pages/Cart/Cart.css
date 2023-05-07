@@ -222,19 +222,19 @@
 }
 
 .confirm-remove-modal .btns {
-  margin-top: 32px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
 
 .confirm-remove-modal .cancel-btn {
   font-size: 1rem;
-  background-color: gray;
+  background-color: #4C4C47;
 }
 
 .confirm-remove-modal .remove-btn {
   font-size: 1rem;
-  background-color: #f26969;
+  background-color: #C14953;
 }
 
 .mobile-only {
