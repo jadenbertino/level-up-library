@@ -23,23 +23,28 @@ export default function CartItem({ item, updateCartQuantity }) {
 
   return (
     <div className='cart-item'>
-      <img src={item.url} alt='' className='cart-item__img' />
-      <div className='cart-item__description'>
-        <h4 className='cart-item__title'>{item.title}</h4>
-        <div className='cart-item__price'>
-          <Price originalPrice={item.originalPrice} salePrice={item.salePrice} />
+      <div className='img-and-description'>
+        <img src={item.url} alt='' className='cart-item__img' />
+        <div className='cart-item__description'>
+          <h4 className='cart-item__title'>{item.title}</h4>
+          <div className='cart-item__price'>
+            <Price originalPrice={item.originalPrice} salePrice={item.salePrice} />
+          </div>
         </div>
       </div>
-      <div className='cart-item__quantity'>
-        <button className='btn adjust-quantity' onClick={decrementQuantity}>
-          -
-        </button>
-        <span className='current-quantity'>{item.quantity}</span>
-        <button className='btn adjust-quantity' onClick={incrementQuantity}>
-          +
-        </button>
+      <div className='quantity-and-title'>
+        <h4 className='cart-item__title mobile-only'>{item.title}</h4>
+        <div className='cart-item__quantity'>
+          <button className='btn adjust-quantity' onClick={decrementQuantity}>
+            -
+          </button>
+          <span className='current-quantity'>{item.quantity}</span>
+          <button className='btn adjust-quantity' onClick={incrementQuantity}>
+            +
+          </button>
+        </div>
       </div>
-      <div className='cart-item__price'>
+      <div className='cart-item__total-price'>
         <span>${formatPrice((item.salePrice || item.originalPrice) * item.quantity)}</span>
       </div>
     </div>

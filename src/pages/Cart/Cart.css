@@ -29,8 +29,8 @@
 
 .cart__header {
   margin-top: 16px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background-color: #7342D6;
   color: white;
   font-size: 1.1rem;
@@ -49,6 +49,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .cart__empty-message {
@@ -85,17 +87,24 @@
   padding: 24px 0;
   border-bottom: 1px solid gray;
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: 1fr 1fr;
-}
-
-.cart-item > * {
-  grid-row: 1 / span 2;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* INFO */
 
+.cart-item .img-and-description {
+  display: flex;
+}
+
+.quantity-and-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .cart-item__img {
+  grid-column: 2 / 3;
   object-fit: contain;
   width: 100px;
   border-radius: 8px;
@@ -103,7 +112,6 @@
 }
 
 .cart-item__description {
-  grid-column: 2 / span 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,7 +122,7 @@
   font-size: 1.25rem;
 }
 
-.cart-item__description .cart-item__price {
+.cart-item__price {
   margin-top: 12px;
   font-weight: bold;
 }
@@ -134,7 +142,6 @@
 /* QUANTITY */
 
 .cart-item__quantity {
-  grid-column: 4 / span 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,8 +163,7 @@
 
 /* PRICE */
 
-.cart-item__price {
-  grid-column: 7 / span 3;
+.cart-item__total-price {
   padding-right: 16px;
   display: flex;
   justify-content: flex-end;
@@ -229,4 +235,30 @@
 .confirm-remove-modal .remove-btn {
   font-size: 1rem;
   background-color: #f26969;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .cart-item__title.mobile-only {
+    display: block;
+    text-align: center;
+    margin: 0 0 12px 0;
+  }
+
+  .cart-item__description {
+    display: none;
+  }
+
+  .cart-item__title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn.adjust-quantity {
+    width: 32px;
+    height: 32px;
+  }
 }

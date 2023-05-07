@@ -26,3 +26,9 @@
   width: 160px;
   filter: grayscale(1) brightness(0) invert(1); /* turns to black then inverts colors */
 }
+
+@media screen and (max-width: 768px) {
+  :root {
+    --footer-height: 240px !important;
+  }
+}
