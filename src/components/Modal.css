@@ -50,6 +50,6 @@
   z-index: 101;
 }
 
-body.modal {
+body:has(.modal) {
   overflow: hidden; /* prevent page scroll if modal is open */
 }

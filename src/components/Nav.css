@@ -5,48 +5,46 @@ nav .container {
   align-items: center;
 }
 
-.nav__logo {
+nav .logo {
   width: 160px;
 }
 
-.nav__list {
+nav ul {
   display: flex;
   align-items: center;
   list-style-type: none;
 }
 
-.nav__list--item,
-.shopping-cart {
+nav li {
   margin-left: 24px;
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-.nav__list--link {
+nav a {
   padding: 8px;
 }
 
-.nav__list--link,
-.nav__list--link:visited,
-.btn__menu {
-  text-decoration: none;
+nav .fa-bars,
+nav .fa-cart-shopping {
   color: #7342d6;
 }
 
-.nav__list--link.primary {
-  border: 2px solid #7342d6;
+nav a.primary {
+  border: 2px solid var(--purple-color);
+  color: var(--purple-color);
   border-radius: 4px;
 }
 
-.shopping-cart {
+nav .shopping-cart {
   position: relative;
 }
 
-.nav__cart-icon {
+nav .fa-cart-shopping {
   font-size: 20px;
 }
 
-.cart__length {
+nav .cart-size-bubble {
   background-color: red;
   color: white;
   width: 18px;
@@ -57,13 +55,23 @@ nav .container {
   justify-content: center;
   border-radius: 50%;
   position: absolute;
-  bottom: 4px;
+  bottom: 10px;
   right: -4px;
+}
+
+nav .hamburger {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+
+nav .fa-bars {
+  font-size: 1.5rem;
 }
 
 /*
 
-    Mobile Nav Menu
+    MOBILE
 
 */
 
@@ -74,70 +82,57 @@ nav .container {
 
 .nav-modal {
   background-color: var(--purple-color);
-  padding: 0 48px;
   border-radius: 0;
+  padding: 48px;
+  height: 100vh;
 }
 
-.nav-modal .x-icon {
-  color: #fff;
-  font-size: 2rem;
-  position: absolute;
-  right: 24px;
-  top: 48px;
-}
-
-.nav-modal .menu {
+.nav-modal ul {
+  height: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   list-style-type: none;
-  height: 100vh;
   color: #fff;
 }
 
-.nav-modal .menu-item {
+.nav-modal li {
   margin: 32px 0;
+}
+
+.nav-modal .fa-x-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.nav-modal .fa-x {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.nav-modal a {
+  font-size: 2rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   border-radius: 4px;
   border: 1px solid #fff;
   padding: 12px;
 }
 
-.nav-modal :is(.fa-house, .fa-book, .fa-cart-shopping) {
+.nav-modal .link-icon {
   font-size: 1.5rem;
   margin-right: 20px;
 }
 
-.nav-modal .link {
-  font-size: 2rem;
-}
-
-/*
-
-    Mobile
-
-*/
-
-.btn__menu--wrapper {
-  display: none;
-}
-
-.btn__menu {
-  border: none;
-}
-
-.btn__menu--icon {
-  font-size: 1.5rem;
-}
-
 @media (max-width: 760px) {
-  .nav__list--item {
+  nav li {
     display: none;
   }
 
-  .btn__menu--wrapper {
+  nav .hamburger,
+  nav .shopping-cart {
     display: block;
   }
 }

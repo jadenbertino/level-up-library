@@ -21,28 +21,28 @@ export default function Nav({ numBooks }) {
       <nav>
         <div className='container'>
           <Link to='/'>
-            <img src={logo} alt='' className='nav__logo' />
+            <img src={logo} alt='' className='logo' />
           </Link>
-          <ul className='nav__list'>
-            <li className='nav__list--item'>
-              <Link to='/' className='nav__list--link'>
+          <ul>
+            <li>
+              <Link to='/'>
                 Home
               </Link>
             </li>
-            <li className='nav__list--item'>
-              <Link to='/books' className='nav__list--link primary'>
+            <li>
+              <Link to='/books' className='primary'>
                 Books
               </Link>
             </li>
-            <li className='btn__menu--wrapper'>
-              <button className='btn__menu' onClick={openNavModal}>
-                <i className='fa-solid fa-bars btn__menu--icon'></i>
+            <li className='hamburger' onClick={openNavModal}>
+              <button className='hamburger'>
+                <i className='fa-solid fa-bars'></i>
               </button>
             </li>
             <li className='shopping-cart'>
-              <Link to='/cart' className='nav__list--link'>
-                <i className='fa-solid fa-cart-shopping nav__cart-icon'></i>
-                {numBooks > 0 ? <span className='cart__length'>{numBooks}</span> : null}
+              <Link to='/cart'>
+                <i className='fa-solid fa-cart-shopping'></i>
+                {numBooks > 0 ? <span className='cart-size-bubble'>{numBooks}</span> : null}
               </Link>
             </li>
           </ul>
@@ -50,24 +50,26 @@ export default function Nav({ numBooks }) {
       </nav>
       {modalContext.type === 'nav' && (
         <Modal className={'nav-modal'}>
-          <i className='fa-solid fa-x x-icon' onClick={closeModal}></i>
-          <ul className='menu'>
-            <li className='menu-item'>
-              <i className='fa-solid fa-house'></i>
-              <Link to='/' className='link' onClick={closeModal}>
-                Home
+          <ul>
+            <li className='fa-x-wrapper'>
+              <i className='fa-solid fa-x' onClick={closeModal}></i>
+            </li>
+            <li>
+              <Link to='/' onClick={closeModal}>
+                <i className='link-icon fa-solid fa-house'></i>
+                <span>Home</span>
               </Link>
             </li>
-            <li className='menu-item'>
-              <i className='fa-solid fa-book'></i>
-              <Link to='/books' className='link' onClick={closeModal}>
-                Books
+            <li>
+              <Link to='/books' onClick={closeModal}>
+                <i className='link-icon fa-solid fa-book'></i>
+                <span>Books</span>
               </Link>
             </li>
-            <li className='menu-item'>
-              <i className='fa-solid fa-cart-shopping'></i>
-              <Link to='/cart' className='link' onClick={closeModal}>
-                Cart
+            <li>
+              <Link to='/cart' onClick={closeModal}>
+                <i className='link-icon fa-solid fa-cart-shopping'></i>
+                <span>Cart</span>
               </Link>
             </li>
           </ul>
