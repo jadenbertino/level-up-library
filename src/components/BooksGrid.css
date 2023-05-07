@@ -1,0 +1,20 @@
+:root {
+  --books-per-row: 4;
+}
+
+.books__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -24px;
+}
+
+.book__wrapper {
+  padding: 24px;
+  width: calc(100% / var(--books-per-row));
+}
+
+@media screen and (max-width: 576px) {
+  :root {
+    --books-per-row: 2;
+  }
+}
