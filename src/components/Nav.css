@@ -144,7 +144,12 @@ nav .fa-bars {
   }
 }
 
-@media screen and (max-height: 576px) {
+@media screen and (max-height: 480px) {
+  .nav-modal {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
   .nav-modal ul {
     max-height: none;
   }
