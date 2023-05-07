@@ -92,7 +92,6 @@ input, select, textarea, button {
 
 .btn {
   background-color: var(--purple-color);
-  margin-bottom: 24px;
   padding: 12px 24px;
   font-size: 1.25rem;
   color: white;

@@ -185,3 +185,48 @@
 .totals__row:nth-child(3) {
   font-weight: 900;
 }
+
+.totals .btn {
+  margin-bottom: 20px;
+}
+
+/* 
+
+    CONFIRM REMOVE MODAL
+
+*/
+
+.confirm-remove-modal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 600px;
+  column-gap: 20px;
+}
+
+.confirm-remove-modal img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.confirm-remove-modal .text-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.confirm-remove-modal .btns {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.confirm-remove-modal .cancel-btn {
+  font-size: 1rem;
+  background-color: gray;
+}
+
+.confirm-remove-modal .remove-btn {
+  font-size: 1rem;
+  background-color: #f26969;
+}

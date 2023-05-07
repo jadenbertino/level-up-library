@@ -31,7 +31,7 @@
 @media screen and (max-width: 576px) {
   #browse-books .container {
     padding-top: 24px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
 
   select {

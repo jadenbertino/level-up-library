@@ -6,7 +6,7 @@ import './Nav.css';
 
 export default function Nav({ numBooks }) {
   function toggleMenu() {
-    document.body.classList.toggle('modal--open');
+    document.body.classList.toggle('mobile-menu-open');
   }
 
   return (
@@ -38,24 +38,24 @@ export default function Nav({ numBooks }) {
             </Link>
           </li>
         </ul>
-        <div className='modal'>
-          <i className='fa-solid fa-x modal__x-icon' onClick={toggleMenu}></i>
-          <ul className='modal__menu'>
-            <li className='modal__menu-item'>
+        <div className='mobile-menu'>
+          <i className='fa-solid fa-x x-icon' onClick={toggleMenu}></i>
+          <ul className='menu'>
+            <li className='menu-item'>
               <i className='fa-solid fa-house'></i>
-              <Link to='/' className='modal__menu-link' onClick={toggleMenu}>
+              <Link to='/' className='link' onClick={toggleMenu}>
                 Home
               </Link>
             </li>
-            <li className='modal__menu-item'>
+            <li className='menu-item'>
               <i className='fa-solid fa-book'></i>
-              <Link to='/books' className='modal__menu-link' onClick={toggleMenu}>
+              <Link to='/books' className='link' onClick={toggleMenu}>
                 Books
               </Link>
             </li>
-            <li className='modal__menu-item'>
+            <li className='menu-item'>
               <i className='fa-solid fa-cart-shopping'></i>
-              <Link to='/cart' className='modal__menu-link' onClick={toggleMenu}>
+              <Link to='/cart' className='link' onClick={toggleMenu}>
                 Cart
               </Link>
             </li>

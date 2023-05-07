@@ -1,10 +1,19 @@
 import Price from 'components/Price';
+import { useModalContext } from 'hooks/useModalContext';
 import { formatPrice } from 'utils/BookUtils';
 
-export default function CartItem({ item, updateCartQuantity, removeItem }) {
+export default function CartItem({ item, updateCartQuantity }) {
+  const { setModalContext } = useModalContext();
+
   function decrementQuantity() {
     if (item.quantity > 1) {
       updateCartQuantity(item, item.quantity - 1);
+    }
+    if (item.quantity === 1) {
+      setModalContext({
+        type: 'confirm-remove',
+        payload: item,
+      });
     }
   }
 
@@ -20,9 +29,6 @@ export default function CartItem({ item, updateCartQuantity, removeItem }) {
         <div className='cart-item__price'>
           <Price originalPrice={item.originalPrice} salePrice={item.salePrice} />
         </div>
-        <button className='cart-item__remove-btn' onClick={() => removeItem(item)}>
-          Remove
-        </button>
       </div>
       <div className='cart-item__quantity'>
         <button className='btn adjust-quantity' onClick={decrementQuantity}>

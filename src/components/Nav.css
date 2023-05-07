@@ -67,7 +67,7 @@ nav .container {
 
 */
 
-.modal {
+.mobile-menu {
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -78,15 +78,15 @@ nav .container {
   z-index: 999;
 }
 
-.modal--open .modal {
+.mobile-menu-open .mobile-menu {
   visibility: visible;
 }
 
-body.modal--open {
+body.mobile-menu-open {
   overflow: hidden; /* prevent page scroll if modal is open */
 }
 
-.modal__x-icon {
+.mobile-menu .x-icon {
   color: white;
   font-size: 48px;
   position: absolute;
@@ -94,7 +94,7 @@ body.modal--open {
   top: 24px;
 }
 
-.modal__menu {
+.mobile-menu .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -104,18 +104,18 @@ body.modal--open {
   color: #fff;
 }
 
-.modal__menu-item {
+.mobile-menu .menu-item {
   margin: 32px 0;
   display: flex;
   align-items: center;
 }
 
-.modal .fa-solid {
+.mobile-menu .fa-solid {
   font-size: 1.5rem;
   margin-right: 20px;
 }
 
-.modal__menu-link {
+.mobile-menu .link {
   font-size: 2.5rem;
 }
 
