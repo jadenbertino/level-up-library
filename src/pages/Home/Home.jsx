@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Landing />
-      <main>
+      <main id='home'>
         <Highlights />
         <PopularBooks />
         <DiscountedBooks />

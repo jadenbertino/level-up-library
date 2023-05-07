@@ -1,10 +1,14 @@
-section > .container {
+#home section > .container {
   padding-top: 48px;
   padding-bottom: 48px;
 }
 
 #explore > .container {
   padding-bottom: 96px;
+}
+
+#home .section__title {
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 576px) {

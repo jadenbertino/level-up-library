@@ -11,17 +11,18 @@
   margin-right: 12px;
 }
 
-.container--book-info {
-  padding-top: 24px;
-}
-
 /*
 
     BOOK SELECTED
 
 */
 
-.book-selected__container {
+:is(#active-book, #recc-books) > .container {
+  padding-top: 24px;
+  padding-bottom: 60px;
+}
+
+.book-selected {
   margin-top: 24px;
   display: flex;
   align-items: flex-start;
@@ -57,6 +58,7 @@
 }
 
 .recc-books__title {
-  margin-top: 60px;
+  margin-bottom: 40px;
   font-size: 2rem;
+  text-align: center;
 }

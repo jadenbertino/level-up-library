@@ -4,6 +4,14 @@
 
 #footer > .container {
   height: var(--footer-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#footer .col {
+  display: flex;
+  justify-content: center;
 }
 
 .footer__logo,

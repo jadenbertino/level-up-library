@@ -23,7 +23,7 @@ export default function DiscountedBooks() {
         </div>
         <div className='row'>
           <div className='col'>
-            {books.length
+            {discountedBooks.length
               ? <BooksGrid books={discountedBooks} />
               : null
             }

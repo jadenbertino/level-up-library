@@ -36,11 +36,11 @@ export default function Books() {
 
   return (
     <main>
-      <section id='books__main'>
+      <section id='browse-books'>
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <div className='section__title books__header'>
+              <div className='section__title'>
                 <h2 className='books__header--title'>
                   All <span className='text--purple'>Books</span>
                 </h2>

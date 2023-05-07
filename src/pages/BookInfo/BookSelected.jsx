@@ -3,7 +3,7 @@ import Rating from 'components/Rating'
 
 export default function BookSelected({ book, addItemToCart }) {
   return (
-    <div className='book-selected__container'>
+    <div className='book-selected'>
       <img src={book.url} alt='' className='book-selected__img' />
       <div className='book-selected__info'>
         <h2 className='book-selected__title'>{book.title}</h2>
