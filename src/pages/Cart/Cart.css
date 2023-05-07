@@ -246,6 +246,14 @@
   .cart__header {
     grid-template-columns: 3fr 2fr 2fr;
   }
+
+  .cart-item .cart-item__img {
+    width: 75%;
+  }
+
+  .cart-item .current-quantity {
+    width: 40px;
+  }
   
   .cart-item__title.mobile-only {
     display: block;
