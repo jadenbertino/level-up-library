@@ -21,8 +21,8 @@ export default function Nav({ numBooks }) {
               Home
             </Link>
           </li>
-          <li className='nav__list--item nav__link--primary'>
-            <Link to='/books' className='nav__list--link'>
+          <li className='nav__list--item'>
+            <Link to='/books' className='nav__list--link primary'>
               Books
             </Link>
           </li>

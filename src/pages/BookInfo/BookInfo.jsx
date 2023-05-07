@@ -47,7 +47,7 @@ export default function BookInfo({ addItemToCart }) {
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <h2 className='recc-books__title'>Recommended Books</h2>
+              <h2 className='recc-books__header'>Recommended Books</h2>
             </div>
           </div>
           <div className='row'>

@@ -1,3 +1,9 @@
+/* 
+
+    NAVICATION HEADER
+
+*/
+
 .home-links {
   display: flex;
   align-items: center;
@@ -28,20 +34,23 @@
   align-items: flex-start;
 }
 
-.book-selected__img {
+.book-selected img {
   border-radius: 12px;
   object-fit: contain;
-  height: auto;
-  flex-basis: calc(100% / 3);
-  min-width: 300px;
+  width: calc(100% / 3);
+  min-width: 250px;
 }
 
-.book-selected__info {
-  flex-basis: calc(100% * 2 / 3);
+.book-selected .mobile-img-wrapper {
+  display: none;
+}
+
+.book-selected .info {
   padding-left: 48px;
+  text-align: left;
 }
 
-.book-selected__title {
+.book-selected .title {
   font-size: 1.75rem;
 }
 
@@ -49,16 +58,60 @@
   margin: 8px 0 12px;
 }
 
-.summary__wrapper {
-  margin: 20px 0;
+.book-selected .summary {
+  margin-top: 20px;
 }
 
-.summary__para {
+.book-selected .btn {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.book-selected .para {
   margin-top: 12px
 }
 
-.recc-books__title {
+.recc-books__header {
   margin-bottom: 40px;
   font-size: 2rem;
   text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .book-selected .info {
+    padding-left: 24px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  :is(#active-book, #recc-books) > .container {
+    padding-bottom: 40px;
+  }
+
+  .book-selected {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .book-selected .info {
+    padding-left: 0;
+  }
+
+  .book-selected .rating-and-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .book-selected .desktop-img {
+    display: none;
+  }
+  
+  .book-selected .mobile-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
