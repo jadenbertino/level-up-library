@@ -1,8 +1,8 @@
-import Book from 'components/Book';
 import { useCollection } from 'hooks/useCollection';
 import { useEffect, useState } from 'react';
 
 // styles
+import BooksGrid from 'components/BooksGrid';
 import './Books.css';
 
 export default function Books() {
@@ -65,7 +65,7 @@ export default function Books() {
               <div className='col'>
                 <div className='books__container'>
                   {filteredBooks.length
-                    ? filteredBooks.map((book) => <Book book={book} key={book.id} />)
+                    ? <BooksGrid books={filteredBooks} />
                     : null}
                 </div>
               </div>

@@ -5,7 +5,7 @@
 .books__container {
   display: flex;
   flex-wrap: wrap;
-  margin: -24px;
+  margin: -24px -12px;
 }
 
 .book__wrapper {

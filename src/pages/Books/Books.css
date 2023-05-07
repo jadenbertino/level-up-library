@@ -1,12 +1,18 @@
-.books__header {
+.section__title.books__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
 }
 
 .books__header--title {
   margin: 0;
   font-size: 40px;
+}
+
+#books__body .books__container {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .books__header select {
