@@ -230,8 +230,7 @@
 
 .confirm-remove-modal .cancel-btn {
   font-size: 1rem;
-  /* background-color: #4C4C47; */
-  background-color: #6D9F71;
+  background-color: gray;
 }
 
 .confirm-remove-modal .remove-btn {
