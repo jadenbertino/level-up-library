@@ -15,9 +15,7 @@ export default function Book({ book }) {
     image.src = book.url;
     image.onload = () => {
       if (mountedRef.current) {
-        setTimeout(() => {
-          setBookImg(image);
-        }, 300);
+        setBookImg(image);
       }
     };
     return () => {
