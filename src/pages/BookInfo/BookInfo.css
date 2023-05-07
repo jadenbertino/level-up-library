@@ -54,10 +54,6 @@
   font-size: 1.75rem;
 }
 
-.book__rating--wrapper {
-  margin: 8px 0 12px;
-}
-
 .book-selected .summary {
   margin-top: 20px;
 }

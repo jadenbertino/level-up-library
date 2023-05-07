@@ -2,10 +2,10 @@
   --books-per-row: 4;
 }
 
-.books__container {
+.books-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: -24px;
+  margin: -24px -12px;
 }
 
 .book__wrapper {
@@ -15,7 +15,7 @@
 
 @media screen and (max-width: 768px) {
   .book__wrapper {
-    padding: 20px 12px;
+    padding: 20px 8px;
   }
 }
 
