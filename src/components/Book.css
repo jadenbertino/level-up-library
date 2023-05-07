@@ -93,7 +93,7 @@
 @media screen and (max-width: 576px) {
   .book__img--wrapper,
   .book__img--skeleton {
-    height: 50vw;
+    height: 55vw;
   }
 
   .book__img {
@@ -107,16 +107,5 @@
 
   .book__title {
     max-width: 200px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .books-grid {
-    margin-bottom: -20px;
-  }
-
-  .book__img--wrapper,
-  .book__img--skeleton {
-    height: 55vw;
   }
 }

@@ -1,27 +1,25 @@
 :root {
   --books-per-row: 4;
   --book-horizontal-padding: 24px;
+  --book-vertical-padding: 24px;
 }
 
 .books-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: -24px calc(-1 * var(--book-horizontal-padding));
+  /* to negate .book__wrapper gutters on edges of books-grid */
+  margin: calc(-1 * var(--book-vertical-padding)) calc(-1 * var(--book-horizontal-padding));
 }
 
 .book__wrapper {
-  padding: 24px var(--book-horizontal-padding);
+  padding: var(--book-vertical-padding) var(--book-horizontal-padding);
   width: calc(100% / var(--books-per-row));
 }
 
 @media screen and (max-width: 768px) {
   :root {
+    --book-vertical-padding: 16px;
     --book-horizontal-padding: 8px;
-  }
-
-  .book__wrapper {
-    padding-top: 16px;
-    padding-bottom: 16px;
   }
 }
 
