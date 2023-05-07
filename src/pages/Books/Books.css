@@ -32,6 +32,7 @@
   }
 
   #browse-books .container {
+    padding-top: 12px;
     padding-bottom: 40px;
   }
 
