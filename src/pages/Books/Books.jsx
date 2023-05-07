@@ -62,9 +62,7 @@ export default function Books() {
           </div>
           <div className='row'>
             <div className='col'>
-              <div className='books__container'>
-                {filteredBooks.length ? <BooksGrid books={filteredBooks} /> : null}
-              </div>
+              {filteredBooks.length ? <BooksGrid books={filteredBooks} /> : null}
             </div>
           </div>
         </div>

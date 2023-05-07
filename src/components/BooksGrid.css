@@ -13,6 +13,12 @@
   width: calc(100% / var(--books-per-row));
 }
 
+@media screen and (max-width: 768px) {
+  .book__wrapper {
+    padding: 20px 12px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   :root {
     --books-per-row: 2;

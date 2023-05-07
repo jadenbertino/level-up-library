@@ -242,6 +242,11 @@
 }
 
 @media screen and (max-width: 576px) {
+  .cart-item,
+  .cart__header {
+    grid-template-columns: 3fr 2fr 2fr;
+  }
+  
   .cart-item__title.mobile-only {
     display: block;
     text-align: center;
@@ -276,7 +281,7 @@
   .confirm-remove-modal {
     padding: 16px;
   }
-  
+
   .confirm-remove-modal h2 {
     font-size: 18px;
   }
