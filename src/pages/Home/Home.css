@@ -1,4 +1,4 @@
-#home section > .container {
+:is(#home section, #landing) > .container {
   padding-top: 48px;
   padding-bottom: 48px;
 }

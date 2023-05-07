@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .books__header--title {
@@ -24,27 +24,21 @@
   line-height: 40px;
   outline: none;
   padding: 0 16px;
-  width: 100%;
-  max-width: 200px;
 }
 
 @media screen and (max-width: 576px) {
   #browse-books .container {
     padding-top: 24px;
-    padding-bottom: 80px;
+    padding-bottom: 40px;
   }
 
-  select {
-    max-width: 160px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #browse-books .section__title {
-    flex-direction: column;
+  #browse-books .books__header--title {
+    font-size: 2rem;
   }
 
   #browse-books select {
-    margin-top: 16px;
+    padding: 0 8px;
+    line-height: 36px;
+    height: 36px;
   }
 }

@@ -3,8 +3,22 @@
   max-width: 720px;
 }
 
+#landing :is(.container, .row, .col) {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+#landing .col {
+  justify-content: space-around;
+}
+
+.header__text {
+  text-align: center;
+}
+
 .header__title {
-  font-size: 56px;
+  font-size: 48px;
   color: #7342D6;
   margin-bottom: 24px;
 }
@@ -18,7 +32,6 @@
   height: 40vh;
   width: 100%;
   object-fit: contain;
-  margin-top: 32px;
 }
 
 @media screen and (max-width: 768px) {

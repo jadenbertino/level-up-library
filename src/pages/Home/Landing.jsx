@@ -9,8 +9,8 @@ export default function Landing() {
     <section id='landing'>
       <div className='container'>
         <div className='row'>
-          <div className='col text--center'>
-            <div className='header__description'>
+          <div className='col'>
+            <div className='header__text'>
               <h1 className='header__title'>America's most awarded online library platform</h1>
               <h2 className='header__sub-title'>
                 Find your dream book with <span className='text--purple'>Library</span>
