@@ -3,10 +3,12 @@ nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1000px;
 }
 
 nav .logo {
   width: 160px;
+  margin-left: -20px;
 }
 
 nav ul {
