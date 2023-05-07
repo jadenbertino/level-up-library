@@ -5,11 +5,11 @@ export const ModalContext = createContext();
 export function ModalContextProvider({ children }) {
   const [modalContext, setModalContext] = useState({
     type: '',
-    payload: ''
+    payload: null,
   });
 
   function closeModal() {
-    setModalContext({})
+    setModalContext({});
   }
 
   return (

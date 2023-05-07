@@ -49,3 +49,7 @@
   height: 100%;
   z-index: 101;
 }
+
+body.modal {
+  overflow: hidden; /* prevent page scroll if modal is open */
+}
