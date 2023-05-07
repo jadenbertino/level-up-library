@@ -1,21 +1,27 @@
 :root {
   --books-per-row: 4;
+  --book-horizontal-padding: 24px;
 }
 
 .books-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: -24px -12px;
+  margin: -24px calc(-1 * var(--book-horizontal-padding));
 }
 
 .book__wrapper {
-  padding: 24px;
+  padding: 24px var(--book-horizontal-padding);
   width: calc(100% / var(--books-per-row));
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    --book-horizontal-padding: 8px;
+  }
+
   .book__wrapper {
-    padding: 20px 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
