@@ -28,7 +28,7 @@ export default function Book({ book }) {
 
   return (
     <div className='book'>
-      {!bookImg ? (
+      {bookImg ? (
         <>
           <div className='book__img--wrapper'>
             <Link to={`/books/${book.id}`} className='book__img'>
