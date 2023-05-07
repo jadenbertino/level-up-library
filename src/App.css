@@ -93,11 +93,11 @@ input, select, textarea, button {
 .btn {
   background-color: var(--purple-color);
   padding: 12px 24px;
-  font-size: 1.25rem;
   color: white;
   border: none;
   border-radius: 4px;
   transition: opacity 250ms ease;
+  font-size: 1rem;
 }
 
 .btn:hover {

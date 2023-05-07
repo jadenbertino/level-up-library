@@ -261,4 +261,28 @@
     width: 32px;
     height: 32px;
   }
+
+  .confirm-remove-modal h2 {
+    font-size: 20px;
+  }
+
+  .confirm-remove-modal .btn {
+    font-size: 14px;
+    padding: 8px 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .confirm-remove-modal {
+    padding: 16px;
+  }
+  
+  .confirm-remove-modal h2 {
+    font-size: 18px;
+  }
+
+  .confirm-remove-modal .btn {
+    font-size: 12px;
+    padding: 8px 20px;
+  }
 }
