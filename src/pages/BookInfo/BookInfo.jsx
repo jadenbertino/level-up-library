@@ -4,8 +4,8 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
 // components
-import BookSelected from './BookSelected';
 import Book from 'components/Book';
+import BookSelected from './BookSelected';
 
 // styles & assets
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -18,7 +18,7 @@ export default function BookInfo({ addItemToCart }) {
   const [book, setBook] = useState(null);
 
   useEffect(() => {
-    if (!books) return;
+    if (books.length < 1) return;
     setBook(books.find((book) => book.id === currentBookID));
   }, [books, currentBookID]);
 
@@ -36,11 +36,12 @@ export default function BookInfo({ addItemToCart }) {
           <div className='row recc-books'>
             <h2 className='recc-books__title'>Recommended Books</h2>
             <div className='books__container'>
-              {books &&
-                books
-                  .filter((book) => book.rating === 5 && book.id !== currentBookID) // if they are on book info page then show only new books
-                  .slice(0, 4)
-                  .map((book) => <Book book={book} key={book.id} />)}
+              {books.length
+                ? books
+                    .filter((book) => book.rating === 5 && book.id !== currentBookID) // if they are on book info page then show only new books
+                    .slice(0, 4)
+                    .map((book) => <Book book={book} key={book.id} />)
+                : null}
             </div>
           </div>
         </div>

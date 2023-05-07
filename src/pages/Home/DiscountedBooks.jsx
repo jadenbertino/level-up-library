@@ -17,11 +17,12 @@ export default function DiscountedBooks() {
         <div className='row'>
           <div className='col'>
             <div className='books__container'>
-              {books &&
-                books
-                  .filter((book) => book.salePrice > 0)
-                  .slice(0, 8)
-                  .map((book) => <Book book={book} key={book.id} />)}
+              {books.length
+                ? books
+                    .filter((book) => book.salePrice > 0)
+                    .slice(0, 8)
+                    .map((book) => <Book book={book} key={book.id} />)
+                : null}
             </div>
           </div>
         </div>

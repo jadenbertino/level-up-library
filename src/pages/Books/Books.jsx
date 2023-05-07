@@ -64,7 +64,9 @@ export default function Books() {
             <div className='row'>
               <div className='col'>
                 <div className='books__container'>
-                  {filteredBooks && filteredBooks.map((book) => <Book book={book} key={book.id} />)}
+                  {filteredBooks.length
+                    ? filteredBooks.map((book) => <Book book={book} key={book.id} />)
+                    : null}
                 </div>
               </div>
             </div>
