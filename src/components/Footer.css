@@ -32,3 +32,9 @@
     --footer-height: 240px !important;
   }
 }
+
+@media screen and (max-width: 576px) {
+  :root {
+    --footer-height: 220px !important;
+  }
+}
