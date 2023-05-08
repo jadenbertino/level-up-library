@@ -1,9 +1,9 @@
 import BooksGrid from 'components/BooksGrid';
 import { useEffect, useState } from 'react';
-import { useCollection } from '../../hooks/useCollection';
+import { useBooksContext } from 'hooks/useBooksContext';
 
 export default function PopularBooks() {
-  const { docs: books } = useCollection('books');
+  const { books } = useBooksContext()
   const [topFourBooks, setTopFourBook] = useState([]);
 
   useEffect(() => {

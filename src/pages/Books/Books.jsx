@@ -1,12 +1,12 @@
-import { useCollection } from 'hooks/useCollection';
 import { useEffect, useState } from 'react';
+import { useBooksContext } from 'hooks/useBooksContext';
 
 // styles
 import BooksGrid from 'components/BooksGrid';
 import './Books.css';
 
 export default function Books() {
-  const { docs: books } = useCollection('books');
+  const { books } = useBooksContext()
   const [filteredBooks, setFilteredBooks] = useState([]);
 
   useEffect(() => {
