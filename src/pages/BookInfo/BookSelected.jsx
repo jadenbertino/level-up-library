@@ -1,7 +1,18 @@
 import Price from 'components/Price'
 import Rating from 'components/Rating'
+import { useState } from 'react'
 
 export default function BookSelected({ book, addItemToCart }) {
+  const [confirmCart, setConfirmCart] = useState(false)
+
+  function handleAddToCart() {
+    addItemToCart(book)
+    setConfirmCart(true)
+    setTimeout(() => {
+      setConfirmCart(false)
+    }, 1500)
+  }
+
   return (
     <div className='book-selected'>
       <img src={book.url} alt='' className='desktop-img' />
@@ -26,9 +37,11 @@ export default function BookSelected({ book, addItemToCart }) {
             debitis. Ex, consectetur! Officiis rerum obcaecati quae, a accusantium, consequatur,
             dignissimos quia velit aperiam dolor quisquam pariatur?
           </p>
-          <button className='btn' onClick={() => addItemToCart(book)}>
-            Add To Cart
-          </button>
+          <div className={`btn-wrapper${confirmCart ? ' confirm-active' : ''}`}>
+            <button className='btn' onClick={handleAddToCart}>
+              Add To Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>

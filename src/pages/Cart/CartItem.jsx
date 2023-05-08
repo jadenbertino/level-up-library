@@ -10,10 +10,11 @@ export default function CartItem({ item, updateCartQuantity }) {
       updateCartQuantity(item, item.quantity - 1);
     }
     if (item.quantity === 1) {
-      setModalContext({
+      setModalContext(prev => ({
+        ...prev,
         type: 'confirm-remove',
         payload: item,
-      });
+      }));
     }
   }
 

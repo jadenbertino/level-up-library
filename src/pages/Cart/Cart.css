@@ -204,6 +204,18 @@
   column-gap: 20px;
 }
 
+.fade-in .confirm-remove-modal {
+  /* slide in animation */
+  transform: translateY(10%); 
+  transition: transform 300ms ease-in-out;
+}
+
+.visible .confirm-remove-modal {
+  /* slide in animation */
+  transform: translateX(0); 
+  transition: transform 300ms ease-in-out;
+}
+
 .confirm-remove-modal img {
   width: 100%;
   object-fit: contain;

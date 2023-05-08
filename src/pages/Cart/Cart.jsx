@@ -9,11 +9,11 @@ import Modal from 'components/Modal';
 import './Cart.css';
 
 export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
-  const { modalContext, setModalContext, closeModal } = useModalContext();
+  const { modalContext, fadeOutModal } = useModalContext();
 
   function handleDelete() {
     removeItem(modalContext.payload);
-    setModalContext({});
+    fadeOutModal();
   }
 
   let { subtotal, tax, total } = totals;
@@ -88,7 +88,7 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
           <div className='text-content'>
             <h2>Are You Sure You Want To Remove "{modalContext.payload.title}"?</h2>
             <div className='btns'>
-              <button className='btn cancel-btn' onClick={closeModal}>
+              <button className='btn cancel-btn' onClick={fadeOutModal}>
                 Cancel
               </button>
               <button className='btn remove-btn' onClick={handleDelete}>

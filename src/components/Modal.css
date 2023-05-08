@@ -1,3 +1,13 @@
+.fade-in {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
 .modal-backdrop {
   position: fixed;
   top: 0;
