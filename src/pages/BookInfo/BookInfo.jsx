@@ -17,7 +17,7 @@ export default function BookInfo({ addItemToCart }) {
   const [focusedBook, setFocusedBook] = useState(null);
   const [topFourBooks, setTopFourBooks] = useState([]);
   const { books } = useBooksContext()
-
+  
   useEffect(() => {
     if (books.length < 1) return;
     window.scrollTo(0, 0);

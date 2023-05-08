@@ -64,6 +64,12 @@
 
 .book-selected .btn {
   margin-top: 20px;
+  transition: background-color 500ms ease;
+}
+
+.book-selected .btn.confirm {
+  background-color: #0496FF;
+  transition: background-color 300ms ease;
 }
 
 .book-selected .para {
