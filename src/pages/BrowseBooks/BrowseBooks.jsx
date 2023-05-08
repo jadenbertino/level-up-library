@@ -3,7 +3,7 @@ import { useBooksContext } from 'hooks/useBooksContext';
 
 // styles
 import BooksGrid from 'components/BooksGrid';
-import './Books.css';
+import './BrowseBooks.css';
 
 export default function Books() {
   const { books } = useBooksContext()
