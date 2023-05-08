@@ -20,6 +20,7 @@ export default function BookInfo({ addItemToCart }) {
 
   useEffect(() => {
     if (books.length < 1) return;
+    window.scrollTo(0, 0);
     setFocusedBook(books.find((book) => book.id === currentBookID));
     setTopFourBooks(
       books
