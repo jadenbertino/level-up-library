@@ -7,7 +7,7 @@ import './Modal.css';
 
 export default function Modal({ children, className }) {
   const root = document.querySelector('#root');
-  const { closeModal } = useModalContext();
+  const { fadeOutModal, modalContext } = useModalContext();
   const [modalVisible, setModalVisible] = useState(false);
 
   // fade in modal
@@ -17,12 +17,12 @@ export default function Modal({ children, className }) {
     });
   }, []);
 
-  function fadeOutModal() {
-    setModalVisible(false);
-    setTimeout(() => {
-      closeModal();
-    }, 100000);
-  }
+  // fade out modal
+  useEffect(() => {
+    if (modalContext.isFadingOut) {
+      setModalVisible(false);
+    }
+  }, [modalContext.isFadingOut])
 
   return createPortal(
     <div className={`modal-backdrop fade-in${modalVisible ? ' visible' : ''}`}>

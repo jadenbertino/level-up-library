@@ -7,10 +7,10 @@ import Modal from './Modal';
 import './Nav.css';
 
 export default function Nav({ numBooks }) {
-  const { modalContext, setModalContext, closeModal } = useModalContext();
+  const { modalContext, fadeInModal, fadeOutModal } = useModalContext();
 
   function openNavModal() {
-    setModalContext({
+    fadeInModal({
       type: 'nav',
       payload: null,
     });
@@ -52,22 +52,22 @@ export default function Nav({ numBooks }) {
         <Modal className={'nav-modal'}>
           <ul>
             <li className='fa-x-wrapper'>
-              <i className='fa-solid fa-x' onClick={closeModal}></i>
+              <i className='fa-solid fa-x' onClick={fadeOutModal}></i>
             </li>
             <li>
-              <Link to='/' onClick={closeModal}>
+              <Link to='/' onClick={fadeOutModal}>
                 <i className='link-icon fa-solid fa-house'></i>
                 <span>Home</span>
               </Link>
             </li>
             <li>
-              <Link to='/books' onClick={closeModal}>
+              <Link to='/books' onClick={fadeOutModal}>
                 <i className='link-icon fa-solid fa-book'></i>
                 <span>Books</span>
               </Link>
             </li>
             <li>
-              <Link to='/cart' onClick={closeModal}>
+              <Link to='/cart' onClick={fadeOutModal}>
                 <i className='link-icon fa-solid fa-cart-shopping'></i>
                 <span>Cart</span>
               </Link>
