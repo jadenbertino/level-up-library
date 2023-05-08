@@ -1,7 +1,7 @@
-import { useCollection } from 'hooks/useCollection';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import { useBooksContext } from 'hooks/useBooksContext';
 
 // components
 import BooksGrid from 'components/BooksGrid';
@@ -14,9 +14,9 @@ import './BookInfo.css';
 
 export default function BookInfo({ addItemToCart }) {
   const { id: currentBookID } = useParams();
-  const { docs: books } = useCollection('books');
   const [focusedBook, setFocusedBook] = useState(null);
   const [topFourBooks, setTopFourBooks] = useState([]);
+  const { books } = useBooksContext()
 
   useEffect(() => {
     if (books.length < 1) return;
