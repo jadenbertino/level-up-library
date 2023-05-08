@@ -62,14 +62,39 @@
   font-size: 20px;
 }
 
-.book-selected .btn {
+.book-selected .btn-wrapper {
   margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.book-selected .btn {
   transition: background-color 500ms ease;
 }
 
-.book-selected .btn.confirm {
-  background-color: #0496FF;
+.book-selected .confirm-active .btn {
+  background-color: #357266;
   transition: background-color 300ms ease;
+}
+
+.btn-wrapper::after {
+  content: '';
+  font-size: 20px;
+  margin-left: 12px;
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
+  background-image: url('../../assets/checkmark.png');
+  width: 32px;
+  height: 32px;
+  background-position: center center;
+  background-size: contain;
+}
+
+.book-selected .confirm-active.btn-wrapper::after {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
 }
 
 .book-selected .para {
@@ -127,6 +152,11 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+  }
+
+  .btn-wrapper::after {
+    width: 28px;
+    height: 28px;
   }
 
   .recc-books__header {

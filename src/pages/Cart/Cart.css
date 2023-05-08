@@ -206,7 +206,7 @@
 
 .fade-in .confirm-remove-modal {
   /* slide in animation */
-  transform: translateY(20%); 
+  transform: translateY(10%); 
   transition: transform 300ms ease-in-out;
 }
 

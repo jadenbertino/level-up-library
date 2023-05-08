@@ -37,9 +37,11 @@ export default function BookSelected({ book, addItemToCart }) {
             debitis. Ex, consectetur! Officiis rerum obcaecati quae, a accusantium, consequatur,
             dignissimos quia velit aperiam dolor quisquam pariatur?
           </p>
-          <button className={`btn${confirmCart ? ' confirm' : ''}`} onClick={handleAddToCart}>
-            Add To Cart
-          </button>
+          <div className={`btn-wrapper${confirmCart ? ' confirm-active' : ''}`}>
+            <button className='btn' onClick={handleAddToCart}>
+              Add To Cart
+            </button>
+          </div>
         </div>
       </div>
     </div>
