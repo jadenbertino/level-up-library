@@ -1,15 +1,29 @@
-import { DisplayFourBooks } from 'components/components';
+import BooksGrid from 'components/BooksGrid';
+import { useEffect, useState } from 'react';
+import { useCollection } from '../../hooks/useCollection';
 
 export default function PopularBooks() {
+  const { docs: books } = useCollection('books');
+  const [topFourBooks, setTopFourBook] = useState([]);
+
+  useEffect(() => {
+    if (books.length < 1) return;
+    setTopFourBook(books.filter((book) => book.rating === 5).slice(0, 4));
+  }, [books]);
+
   return (
     <section id='featured'>
       <div className='container'>
         <div className='row'>
-          <h2 className='section__title'>
-            Popular <span className='text--purple'>Books</span>
-          </h2>
-          <div className='books'>
-            <DisplayFourBooks />
+          <div className='col'>
+            <h2 className='section__title'>
+              Popular <span className='text--purple'>Books</span>
+            </h2>
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col'>
+            {topFourBooks.length ? <BooksGrid books={topFourBooks} /> : null}
           </div>
         </div>
       </div>

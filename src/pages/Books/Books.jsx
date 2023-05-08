@@ -1,8 +1,8 @@
-import { Book } from 'components/components';
 import { useCollection } from 'hooks/useCollection';
 import { useEffect, useState } from 'react';
 
 // styles
+import BooksGrid from 'components/BooksGrid';
 import './Books.css';
 
 export default function Books() {
@@ -12,7 +12,6 @@ export default function Books() {
   useEffect(() => {
     setFilteredBooks(books);
   }, [books]);
-  console.log('books:', books);
 
   function filterBooks(filter) {
     switch (filter) {
@@ -36,37 +35,38 @@ export default function Books() {
   }
 
   return (
-    <div id='books__body'>
-      <main id='books__main'>
-        <section>
-          <div className='container'>
-            <div className='row'>
-              <div className='books__header'>
-                <h2 className='section__title books__header--title'>
+    <main>
+      <section id='browse-books'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <div className='section__title'>
+                <h2 className='books__header--title'>
                   All <span className='text--purple'>Books</span>
                 </h2>
-                {filteredBooks && (
-                  <select
-                    id='filter'
-                    onChange={(event) => filterBooks(event.target.value)}
-                    defaultValue={'DEFAULT'}
-                  >
-                    <option value='DEFAULT' disabled>
-                      Sort
-                    </option>
-                    <option value='LOW_TO_HIGH'>Price, Low to High</option>
-                    <option value='HIGH_TO_LOW'>Price, High to Low</option>
-                    <option value='RATING'>Top Rated</option>
-                  </select>
-                )}
-              </div>
-              <div className='books__container'>
-                {filteredBooks && filteredBooks.map((book) => <Book book={book} key={book.id} />)}
+                <select
+                  id='filter'
+                  onChange={(e) => filterBooks(e.target.value)}
+                  defaultValue={'DEFAULT'}
+                  className='filter-books'
+                >
+                  <option value='DEFAULT' disabled>
+                    Sort
+                  </option>
+                  <option value='LOW_TO_HIGH'>Price, Low to High</option>
+                  <option value='HIGH_TO_LOW'>Price, High to Low</option>
+                  <option value='RATING'>Top Rated</option>
+                </select>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+          <div className='row'>
+            <div className='col'>
+              {filteredBooks.length ? <BooksGrid books={filteredBooks} /> : null}
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

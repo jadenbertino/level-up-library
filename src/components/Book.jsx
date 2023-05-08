@@ -1,4 +1,5 @@
-import { Price, Rating } from 'components/components';
+import Price from 'components/Price'
+import Rating from 'components/Rating'
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -14,9 +15,7 @@ export default function Book({ book }) {
     image.src = book.url;
     image.onload = () => {
       if (mountedRef.current) {
-        setTimeout(() => {
-          setBookImg(image);
-        }, 300);
+        setBookImg(image);
       }
     };
     return () => {
@@ -29,9 +28,11 @@ export default function Book({ book }) {
     <div className='book'>
       {bookImg ? (
         <>
-          <Link to={`/books/${book.id}`} className='book__img--wrapper'>
-            <img src={book.url} alt='' className='book__img' />
-          </Link>
+          <div className='book__img--wrapper'>
+            <Link to={`/books/${book.id}`} className='book__img'>
+              <img src={book.url} alt='' className='book__img' />
+            </Link>
+          </div>
           <Link to={`/books/${book.id}`} className='book__info'>
             <h3 className='book__title'>{book.title}</h3>
             <Rating rating={book.rating} />

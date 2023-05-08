@@ -1,17 +1,17 @@
-import DiscountedBooks from './DiscountedBooks';
 import Explore from './Explore';
-import FeatureShowcase from './FeatureShowcase';
+import Highlights from './WhyChooseLibrary';
 import Landing from './Landing';
-import PopularBooks from './PopularBooks';
+import PopularBooks from './PopularBooks'
+import DiscountedBooks from './DiscountedBooks';
 
-import './Home.css';
+import './Home.css'
 
 export default function Home() {
   return (
     <>
       <Landing />
-      <main>
-        <FeatureShowcase />
+      <main id='home'>
+        <Highlights />
         <PopularBooks />
         <DiscountedBooks />
         <Explore />

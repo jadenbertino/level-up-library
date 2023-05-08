@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { db } from '../firebase/init';
 
 export function useCollection(collectionName) {
-  const [docs, setDocs] = useState(null);
+  const [docs, setDocs] = useState([]);
   const [pending, setPending] = useState(true);
 
   useEffect(() => {

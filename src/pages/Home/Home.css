@@ -1,114 +1,19 @@
-/*
-
-    REUSABLES
-
-*/
-
-.section__title {
-  margin-bottom: 32px;
-  font-size: 2rem;
-  text-align: center;
+:is(#home section, #landing) > .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
-.row--center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#explore > .container {
+  padding-bottom: 96px;
 }
 
-/*
-
-    LANDING
-
-*/
-
-.header__container {
-  height: calc(100vh - 100px);
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+#home .section__title {
+  margin-bottom: 40px;
 }
 
-.header__title {
-  font-size: 3.5rem;
-  color: #7342D6;
-  margin-bottom: 24px;
-}
-
-.header__sub-title {
-  font-size: 1.5rem;
-  margin-bottom: 32px;
-}
-
-.header__img--wrapper {
-  max-height: 50vh;
-  padding: 20px;
-}
-
-.header__img {
-  height: 100%;
-}
-
-/*
-
-    FEATURES
-
-*/
-
-#highlights {
-  text-align: center;
-}
-
-.highlights__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 60px;
-}
-
-.highlight {
-  padding: 0 24px;
-  flex-basis: calc(100% / 3)
-}
-
-.highlight__icon--wrapper {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 24px;
-  border: 2px solid #7342D6;
-  border-radius: 4px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.highlight__icon {
-  color: #7342D6;
-  font-size: 32px;
-}
-
-.highlight__title {
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
-.highlight__para {
-  margin-bottom: 24px;
-  max-width: 280px;
-  margin: 0 auto;
-}
-
-/*
-
-    Featured Books
-
-*/
-#featured {
-  text-align: start;
+@media screen and (max-width: 576px) {
+  section > .container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
