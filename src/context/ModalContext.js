@@ -23,7 +23,7 @@ export function ModalContextProvider({ children }) {
     setModalContext(prev => ({...prev, isFadingOut: true}))
     setTimeout(() => {
       setModalContext(initialModalContext)
-    }, 400) // must match the transition time in Modal.css
+    }, 300) // must match the transition time in Modal.css
   }
 
   return (
