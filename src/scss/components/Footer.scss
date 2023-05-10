@@ -1,9 +1,11 @@
+@use '../variables';
+
 #footer {
   background-color: #242424;
 }
 
 #footer > .container {
-  height: var(--footer-height);
+  height: variables.$footer-height;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,16 +27,4 @@
 .footer__logo {
   width: 160px;
   filter: grayscale(1) brightness(0) invert(1); /* turns to black then inverts colors */
-}
-
-@media screen and (max-width: 768px) {
-  :root {
-    --footer-height: 240px !important;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  :root {
-    --footer-height: 220px !important;
-  }
 }

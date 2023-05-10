@@ -1,3 +1,5 @@
+@use '../variables';
+
 .fade-in {
   opacity: 0;
   transition: opacity 300ms ease-in-out;
@@ -25,7 +27,7 @@
 .modal {
   border-radius: 8px;
   background-color: #fff;
-  color: var(--purple-color);
+  color: variables.$purple-color;
   padding: 24px;
   position: relative;
   z-index: 102;

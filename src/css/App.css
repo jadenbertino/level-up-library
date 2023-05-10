@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-:root {
-  --purple-color: #7342D6;
-  --nav-height: 92px;
-  --footer-height: 300px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +17,10 @@ button {
   cursor: pointer;
 }
 
-input, select, textarea, button {
+input,
+select,
+textarea,
+button {
   font-family: inherit;
 }
 
@@ -88,7 +85,7 @@ input, select, textarea, button {
 
 */
 .btn {
-  background-color: var(--purple-color);
+  background-color: #7342d6;
   padding: 12px 24px;
   color: white;
   border: none;
@@ -107,5 +104,5 @@ input, select, textarea, button {
 }
 
 .text--purple {
-  color: var(--purple-color);
+  color: #7342d6;
 }
