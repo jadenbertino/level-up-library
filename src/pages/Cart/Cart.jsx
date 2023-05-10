@@ -6,7 +6,7 @@ import CartItem from './CartItem';
 // styles
 import cartIcon from 'assets/empty_cart.svg';
 import Modal from 'components/Modal';
-import './Cart.css';
+import 'styles/pages/Cart/Cart.css';
 
 export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
   const { modalContext, fadeOutModal } = useModalContext();

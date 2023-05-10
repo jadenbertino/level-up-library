@@ -3,7 +3,7 @@ import { useModalContext } from '../hooks/useModalContext';
 
 // styles
 import { useEffect, useState } from 'react';
-import './Modal.css';
+import 'styles/components/Modal.css';
 
 export default function Modal({ children, className }) {
   const root = document.querySelector('#root');

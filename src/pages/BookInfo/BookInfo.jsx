@@ -11,7 +11,7 @@ import BookSelected from './BookSelected';
 // styles & assets
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './BookInfo.css';
+import 'styles/pages/BookInfo/BookInfo.css';
 
 export default function BookInfo({ addItemToCart }) {
   const { id: currentBookID } = useParams();

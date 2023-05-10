@@ -4,7 +4,7 @@ import Landing from './Landing';
 import PopularBooks from './PopularBooks'
 import DiscountedBooks from './DiscountedBooks';
 
-import './Home.css'
+import 'styles/pages/Home/Home.css'
 
 export default function Home() {
   return (

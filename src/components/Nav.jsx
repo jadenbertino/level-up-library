@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // styles & assets
 import logo from 'assets/library-logo.png';
 import Modal from './Modal';
-import './Nav.css';
+import 'styles/components/Nav.css';
 
 export default function Nav({ numBooks }) {
   const { modalContext, fadeInModal, fadeOutModal } = useModalContext();

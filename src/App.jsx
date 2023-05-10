@@ -12,7 +12,7 @@ import Footer from 'components/Footer';
 import Nav from 'components/Nav';
 
 // styles
-import './App.css';
+import 'styles/App.css';
 
 export default function App() {
   const { cart, addItemToCart, updateCartQuantity, removeItem, calcPrices, getNumBooks } = useCart();

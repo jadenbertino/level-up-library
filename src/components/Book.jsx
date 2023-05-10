@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // styles
-import './Book.css';
+import 'styles/components/Book.css';
 
 export default function Book({ book }) {
   const [bookImg, setBookImg] = useState();
