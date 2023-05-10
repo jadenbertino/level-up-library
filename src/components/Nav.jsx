@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 // styles & assets
 import logo from 'assets/library-logo.png';
+import 'css/components/Nav.css';
 import Modal from './Modal';
-import 'styles/components/Nav.css';
 
 export default function Nav({ numBooks }) {
   const { modalContext, fadeInModal, fadeOutModal } = useModalContext();
@@ -25,9 +25,7 @@ export default function Nav({ numBooks }) {
           </Link>
           <ul>
             <li>
-              <Link to='/'>
-                Home
-              </Link>
+              <Link to='/'>Home</Link>
             </li>
             <li>
               <Link to='/books' className='primary'>

@@ -12,10 +12,11 @@ import Footer from 'components/Footer';
 import Nav from 'components/Nav';
 
 // styles
-import 'styles/App.css';
+import 'css/App.css';
 
 export default function App() {
-  const { cart, addItemToCart, updateCartQuantity, removeItem, calcPrices, getNumBooks } = useCart();
+  const { cart, addItemToCart, updateCartQuantity, removeItem, calcPrices, getNumBooks } =
+    useCart();
 
   return (
     <div className='app'>

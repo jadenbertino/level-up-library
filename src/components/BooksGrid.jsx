@@ -1,5 +1,5 @@
+import 'css/components/BooksGrid.css';
 import Book from './Book';
-import 'styles/components/BooksGrid.css';
 
 export default function BooksGrid({ books }) {
   return (

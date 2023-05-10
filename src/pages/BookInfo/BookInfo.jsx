@@ -1,7 +1,7 @@
+import { useBooksContext } from 'hooks/useBooksContext';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { useBooksContext } from 'hooks/useBooksContext';
 import { animateScroll as scroll } from 'react-scroll';
 
 // components
@@ -11,19 +11,19 @@ import BookSelected from './BookSelected';
 // styles & assets
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import 'styles/pages/BookInfo/BookInfo.css';
+import 'css/pages/BookInfo/BookInfo.css';
 
 export default function BookInfo({ addItemToCart }) {
   const { id: currentBookID } = useParams();
   const [focusedBook, setFocusedBook] = useState(null);
   const [topFourBooks, setTopFourBooks] = useState([]);
-  const { books } = useBooksContext()
-  
+  const { books } = useBooksContext();
+
   useEffect(() => {
     if (books.length < 1) return;
     scroll.scrollToTop({
       duration: 600,
-    })
+    });
     setFocusedBook(books.find((book) => book.id === currentBookID));
     setTopFourBooks(
       books

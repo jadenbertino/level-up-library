@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
 import { useBooksContext } from 'hooks/useBooksContext';
+import { useEffect, useState } from 'react';
 
 // styles
 import BooksGrid from 'components/BooksGrid';
-import 'styles/pages/BrowseBooks/BrowseBooks.css';
+import 'css/pages/BrowseBooks/BrowseBooks.css';
 
 export default function Books() {
-  const { books } = useBooksContext()
+  const { books } = useBooksContext();
   const [filteredBooks, setFilteredBooks] = useState([]);
 
   useEffect(() => {

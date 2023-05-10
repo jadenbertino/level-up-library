@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 // styles
 import logo from 'assets/library-logo.png';
-import 'styles/components/Footer.css';
+import 'css/components/Footer.css';
 
 export default function Footer() {
   return (
