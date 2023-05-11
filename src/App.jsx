@@ -8,8 +8,8 @@ import Home from './pages/Home/Home';
 
 // components & hooks
 import useCart from './hooks/useCart';
-import Footer from 'components/Footer';
-import Nav from 'components/Nav';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
 
 // styles
 import './css/App.css';
