@@ -1,17 +1,17 @@
-import { useBooksContext } from 'hooks/useBooksContext';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { animateScroll as scroll } from 'react-scroll';
 
-// components
-import BooksGrid from 'components/BooksGrid';
+// components & hooks
+import { useBooksContext } from '../../hooks/useBooksContext';
+import BooksGrid from '../../components/BooksGrid';
 import BookSelected from './BookSelected';
 
-// styles & assets
+// styles
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import 'css/pages/BookInfo/BookInfo.css';
+import '../../css/pages/BookInfo/BookInfo.css';
 
 export default function BookInfo({ addItemToCart }) {
   const { id: currentBookID } = useParams();

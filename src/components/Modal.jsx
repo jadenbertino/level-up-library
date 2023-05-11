@@ -1,9 +1,11 @@
 import { createPortal } from 'react-dom';
+import { useEffect, useState } from 'react';
+
+// hooks
 import { useModalContext } from '../hooks/useModalContext';
 
 // styles
-import 'css/components/Modal.css';
-import { useEffect, useState } from 'react';
+import '../css/components/Modal.css';
 
 export default function Modal({ children, className }) {
   const root = document.querySelector('#root');

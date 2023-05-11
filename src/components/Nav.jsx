@@ -1,11 +1,14 @@
-import { useModalContext } from 'hooks/useModalContext';
 import { Link } from 'react-router-dom';
 
-// styles & assets
-import logo from 'assets/library-logo.png';
+// hooks
+import { useModalContext } from '../hooks/useModalContext';
+
+// components
 import Modal from './Modal';
-import 'css/components/Nav.css';
-import 'css/components/NavMobile.css'
+
+// styles
+import logo from '../assets/library-logo.png';
+import '../css/components/Nav.css';
 
 export default function Nav({ numBooks }) {
   const { modalContext, fadeInModal, fadeOutModal } = useModalContext();

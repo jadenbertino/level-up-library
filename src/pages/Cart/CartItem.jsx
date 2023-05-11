@@ -1,6 +1,7 @@
-import Price from 'components/Price';
-import { useModalContext } from 'hooks/useModalContext';
-import { formatPrice } from 'utils/BookUtils';
+// hooks, components, utils
+import Price from '../../components/Price';
+import { useModalContext } from '../../hooks/useModalContext';
+import { formatPrice } from '../../utils/BookUtils';
 
 export default function CartItem({ item, updateCartQuantity }) {
   const { setModalContext } = useModalContext();

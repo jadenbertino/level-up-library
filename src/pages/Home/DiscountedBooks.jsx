@@ -1,6 +1,8 @@
-import { useBooksContext } from 'hooks/useBooksContext';
 import { useEffect, useState } from 'react';
-import BooksGrid from 'components/BooksGrid';
+
+// hooks, components
+import { useBooksContext } from '../../hooks/useBooksContext';
+import BooksGrid from '../../components/BooksGrid';
 
 export default function DiscountedBooks() {
   const { books } = useBooksContext()

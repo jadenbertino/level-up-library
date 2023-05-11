@@ -1,16 +1,18 @@
-import Price from 'components/Price'
-import Rating from 'components/Rating'
-import { useState } from 'react'
+import { useState } from 'react';
+
+// components
+import Price from '../../components/Price';
+import Rating from '../../components/Rating';
 
 export default function BookSelected({ book, addItemToCart }) {
-  const [confirmCart, setConfirmCart] = useState(false)
+  const [confirmCart, setConfirmCart] = useState(false);
 
   function handleAddToCart() {
-    addItemToCart(book)
-    setConfirmCart(true)
+    addItemToCart(book);
+    setConfirmCart(true);
     setTimeout(() => {
-      setConfirmCart(false)
-    }, 1000)
+      setConfirmCart(false);
+    }, 1000);
   }
 
   return (
@@ -23,7 +25,7 @@ export default function BookSelected({ book, addItemToCart }) {
           <Price originalPrice={book.originalPrice} salePrice={book.salePrice} />
         </div>
         <div className='mobile-img-wrapper'>
-          <img src={book.url} alt='' className='mobile-img'/>
+          <img src={book.url} alt='' className='mobile-img' />
         </div>
         <div className='summary'>
           <h3 className='title'>Summary</h3>
@@ -37,7 +39,11 @@ export default function BookSelected({ book, addItemToCart }) {
             debitis. Ex, consectetur! Officiis rerum obcaecati quae, a accusantium, consequatur,
             dignissimos quia velit aperiam dolor quisquam pariatur?
           </p>
-          <button className={`btn${confirmCart ? ' confirm-active' : ''}`} onClick={handleAddToCart} disabled={confirmCart}>
+          <button
+            className={`btn${confirmCart ? ' confirm-active' : ''}`}
+            onClick={handleAddToCart}
+            disabled={confirmCart}
+          >
             Add To Cart
           </button>
         </div>

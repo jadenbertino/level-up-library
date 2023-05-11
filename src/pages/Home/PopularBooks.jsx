@@ -1,6 +1,8 @@
-import BooksGrid from 'components/BooksGrid';
 import { useEffect, useState } from 'react';
-import { useBooksContext } from 'hooks/useBooksContext';
+
+// components & hooks
+import BooksGrid from '../../components/BooksGrid';
+import { useBooksContext } from '../../hooks/useBooksContext';
 
 export default function PopularBooks() {
   const { books } = useBooksContext()

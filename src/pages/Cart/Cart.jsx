@@ -1,12 +1,14 @@
-import { useModalContext } from 'hooks/useModalContext';
 import { Link } from 'react-router-dom';
+
+// components, hooks, utils
+import { useModalContext } from '../../hooks/useModalContext';
 import { formatPrice } from '../../utils/BookUtils';
 import CartItem from './CartItem';
+import Modal from '../../components/Modal';
 
 // styles
-import cartIcon from 'assets/empty_cart.svg';
-import Modal from 'components/Modal';
-import 'css/pages/Cart/Cart.css';
+import '../../css/pages/Cart/Cart.css';
+import cartIcon from '../../assets/empty_cart.svg';
 
 export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
   const { modalContext, fadeOutModal } = useModalContext();

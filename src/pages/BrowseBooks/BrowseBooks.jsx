@@ -1,5 +1,7 @@
-import { useBooksContext } from 'hooks/useBooksContext';
 import { useEffect, useState } from 'react';
+
+// hooks
+import { useBooksContext } from '../../hooks/useBooksContext';
 
 // styles
 import BooksGrid from 'components/BooksGrid';

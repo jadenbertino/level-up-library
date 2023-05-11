@@ -1,4 +1,7 @@
-import 'css/components/BooksGrid.css';
+// components
+import '../css/components/BooksGrid.css';
+
+// styles
 import Book from './Book';
 
 export default function BooksGrid({ books }) {

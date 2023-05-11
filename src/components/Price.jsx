@@ -1,3 +1,4 @@
+// utils
 import { formatPrice } from '../utils/BookUtils';
 
 export default function Price({ originalPrice, salePrice }) {

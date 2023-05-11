@@ -1,10 +1,12 @@
-import Price from 'components/Price';
-import Rating from 'components/Rating';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// components
+import Price from './Price';
+import Rating from './Rating';
+
 // styles
-import 'css/components/Book.css';
+import '../css/components/Book.css'
 
 export default function Book({ book }) {
   const [bookImg, setBookImg] = useState();
