@@ -1,7 +1,7 @@
 @use '../variables';
 
 .modal-backdrop {
-  :has(.nav-modal) {
+  &:has(.nav-modal) {
     justify-content: flex-end;
     padding: 0;
   }

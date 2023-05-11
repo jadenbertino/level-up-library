@@ -1,4 +1,4 @@
-.modal-backdrop :has(.nav-modal) {
+.modal-backdrop:has(.nav-modal) {
   justify-content: flex-end;
   padding: 0;
 }

@@ -24,17 +24,17 @@ export default function CartItem({ item, updateCartQuantity }) {
 
   return (
     <div className='cart-item'>
-      <div className='img-and-description'>
+      <div className='df'>
         <img src={item.url} alt='' className='cart-item__img' />
-        <div className='cart-item__description'>
+        <div className='cart-item__description desktop'>
           <h4 className='cart-item__title'>{item.title}</h4>
           <div className='cart-item__price'>
             <Price originalPrice={item.originalPrice} salePrice={item.salePrice} />
           </div>
         </div>
       </div>
-      <div className='quantity-and-title'>
-        <h4 className='cart-item__title mobile-only'>{item.title}</h4>
+      <div className='dfa fc'>
+        <h4 className='cart-item__title mobile'>{item.title}</h4>
         <div className='cart-item__quantity'>
           <button className='btn adjust-quantity' onClick={decrementQuantity}>
             -

@@ -10,7 +10,7 @@ export default function BookSelected({ book, addItemToCart }) {
     setConfirmCart(true)
     setTimeout(() => {
       setConfirmCart(false)
-    }, 2000)
+    }, 1000)
   }
 
   return (

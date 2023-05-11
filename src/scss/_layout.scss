@@ -21,6 +21,16 @@
   padding-left: 16px;
 }
 
+.df {
+  display: flex;
+}
+
+.dfa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .fc {
   flex-direction: column;
 }

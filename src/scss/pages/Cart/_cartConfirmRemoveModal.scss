@@ -1,0 +1,76 @@
+
+.confirm-remove-modal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  max-width: 600px;
+  column-gap: 20px;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .text-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .btns {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .cancel-btn {
+      font-size: 1rem;
+      background-color: gray;
+    }
+    
+    .remove-btn {
+      font-size: 1rem;
+      background-color: #c14953;
+    }
+  }
+}
+
+.fade-in .confirm-remove-modal {
+  /* slide in animation */
+  transform: translateY(10%);
+  transition: transform 300ms ease-in-out;
+}
+
+.visible .confirm-remove-modal {
+  /* slide in animation */
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+@media screen and (max-width: 576px) {
+  .confirm-remove-modal {
+    h2 {
+      font-size: 20px;
+    }
+
+    .btn {
+      font-size: 14px;
+      padding: 8px 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .confirm-remove-modal {
+    padding: 16px;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .btn {
+      font-size: 12px;
+      padding: 8px 20px;
+    }
+  }
+}
+
