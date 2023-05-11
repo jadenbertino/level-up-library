@@ -60,7 +60,7 @@
   opacity: 0;
   transform: translateY(-40%);
   transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
-  background-image: url("assets/checkmark.png");
+  background-image: url("../../../assets/checkmark.png");
   width: 32px;
   height: 32px;
   background-position: center center;

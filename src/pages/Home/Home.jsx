@@ -4,7 +4,7 @@ import Landing from './Landing';
 import PopularBooks from './PopularBooks';
 import Highlights from './WhyChooseLibrary';
 
-import 'css/pages/Home/Home.css';
+import '../../css/pages/Home/Home.css';
 
 export default function Home() {
   return (
