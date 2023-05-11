@@ -1,20 +1,16 @@
-/* 
-
-    NAVICATION HEADER
-
-*/
+// NAVIGATION HEADER
 
 .home-links {
   display: flex;
   align-items: center;
-}
 
-.home-link {
-  font-size: 1.5rem;
-}
+  .home-link {
+    font-size: 1.5rem;
 
-.home-link:first-child {
-  margin-right: 12px;
+    &:first-child {
+      margin-right: 12px;
+    }
+  }
 }
 
 /*
@@ -23,82 +19,87 @@
 
 */
 
-:is(#active-book, #recc-books) > .container {
-  padding-top: 24px;
-  padding-bottom: 60px;
+#active-book,
+#recc-books {
+  > .container {
+    padding-top: 24px;
+    padding-bottom: 60px;
+  }
 }
 
 .book-selected {
   margin-top: 24px;
   display: flex;
   align-items: flex-start;
-}
 
-.book-selected img {
-  border-radius: 12px;
-  object-fit: contain;
-  width: calc(100% / 3);
-  min-width: 250px;
-}
+  img {
+    border-radius: 12px;
+    object-fit: contain;
+    width: calc(100% / 3);
+    min-width: 250px;
+  }
 
-.book-selected .mobile-img-wrapper {
-  display: none;
-}
+  .mobile-img-wrapper {
+    display: none;
+  }
 
-.book-selected .info {
-  padding-left: 48px;
-  text-align: left;
-}
+  .info {
+    padding-left: 48px;
+    text-align: left;
 
-.book-selected .title {
-  font-size: 1.75rem;
-}
+    .title {
+      font-size: 1.75rem;
+    }
 
-.book-selected .summary {
-  margin-top: 20px;
-}
+    .summary {
+      margin-top: 20px;
 
-.summary .title {
-  font-size: 20px;
-}
+      .title {
+        font-size: 20px;
+      }
 
-.book-selected .btn-wrapper {
-  margin-top: 20px;
-  display: inline-flex;
-  align-items: center;
-}
+      .para {
+        margin-top: 12px;
+      }
+    }
+  }
 
-.book-selected .btn {
-  transition: background-color 500ms ease;
-}
+  .btn-wrapper {
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
 
-.book-selected .confirm-active .btn {
-  background-color: #357266;
-  transition: background-color 300ms ease;
-}
+    .btn {
+      transition: background-color 500ms ease;
+    }
 
-.btn-wrapper::after {
-  content: '';
-  font-size: 20px;
-  margin-left: 12px;
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
-  background-image: url('assets/checkmark.png');
-  width: 32px;
-  height: 32px;
-  background-position: center center;
-  background-size: contain;
-}
+    &::after {
+      content: '';
+      font-size: 20px;
+      margin-left: 12px;
+      opacity: 0;
+      transform: translateY(10%);
+      transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
+      background-image: url('assets/checkmark.png');
+      width: 32px;
+      height: 32px;
+      background-position: center center;
+      background-size: contain;
+    }
+  }
 
-.book-selected .confirm-active.btn-wrapper::after {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
-}
+  .btn-wrapper.confirm-active {
+    .btn {
+      background-color: #357266;
+      transition: background-color 300ms ease;
+    }
 
-.book-selected .para {
-  margin-top: 12px
+    &::after {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
+    }
+  }
 }
 
 .recc-books__header {
@@ -108,9 +109,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  :is(#active-book, #recc-books) > .container {
-    padding-top: 12px;
-    padding-bottom: 40px;
+  #active-book,
+  #recc-books {
+    > .container {
+      padding-top: 12px;
+      padding-bottom: 40px;
+    }
   }
 
   .book-selected .info {
@@ -123,40 +127,41 @@
     flex-direction: column;
     align-items: center;
     gap: 32px;
-  }
 
-  .book-selected .btn {
-    padding: 8px 20px;
-  }
+    .info {
+      padding-left: 0;
 
-  .book-selected .info {
-    padding-left: 0;
-  }
+      .title {
+        margin-top: 24px;
+      }
+    }
 
-  .summary .title {
-    margin-top: 24px
-  }
-
-  .book-selected .rating-and-price {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .book-selected .desktop-img {
-    display: none;
-  }
+    .rating-and-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   
-  .book-selected .mobile-img-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
+    .desktop-img {
+      display: none;
+    }
+  
+    .mobile-img-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
 
-  .btn-wrapper::after {
-    width: 28px;
-    height: 28px;
+    .btn-wrapper {
+      &::after {
+        width: 28px;
+        height: 28px;
+      }
+      .btn {
+        padding: 8px 20px;
+      }
+    }
   }
 
   .recc-books__header {

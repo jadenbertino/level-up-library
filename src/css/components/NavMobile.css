@@ -56,8 +56,7 @@
   nav li {
     display: none;
   }
-  nav .hamburger,
-  nav .shopping-cart {
+  nav .hamburger {
     display: block;
   }
 }

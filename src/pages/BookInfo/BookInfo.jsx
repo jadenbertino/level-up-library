@@ -15,9 +15,9 @@ import 'css/pages/BookInfo/BookInfo.css';
 
 export default function BookInfo({ addItemToCart }) {
   const { id: currentBookID } = useParams();
+  const { books } = useBooksContext();
   const [focusedBook, setFocusedBook] = useState(null);
   const [topFourBooks, setTopFourBooks] = useState([]);
-  const { books } = useBooksContext();
 
   useEffect(() => {
     if (books.length < 1) return;

@@ -71,8 +71,7 @@
       display: none;
     }
 
-    .hamburger,
-    .shopping-cart {
+    .hamburger {
       display: block;
     }
   }
@@ -85,6 +84,7 @@
 }
 
 @media screen and (max-height: 480px) {
+  // landscape mobile
   .nav-modal {
     padding-top: 24px;
     padding-bottom: 24px;
