@@ -16,7 +16,12 @@
 #footer > .container .col .footer__link,
 #footer > .container .col .footer__copyright {
   color: #fff;
-  margin: 16px;
+}
+#footer > .container .col .footer__links {
+  margin: 24px 0;
+}
+#footer > .container .col .footer__link {
+  margin: 0 16px;
 }
 #footer > .container .col .footer__logo {
   width: 160px;

@@ -42,17 +42,17 @@
   .highlights {
     column-gap: 16px;
   }
-  .highlights__title {
+  .highlight__title {
     font-size: 18px;
   }
-  .highlights__para {
+  .highlight__para {
     font-size: 14px;
   }
-  .highlights__icon--wrapper {
+  .highlight__icon--wrapper {
     width: 80px;
     height: 80px;
   }
-  .highlights__icon {
+  .highlight__icon {
     font-size: 28px;
   }
 }

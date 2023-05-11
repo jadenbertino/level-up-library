@@ -10,9 +10,7 @@ export default function Footer() {
       <div className='container'>
         <div className='row'>
           <div className='col'>
-            <figure className='footer__logo--wrapper'>
-              <img src={logo} alt='' className='footer__logo' />
-            </figure>
+            <img src={logo} alt='' className='footer__logo' />
           </div>
         </div>
         <div className='row'>

@@ -12,7 +12,9 @@
   flex-direction: column;
 
   &__img--wrapper {
-    img {
+
+    a, img {
+      display: block;
       height: 100%;
       width: 100%;
       object-fit: contain;
@@ -97,8 +99,8 @@
   @include setBookImgHeight(55vw);
 
   .book {
-    &__img {
-      object-position: bottom;
+    img {
+      object-position: center bottom;
     }
 
     &__info {

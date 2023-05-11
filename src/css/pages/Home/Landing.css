@@ -10,7 +10,7 @@
 }
 #landing .header__title {
   font-size: 48px;
-  color: #7342D6;
+  color: #7342d6;
   margin-bottom: 24px;
 }
 #landing .header__sub-title {
@@ -23,22 +23,21 @@
   width: 100%;
   object-fit: contain;
 }
-
 @media screen and (max-width: 768px) {
-  .header__title {
+  #landing .header__title {
     font-size: 40px;
   }
 }
 @media screen and (max-width: 576px) {
-  .header__img {
+  #landing .header__img {
     height: 35vh;
   }
 }
 @media screen and (max-width: 480px) {
-  .header__title {
+  #landing .header__title {
     font-size: 36px;
   }
-  .header__sub-title {
+  #landing .header__sub-title {
     font-size: 20px;
   }
 }

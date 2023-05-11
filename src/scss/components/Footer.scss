@@ -18,7 +18,14 @@
       .footer__link,
       .footer__copyright {
         color: #fff;
-        margin: 16px;
+      }
+
+      .footer__links {
+        margin: 24px 0;
+      }
+
+      .footer__link {
+        margin: 0 16px;
       }
 
       .footer__logo {

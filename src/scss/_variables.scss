@@ -1,6 +1,6 @@
 $purple-color: #7342d6;
 $nav-height: 92px;
-$footer-height: 300px;
+$footer-height: 220px;
 
 // breakpoints (desktop first approach)
 $xs: 480px;
@@ -8,12 +8,3 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
-
-@media screen and (max-width: $md) {
-  $footer-height: 240px !global;
-}
-
-@media screen and (max-width: $sm) {
-  $footer-height: 220px !global;
-}
-
