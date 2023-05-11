@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { useBooksContext } from '../../hooks/useBooksContext';
 
 // styles
-import BooksGrid from 'components/BooksGrid';
-import 'css/pages/BrowseBooks/BrowseBooks.css';
+import BooksGrid from '../../components/BooksGrid';
+import '../../css/pages/BrowseBooks/BrowseBooks.css';
 
 export default function Books() {
   const { books } = useBooksContext();
