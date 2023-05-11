@@ -1,7 +1,7 @@
 .books-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: -24px -24px; // to negate .book__wrapper gutters
+  margin: -24px; // to negate .book__wrapper gutters
 
   .book__wrapper {
     padding: 24px;
@@ -12,14 +12,17 @@
 @media screen and (max-width: 768px) {
   .books-grid {
     margin: -16px -8px;
-  }
-  .book__wrapper {
-    padding: 16px 8px;
+    
+    .book__wrapper {
+      padding: 16px 8px;
+    }
   }
 }
 
 @media screen and (max-width: 576px) {
-  .books-grid .book__wrapper {
-    width: calc(100% / 2); // 2 books per row
+  .books-grid {
+    .book__wrapper {
+      width: calc(100% / 2); // 2 books per row
+    }
   }
 }

@@ -1,28 +1,24 @@
 #footer {
   background-color: #242424;
 }
-
 #footer > .container {
   height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-#footer .col {
+#footer > .container .col {
   display: flex;
   justify-content: center;
 }
-
-.footer__logo,
-.footer__links,
-.footer__link,
-.footer__copyright {
-  color: white;
+#footer > .container .col .footer__logo,
+#footer > .container .col .footer__links,
+#footer > .container .col .footer__link,
+#footer > .container .col .footer__copyright {
+  color: #fff;
   margin: 16px;
 }
-
-.footer__logo {
+#footer > .container .col .footer__logo {
   width: 160px;
-  filter: grayscale(1) brightness(0) invert(1); /* turns to black then inverts colors */
+  filter: grayscale(1) brightness(0) invert(1);
 }

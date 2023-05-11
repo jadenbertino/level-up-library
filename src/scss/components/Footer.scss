@@ -2,29 +2,29 @@
 
 #footer {
   background-color: #242424;
-}
 
-#footer > .container {
-  height: variables.$footer-height;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+  > .container {
+    height: variables.$footer-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-#footer .col {
-  display: flex;
-  justify-content: center;
-}
+    .col {
+      display: flex;
+      justify-content: center;
 
-.footer__logo,
-.footer__links,
-.footer__link,
-.footer__copyright {
-  color: white;
-  margin: 16px;
-}
+      .footer__logo,
+      .footer__links,
+      .footer__link,
+      .footer__copyright {
+        color: #fff;
+        margin: 16px;
+      }
 
-.footer__logo {
-  width: 160px;
-  filter: grayscale(1) brightness(0) invert(1); /* turns to black then inverts colors */
+      .footer__logo {
+        width: 160px;
+        filter: grayscale(1) brightness(0) invert(1); // pure white
+      }
+    }
+  }
 }

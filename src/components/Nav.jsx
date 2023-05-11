@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // styles & assets
 import logo from 'assets/library-logo.png';
 import 'css/components/Nav.css';
+import 'css/components/NavMobile.css'
 import Modal from './Modal';
 
 export default function Nav({ numBooks }) {
