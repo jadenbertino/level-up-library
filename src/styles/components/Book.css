@@ -12,7 +12,7 @@
 }
 
 .book__img--wrapper,
-.book__img--skeleton {
+.book__skeleton--img {
   height: 280px;
 }
 
@@ -31,7 +31,7 @@
   font-size: 18px;
 }
 
-.book__rating--wrapper {
+.book__rating {
   color: #fabf2a;
   margin-top: 4px;
   margin-bottom: 8px;
@@ -49,30 +49,30 @@
 
 */
 
-.book__img--skeleton {
+.book__skeleton--img {
   height: 360px;
   background-color: rgb(204, 204, 204);
   border-radius: 2px;
 }
 
-.book__title--skeleton,
-.book__rating--skeleton,
-.book__price--skeleton {
+.book__skeleton--title,
+.book__skeleton--rating,
+.book__skeleton--price {
   background-color: rgb(223, 223, 223);
   margin-top: 8px;
   border-radius: 1px;
 }
 
-.book__title--skeleton {
+.book__skeleton--title {
   height: 22px;
 }
 
-.book__rating--skeleton {
+.book__skeleton--rating {
   width: 40%;
   height: 18px;
 }
 
-.book__price--skeleton {
+.book__skeleton--price {
   width: 70%;
   height: 18px;
 }
@@ -85,14 +85,14 @@
 
 @media screen and (max-width: 1200px) {
   .book__img--wrapper,
-  .book__img--skeleton {
+  .book__skeleton--img {
     height: 25vw;
   }
 }
 
 @media screen and (max-width: 576px) {
   .book__img--wrapper,
-  .book__img--skeleton {
+  .book__skeleton--img {
     height: 55vw;
   }
 

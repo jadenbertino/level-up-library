@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 // styles
 import landingImg from 'assets/undraw-books.svg';
-import './Landing.css';
+import 'css/pages/Home/Landing.css';
 
 export default function Landing() {
   return (

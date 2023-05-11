@@ -1,28 +1,25 @@
-$books-per-row: 4;
-$book-horizontal-padding: 24px;
-$book-vertical-padding: 24px;
-
 .books-grid {
   display: flex;
   flex-wrap: wrap;
-  /* to negate .book__wrapper gutters on edges of books-grid */
-  margin: calc(-1 * $book-horizontal-padding) calc(-1 * $book-horizontal-padding);
-}
+  margin: -24px -24px; // to negate .book__wrapper gutters
 
-.book__wrapper {
-  padding: $book-horizontal-padding $book-horizontal-padding;
-  width: calc(100% / $books-per-row);
+  .book__wrapper {
+    padding: 24px;
+    width: calc(100% / 4); // defaults to 4 books per row
+  }
 }
 
 @media screen and (max-width: 768px) {
-  :root {
-    $book-vertical-padding: 16px;
-    $book-horizontal-padding: 8px;
+  .books-grid {
+    margin: -16px -8px;
+  }
+  .book__wrapper {
+    padding: 16px 8px;
   }
 }
 
 @media screen and (max-width: 576px) {
-  :root {
-    $books-per-row: 2;
+  .books-grid .book__wrapper {
+    width: calc(100% / 2); // 2 books per row
   }
 }

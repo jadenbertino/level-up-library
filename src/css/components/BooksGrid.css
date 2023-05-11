@@ -1,11 +1,23 @@
 .books-grid {
   display: flex;
   flex-wrap: wrap;
-  /* to negate .book__wrapper gutters on edges of books-grid */
   margin: -24px -24px;
 }
-
-.book__wrapper {
-  padding: 24px 24px;
+.books-grid .book__wrapper {
+  padding: 24px;
   width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+  .books-grid {
+    margin: -16px -8px;
+  }
+  .book__wrapper {
+    padding: 16px 8px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .books-grid .book__wrapper {
+    width: 50%;
+  }
 }

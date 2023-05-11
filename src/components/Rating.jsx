@@ -8,7 +8,7 @@ export default function Rating({ rating }) {
   const fullStarsArr = new Array(numFullStars).fill('');
 
   return (
-    <div className='book__rating--wrapper'>
+    <div className='book__rating'>
       {fullStarsArr.map((_, i) => (
         <FontAwesomeIcon icon={faStar} key={i} />
       ))}
