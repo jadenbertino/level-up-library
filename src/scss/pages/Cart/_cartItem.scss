@@ -2,7 +2,7 @@
   padding: 24px 0;
   border-bottom: 1px solid gray;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1.25fr 2fr;
 
   &__img {
     grid-column: 2 / 3;
@@ -23,7 +23,7 @@
     font-size: 1.25rem;
 
     &.mobile {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       text-align: center;
     }
   }
@@ -62,10 +62,14 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .cart-item {
-    grid-template-columns: 2fr 3fr 1fr;
-
     &__img {
       width: 75%;
       max-width: 160px;
@@ -77,6 +81,10 @@
 
     &__total-price {
       padding-right: 0;
+    }
+
+    &__title.mobile {
+      margin-bottom: 8px;
     }
 
     .current-quantity {
@@ -91,7 +99,9 @@
 }
 
 @media screen and (max-width: 480px) {
-  .cart-item__title {
-    font-size: 18px;
+  .cart-item {
+    &__title {
+      font-size: 16px;
+    }
   }
 }

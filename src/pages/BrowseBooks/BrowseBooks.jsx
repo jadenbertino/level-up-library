@@ -42,7 +42,7 @@ export default function Books() {
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <header className='section__title'>
+              <header className='books__header'>
                 <h2 className='books__header--title'>
                   All <span className='text--purple'>Books</span>
                 </h2>

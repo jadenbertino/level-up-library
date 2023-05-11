@@ -17,6 +17,14 @@
   color: white;
   font-size: 1.1rem;
   padding: 12px 16px;
+
+  .price {
+    text-align: end;
+  }
+
+  .quantity {
+    text-align: center;
+  }
 }
 
 .cart__contents {
@@ -65,7 +73,7 @@
 }
 
 @media screen and (max-width: 576px) {
-  .cart__header {
-    grid-template-columns: 2fr 3fr 1fr;
+  #cart h2 {
+    font-size: 28px;
   }
 }

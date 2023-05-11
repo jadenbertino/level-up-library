@@ -34,8 +34,8 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
             <div className='col'>
               <div className='cart__header'>
                 <span>Books</span>
-                <span>Quantity</span>
-                <span>Price</span>
+                <span className='quantity'>Quantity</span>
+                <span className='price'>Price</span>
               </div>
             </div>
           </div>

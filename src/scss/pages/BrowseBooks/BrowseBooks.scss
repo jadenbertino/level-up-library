@@ -4,13 +4,13 @@
     padding-bottom: 64px;
   }
 
-  header {
+  .books__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 
-    .books__header--title {
+    &--title {
       font-size: 40px;
     }
   }
@@ -25,23 +25,28 @@
     outline: none;
     padding: 0 16px;
   }
-}
 
-@media screen and (max-width: 768px) {
-  #browse-books {
+  @media screen and (max-width: 768px) {
     .container {
       padding-top: 12px;
       padding-bottom: 40px;
     }
-
+  
     .books__header--title {
       font-size: 2rem;
     }
-
+  
     select {
       padding: 0 8px;
       line-height: 36px;
       height: 36px;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    .books__header--title {
+      font-size: 1.75rem;
+    }
+  }
 }
+
