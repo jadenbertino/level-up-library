@@ -1,5 +1,5 @@
 .book__img--wrapper,
-.book__skeleton--img {
+.book-skeleton__img {
   height: 280px;
 }
 
@@ -70,13 +70,13 @@
 */
 @media screen and (max-width: 1200px) {
   .book__img--wrapper,
-  .book__skeleton--img {
+  .book-skeleton__img {
     height: 25vw;
   }
 }
 @media screen and (max-width: 576px) {
   .book__img--wrapper,
-  .book__skeleton--img {
+  .book-skeleton__img {
     height: 55vw;
   }
   .book img {

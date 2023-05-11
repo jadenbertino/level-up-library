@@ -1,6 +1,6 @@
 @mixin setBookImgHeight($height) {
   .book__img--wrapper,
-  .book__skeleton--img {
+  .book-skeleton__img {
     height: $height;
   }
 }
