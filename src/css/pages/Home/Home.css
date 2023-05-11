@@ -1,20 +1,26 @@
-#home section > .container,
-#landing > .container {
+#highlights,
+#featured,
+#discounted,
+#explore {
   padding-top: 48px;
   padding-bottom: 48px;
 }
-
-#explore > .container {
-  padding-bottom: 96px;
-}
-
-#home .section__title {
+#highlights .section__title,
+#featured .section__title,
+#discounted .section__title,
+#explore .section__title {
   margin-bottom: 40px;
 }
-
 @media screen and (max-width: 576px) {
-  section > .container {
+  #highlights,
+  #featured,
+  #discounted,
+  #explore {
     padding-top: 32px;
     padding-bottom: 32px;
   }
+}
+
+#explore {
+  padding-bottom: 96px;
 }

@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
+// import { animateScroll as scroll } from 'react-scroll';
 
 // components & hooks
-import { useBooksContext } from '../../hooks/useBooksContext';
 import BooksGrid from '../../components/BooksGrid';
+import { useBooksContext } from '../../hooks/useBooksContext';
 import BookSelected from './BookSelected';
 
 // styles
@@ -21,9 +21,9 @@ export default function BookInfo({ addItemToCart }) {
 
   useEffect(() => {
     if (books.length < 1) return;
-    scroll.scrollToTop({
-      duration: 600,
-    });
+    // scroll.scrollTo("recc-books", {
+    //   duration: 600,
+    // });
     setFocusedBook(books.find((book) => book.id === currentBookID));
     setTopFourBooks(
       books
@@ -34,7 +34,7 @@ export default function BookInfo({ addItemToCart }) {
 
   return (
     <main>
-      <section id='active-book'>
+      <section id='go-to-browse'>
         <div className='container'>
           <div className='row'>
             <div className='col'>
@@ -42,6 +42,14 @@ export default function BookInfo({ addItemToCart }) {
                 <FontAwesomeIcon icon={faArrowLeft} className='home-link' />
                 <h2 className='home-link'>All Books</h2>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='active-book'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
               {focusedBook && <BookSelected book={focusedBook} addItemToCart={addItemToCart} />}
             </div>
           </div>

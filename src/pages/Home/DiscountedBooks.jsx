@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react';
 
 // hooks, components
-import { useBooksContext } from '../../hooks/useBooksContext';
 import BooksGrid from '../../components/BooksGrid';
+import { useBooksContext } from '../../hooks/useBooksContext';
 
 export default function DiscountedBooks() {
-  const { books } = useBooksContext()
-  const [discountedBooks, setDiscountedBooks] = useState([])
+  const { books } = useBooksContext();
+  const [discountedBooks, setDiscountedBooks] = useState([]);
 
   useEffect(() => {
     if (books.length < 1) return;
-    setDiscountedBooks(books
-      .filter((book) => book.salePrice > 0)
-      .slice(0, 8))
-  }, [books])
-  
+    setDiscountedBooks(books.filter((book) => book.salePrice > 0).slice(0, 8));
+  }, [books]);
+
   return (
-    <section id='recent'>
+    <section id='discounted'>
       <div className='container'>
         <div className='row'>
           <div className='col'>
@@ -27,10 +25,7 @@ export default function DiscountedBooks() {
         </div>
         <div className='row'>
           <div className='col'>
-            {discountedBooks.length
-              ? <BooksGrid books={discountedBooks} />
-              : null
-            }
+            {discountedBooks.length ? <BooksGrid books={discountedBooks} /> : null}
           </div>
         </div>
       </div>

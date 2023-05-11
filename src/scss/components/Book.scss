@@ -12,7 +12,6 @@
   flex-direction: column;
 
   &__img--wrapper {
-
     a, img {
       display: block;
       height: 100%;
@@ -93,6 +92,12 @@
 
 @media screen and (max-width: 1200px) {
   @include setBookImgHeight(25vw);
+}
+
+@media screen and (max-width: 768px) {
+  .book__title {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 576px) {

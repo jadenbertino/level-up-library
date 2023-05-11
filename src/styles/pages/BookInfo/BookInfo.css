@@ -23,7 +23,7 @@
 
 */
 
-:is(#active-book, #recc-books) > .container {
+:is(#go-to-browse, #recc-books) > .container {
   padding-top: 24px;
   padding-bottom: 60px;
 }
@@ -98,7 +98,7 @@
 }
 
 .book-selected .para {
-  margin-top: 12px
+  margin-top: 12px;
 }
 
 .recc-books__header {
@@ -108,7 +108,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  :is(#active-book, #recc-books) > .container {
+  :is(#go-to-browse, #recc-books) > .container {
     padding-top: 12px;
     padding-bottom: 40px;
   }
@@ -134,7 +134,7 @@
   }
 
   .summary .title {
-    margin-top: 24px
+    margin-top: 24px;
   }
 
   .book-selected .rating-and-price {
@@ -146,7 +146,7 @@
   .book-selected .desktop-img {
     display: none;
   }
-  
+
   .book-selected .mobile-img-wrapper {
     display: flex;
     align-items: center;

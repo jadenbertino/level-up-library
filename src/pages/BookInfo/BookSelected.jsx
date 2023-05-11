@@ -40,7 +40,7 @@ export default function BookSelected({ book, addItemToCart }) {
             dignissimos quia velit aperiam dolor quisquam pariatur?
           </p>
           <button
-            className={`btn${confirmCart ? ' confirm-active' : ''}`}
+            className={`btn add-to-cart-btn${confirmCart ? ' confirm-active' : ''}`}
             onClick={handleAddToCart}
             disabled={confirmCart}
           >

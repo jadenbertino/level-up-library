@@ -74,6 +74,11 @@
     height: 25vw;
   }
 }
+@media screen and (max-width: 768px) {
+  .book__title {
+    font-size: 16px;
+  }
+}
 @media screen and (max-width: 576px) {
   .book__img--wrapper,
   .book-skeleton__img {
