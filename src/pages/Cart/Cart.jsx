@@ -21,7 +21,7 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
 
   return (
     <>
-      <main className='cart expand-vertically'>
+      <main id='cart' className='expand-vertically'>
         <div className='container expand-vertically'>
           <div className='row'>
             <div className='col'>
@@ -51,10 +51,10 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
                   ))
                 ) : (
                   <div className='cart__empty'>
-                    <img src={cartIcon} className='cart__empty-img' alt='' />
-                    <p className='cart__empty-message'>Your cart is currently empty.</p>
+                    <img src={cartIcon} className='cart__empty--img' alt='' />
+                    <p className='cart__empty--message'>Your cart is currently empty.</p>
                     <Link to='/books'>
-                      <button className='btn btn--cart-empty'>Continue Shopping</button>
+                      <button className='btn cart__empty--btn'>Continue Shopping</button>
                     </Link>
                   </div>
                 )}
