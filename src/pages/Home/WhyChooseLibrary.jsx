@@ -17,11 +17,11 @@ export default function FeatureShowcase() {
         <div className='row'>
           <div className='col'>
             <div className='highlights'>
-              <div className='easy highlight__icon--wrapper'>
+              <div className='first-highlight highlight__icon--wrapper'>
                 <FontAwesomeIcon icon={faBolt} className='highlight__icon' />
               </div>
-              <h3 className='easy highlight__title'>Easy And Quick</h3>
-              <p className='easy highlight__para'>
+              <h3 className='first-highlight highlight__title'>Easy And Quick</h3>
+              <p className='first-highlight highlight__para'>
                 Get access to the book you purchased online instantly.
               </p>
               <div className='access highlight__icon--wrapper'>

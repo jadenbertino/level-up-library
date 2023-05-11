@@ -80,11 +80,6 @@ button {
   font-family: inherit;
 }
 
-/* 
-
-    GLOBAL STYLES
-
-*/
 .btn {
   background-color: #7342d6;
   padding: 12px 24px;
@@ -94,7 +89,6 @@ button {
   transition: opacity 250ms ease;
   font-size: 1rem;
 }
-
 .btn:hover {
   opacity: 0.9;
 }

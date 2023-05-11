@@ -8,61 +8,63 @@
   column-gap: 20px;
   max-width: 1000px;
   margin: 0 auto;
+
+  .first-highlight {
+    grid-column: 1 / 2;
+  }
 }
 
-.highlights .easy {
-  grid-column: 1 / 2;
-}
+.highlight {
+  &__icon--wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 2px solid variables.$purple-color;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.highlight__icon--wrapper {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border: 2px solid variables.$purple-color;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  &__icon {
+    color: variables.$purple-color;
+    font-size: 32px;
+  }
 
-.highlight__icon {
-  color: variables.$purple-color;
-  font-size: 32px;
-}
+  &__title {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.highlight__title {
-  margin-top: 20px;
-  margin-bottom: 12px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.highlight__para {
-  max-width: 250px;
-  margin: 0 auto;
+  &__para {
+    max-width: 250px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .highlights {
     column-gap: 16px;
-  }
 
-  .highlight__title {
-    font-size: 18px;
-  }
+    &__title {
+      font-size: 18px;
+    }
 
-  .highlight__para {
-    font-size: 14px;
-  }
+    &__para {
+      font-size: 14px;
+    }
 
-  .highlight__icon--wrapper {
-    width: 80px;
-    height: 80px;
-  }
+    &__icon--wrapper {
+      width: 80px;
+      height: 80px;
+    }
 
-  .highlight__icon {
-    font-size: 28px;
+    &__icon {
+      font-size: 28px;
+    }
   }
 }

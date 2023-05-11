@@ -1,40 +1,38 @@
 @use '../../variables';
 
-#landing .container {
-  min-height: calc(100vh - variables.$nav-height);
-  max-width: 720px;
-}
+#landing {
+  .container {
+    min-height: calc(100vh - variables.$nav-height);
+    max-width: 720px;
+  }
 
-#landing :is(.container, .row, .col) {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
+  .col {
+    justify-content: space-evenly;
+  }
 
-#landing .col {
-  justify-content: space-evenly;
-}
-
-.header__text {
-  text-align: center;
-}
-
-.header__title {
-  font-size: 48px;
-  color: #7342D6;
-  margin-bottom: 24px;
-}
-
-.header__sub-title {
-  font-size: 24px;
-  margin-bottom: 32px;
-}
-
-.header__img {
-  margin-top: 32px;
-  max-height: 300px;
-  width: 100%;
-  object-fit: contain;
+  .header {
+    &__text {
+      text-align: center;
+    }
+    
+    &__title {
+      font-size: 48px;
+      color: #7342D6;
+      margin-bottom: 24px;
+    }
+    
+    &__sub-title {
+      font-size: 24px;
+      margin-bottom: 32px;
+    }
+    
+    &__img {
+      margin-top: 32px;
+      max-height: 300px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

@@ -28,12 +28,6 @@ button {
   font-family: inherit;
 }
 
-/* 
-
-    GLOBAL STYLES
-
-*/
-
 .btn {
   background-color: variables.$purple-color;
   padding: 12px 24px;
@@ -42,10 +36,10 @@ button {
   border-radius: 4px;
   transition: opacity 250ms ease;
   font-size: 1rem;
-}
 
-.btn:hover {
-  opacity: 0.9;
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .section__title {

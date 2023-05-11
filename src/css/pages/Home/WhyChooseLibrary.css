@@ -7,8 +7,7 @@
   max-width: 1000px;
   margin: 0 auto;
 }
-
-.highlights .easy {
+.highlights .first-highlight {
   grid-column: 1/2;
 }
 
@@ -22,12 +21,10 @@
   align-items: center;
   justify-content: center;
 }
-
 .highlight__icon {
   color: #7342d6;
   font-size: 32px;
 }
-
 .highlight__title {
   margin-top: 20px;
   margin-bottom: 12px;
@@ -36,7 +33,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .highlight__para {
   max-width: 250px;
   margin: 0 auto;
@@ -46,17 +42,17 @@
   .highlights {
     column-gap: 16px;
   }
-  .highlight__title {
+  .highlights__title {
     font-size: 18px;
   }
-  .highlight__para {
+  .highlights__para {
     font-size: 14px;
   }
-  .highlight__icon--wrapper {
+  .highlights__icon--wrapper {
     width: 80px;
     height: 80px;
   }
-  .highlight__icon {
+  .highlights__icon {
     font-size: 28px;
   }
 }

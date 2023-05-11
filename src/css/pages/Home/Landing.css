@@ -2,33 +2,22 @@
   min-height: calc(100vh - 92px);
   max-width: 720px;
 }
-
-#landing :is(.container, .row, .col) {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
 #landing .col {
   justify-content: space-evenly;
 }
-
-.header__text {
+#landing .header__text {
   text-align: center;
 }
-
-.header__title {
+#landing .header__title {
   font-size: 48px;
   color: #7342D6;
   margin-bottom: 24px;
 }
-
-.header__sub-title {
+#landing .header__sub-title {
   font-size: 24px;
   margin-bottom: 32px;
 }
-
-.header__img {
+#landing .header__img {
   margin-top: 32px;
   max-height: 300px;
   width: 100%;

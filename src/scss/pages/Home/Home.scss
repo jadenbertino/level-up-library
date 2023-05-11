@@ -1,6 +1,9 @@
-:is(#home section, #landing) > .container {
-  padding-top: 48px;
-  padding-bottom: 48px;
+#home section,
+#landing {
+  > .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 
 #explore > .container {
