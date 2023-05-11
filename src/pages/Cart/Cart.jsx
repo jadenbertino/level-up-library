@@ -21,9 +21,9 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
 
   return (
     <>
-      <main id='cart' className='expand-vertically'>
+      <main className='cart expand-vertically'>
         <div className='container expand-vertically'>
-          <div className='row section__title'>
+          <div className='row'>
             <div className='col'>
               <h2>Cart</h2>
             </div>
@@ -31,9 +31,9 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
           <div className='row'>
             <div className='col'>
               <div className='cart__header'>
-                <span className='cart__header-books'>Books</span>
-                <span className='cart__header-quantity'>Quantity</span>
-                <span className='cart__header-price'>Price</span>
+                <span>Books</span>
+                <span>Quantity</span>
+                <span>Price</span>
               </div>
             </div>
           </div>
