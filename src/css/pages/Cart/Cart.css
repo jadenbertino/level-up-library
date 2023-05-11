@@ -42,7 +42,8 @@
   font-size: 1.25rem;
 }
 .cart__empty--img {
-  max-width: 320px;
+  max-width: 260px;
+  width: 75%;
   object-fit: contain;
 }
 .cart__empty--btn {
