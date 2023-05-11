@@ -40,7 +40,7 @@ export default function Books() {
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <div className='section__title'>
+              <header className='section__title'>
                 <h2 className='books__header--title'>
                   All <span className='text--purple'>Books</span>
                 </h2>
@@ -57,7 +57,7 @@ export default function Books() {
                   <option value='HIGH_TO_LOW'>Price, High to Low</option>
                   <option value='RATING'>Top Rated</option>
                 </select>
-              </div>
+              </header>
             </div>
           </div>
           <div className='row'>
