@@ -50,20 +50,20 @@
 .book-selected .info .summary .para {
   margin-top: 12px;
 }
-.book-selected .btn-wrapper {
-  margin-top: 20px;
-  display: inline-flex;
-  align-items: center;
-}
-.book-selected .btn-wrapper .btn {
+.book-selected .btn {
   transition: background-color 500ms ease;
+  transition-delay: 200ms;
+  margin-top: 20px;
+  position: relative;
 }
-.book-selected .btn-wrapper::after {
+.book-selected .btn::after {
   content: "";
   font-size: 20px;
-  margin-left: 12px;
+  position: absolute;
+  right: -44px;
+  top: 50%;
   opacity: 0;
-  transform: translateY(10%);
+  transform: translateY(-40%);
   transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
   background-image: url("assets/checkmark.png");
   width: 32px;
@@ -71,14 +71,15 @@
   background-position: center center;
   background-size: contain;
 }
-.book-selected .btn-wrapper.confirm-active .btn {
+.book-selected .btn.confirm-active {
   background-color: #357266;
   transition: background-color 300ms ease;
 }
-.book-selected .btn-wrapper.confirm-active::after {
+.book-selected .btn.confirm-active::after {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(-50%);
   transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
+  transition-delay: 100ms;
 }
 
 .recc-books__header {

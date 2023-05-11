@@ -64,21 +64,20 @@
     }
   }
 
-  .btn-wrapper {
+  .btn {
+    transition: background-color 500ms ease;
+    transition-delay: 200ms;
     margin-top: 20px;
-    display: inline-flex;
-    align-items: center;
-
-    .btn {
-      transition: background-color 500ms ease;
-    }
+    position: relative;
 
     &::after {
       content: '';
       font-size: 20px;
-      margin-left: 12px;
+      position: absolute;
+      right: -44px;
+      top: 50%;
       opacity: 0;
-      transform: translateY(10%);
+      transform: translateY(-40%);
       transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
       background-image: url('assets/checkmark.png');
       width: 32px;
@@ -86,18 +85,17 @@
       background-position: center center;
       background-size: contain;
     }
-  }
 
-  .btn-wrapper.confirm-active {
-    .btn {
+    &.confirm-active {
       background-color: #357266;
       transition: background-color 300ms ease;
-    }
 
-    &::after {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
+      &::after {
+        opacity: 1;
+        transform: translateY(-50%);
+        transition: opacity 300ms ease-in-out, transform 200ms ease-in-out;
+        transition-delay: 100ms;
+      }
     }
   }
 }
@@ -141,11 +139,11 @@
       align-items: center;
       justify-content: space-between;
     }
-  
+
     .desktop-img {
       display: none;
     }
-  
+
     .mobile-img-wrapper {
       display: flex;
       align-items: center;

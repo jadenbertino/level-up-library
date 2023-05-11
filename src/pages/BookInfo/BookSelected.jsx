@@ -10,7 +10,7 @@ export default function BookSelected({ book, addItemToCart }) {
     setConfirmCart(true)
     setTimeout(() => {
       setConfirmCart(false)
-    }, 1500)
+    }, 2000)
   }
 
   return (
@@ -37,11 +37,9 @@ export default function BookSelected({ book, addItemToCart }) {
             debitis. Ex, consectetur! Officiis rerum obcaecati quae, a accusantium, consequatur,
             dignissimos quia velit aperiam dolor quisquam pariatur?
           </p>
-          <div className={`btn-wrapper${confirmCart ? ' confirm-active' : ''}`}>
-            <button className='btn' onClick={handleAddToCart}>
-              Add To Cart
-            </button>
-          </div>
+          <button className={`btn${confirmCart ? ' confirm-active' : ''}`} onClick={handleAddToCart} disabled={confirmCart}>
+            Add To Cart
+          </button>
         </div>
       </div>
     </div>
