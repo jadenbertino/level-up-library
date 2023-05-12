@@ -1,105 +1,48 @@
-import { Link } from 'react-router-dom';
-
 // components, hooks, utils
 import { useModalContext } from '../../hooks/useModalContext';
 import { formatPrice } from '../../utils/BookUtils';
-import CartItem from './CartItem';
-import Modal from '../../components/Modal';
 
 // styles
 import '../../css/pages/Cart/Cart.css';
-import cartIcon from '../../assets/empty_cart.svg';
+import CartContents from './CartContents';
+import CartTotals from './CartTotals';
+import ConfirmRemoveModal from './ConfirmRemoveModal';
 
 export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
-  const { modalContext, fadeOutModal } = useModalContext();
-
-  function handleDelete() {
-    removeItem(modalContext.payload);
-    fadeOutModal();
-  }
+  const { modalContext } = useModalContext();
 
   let { subtotal, tax, total } = totals;
   [subtotal, tax, total] = [subtotal, tax, total].map((amount) => formatPrice(amount));
 
   return (
-    <>
-      <main id='cart' className='expand-vertically'>
-        <div className='container expand-vertically'>
-          <div className='row'>
-            <div className='col'>
-              <h2>Cart</h2>
-            </div>
+    <main id='cart' className='expand-vertically'>
+      <div className='container expand-vertically'>
+        <div className='row'>
+          <div className='col'>
+            <h2>Cart</h2>
           </div>
-          <div className='row'>
-            <div className='col'>
-              <div className='cart__header'>
-                <span>Books</span>
-                <span className='quantity'>Quantity</span>
-                <span className='price'>Price</span>
-              </div>
-            </div>
-          </div>
-          <div className='row expand-vertically'>
-            <div className='col expand-vertically'>
-              <div className='cart__contents'>
-                {cart.length > 0 ? (
-                  cart.map((item) => (
-                    <CartItem
-                      item={item}
-                      updateCartQuantity={updateCartQuantity}
-                      removeItem={removeItem}
-                      key={item.id}
-                    />
-                  ))
-                ) : (
-                  <div className='cart__empty'>
-                    <img src={cartIcon} className='cart__empty--img' alt='' />
-                    <p className='cart__empty--message'>Your cart is currently empty.</p>
-                    <Link to='/books'>
-                      <button className='btn cart__empty--btn'>Continue Shopping</button>
-                    </Link>
-                  </div>
-                )}
-              </div>
-              {subtotal > 0 ? (
-                <div className='totals'>
-                  <div className='totals--wrapper'>
-                    <div className='totals__row'>
-                      <span>Subtotal</span>
-                      <span>${subtotal}</span>
-                    </div>
-                    <div className='totals__row'>
-                      <span>Tax</span>
-                      <span>${tax}</span>
-                    </div>
-                    <div className='totals__row'>
-                      <span>Total</span>
-                      <span>${total}</span>
-                    </div>
-                    <button className='btn'>Proceed to checkout</button>
-                  </div>
-                </div>
-              ) : null}
+        </div>
+        <div className='row'>
+          <div className='col'>
+            <div className='cart__header'>
+              <span>Books</span>
+              <span className='quantity'>Quantity</span>
+              <span className='price'>Price</span>
             </div>
           </div>
         </div>
-      </main>
-      {modalContext.type === 'confirm-remove' && (
-        <Modal className={'confirm-remove-modal'}>
-          <img src={modalContext.payload.url} alt='' />
-          <div className='text-content'>
-            <h2>Are You Sure You Want To Remove "{modalContext.payload.title}"?</h2>
-            <div className='btns'>
-              <button className='btn cancel-btn' onClick={fadeOutModal}>
-                Cancel
-              </button>
-              <button className='btn remove-btn' onClick={handleDelete}>
-                Remove
-              </button>
-            </div>
+        <div className='row expand-vertically'>
+          <div className='col expand-vertically'>
+            <CartContents
+              cart={cart}
+              updateCartQuantity={updateCartQuantity}
+              removeItem={removeItem}
+            />
+            {subtotal > 0 ? <CartTotals subtotal={subtotal} tax={tax} total={total} /> : null}
           </div>
-        </Modal>
-      )}
-    </>
+        </div>
+      </div>
+      {modalContext.type === 'confirm-remove' && <ConfirmRemoveModal removeItem={removeItem} />}
+    </main>
   );
 }
