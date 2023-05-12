@@ -16,32 +16,38 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
 
   return (
     <main id='cart' className='expand-vertically'>
-      <div className='container expand-vertically'>
-        <div className='row'>
-          <div className='col'>
-            <h2>Cart</h2>
+      <header>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
+              <h2>Cart</h2>
+            </div>
           </div>
-        </div>
-        <div className='row'>
-          <div className='col'>
+          <div className='row'>
+            <div className='col'>
             <div className='cart__header'>
               <span>Books</span>
               <span className='quantity'>Quantity</span>
               <span className='price'>Price</span>
             </div>
+            </div>
           </div>
         </div>
-        <div className='row expand-vertically'>
-          <div className='col expand-vertically'>
-            <CartContents
-              cart={cart}
-              updateCartQuantity={updateCartQuantity}
-              removeItem={removeItem}
-            />
-            {subtotal > 0 ? <CartTotals subtotal={subtotal} tax={tax} total={total} /> : null}
+      </header>
+      <section id='cart-contents'>
+        <div className='container expand-vertically'>
+          <div className='row expand-vertically'>
+            <div className='col expand-vertically'>
+              <CartContents
+                cart={cart}
+                updateCartQuantity={updateCartQuantity}
+                removeItem={removeItem}
+              />
+              {subtotal > 0 ? <CartTotals subtotal={subtotal} tax={tax} total={total} /> : null}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
       {modalContext.type === 'confirm-remove' && <ConfirmRemoveModal removeItem={removeItem} />}
     </main>
   );
