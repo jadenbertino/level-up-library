@@ -1,6 +1,7 @@
 @use '../../variables';
-@use 'cartLayout'; 
-// above two must be imported first !!
+
+@use 'cartLayout';
 @use 'cartItem';
+@use 'cartEmpty';
 @use 'cartTotals';
 @use 'cartConfirmRemoveModal';

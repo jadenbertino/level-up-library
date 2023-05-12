@@ -1,9 +1,15 @@
 #cart {
   min-height: calc(100vh - 92px - 220px);
 }
-#cart h2 {
+
+.cart__section-title {
   text-align: left;
   font-size: 36px;
+}
+@media screen and (max-width: 576px) {
+  .cart__section-title {
+    font-size: 28px;
+  }
 }
 
 .cart__header {
@@ -28,46 +34,6 @@
   flex-direction: column;
 }
 
-.cart__empty {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-.cart__empty--message {
-  margin: 48px 0 24px;
-  font-size: 1.25rem;
-}
-.cart__empty--img {
-  max-width: 260px;
-  width: 75%;
-  object-fit: contain;
-}
-.cart__empty--btn {
-  padding-left: 48px;
-  padding-right: 48px;
-}
-
-.mobile {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .desktop {
-    display: none !important;
-  }
-  .mobile {
-    display: block !important;
-  }
-}
-@media screen and (max-width: 576px) {
-  #cart h2 {
-    font-size: 28px;
-  }
-}
 .cart-item {
   padding: 24px 0;
   border-bottom: 1px solid gray;
@@ -122,7 +88,6 @@
   align-items: center;
   font-weight: bold;
 }
-
 @media screen and (max-width: 768px) {
   .cart-item {
     grid-template-columns: 1fr 1.5fr 1fr;
@@ -155,6 +120,30 @@
     font-size: 16px;
   }
 }
+
+.cart__empty {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.cart__empty--message {
+  margin: 48px 0 24px;
+  font-size: 1.25rem;
+}
+.cart__empty--img {
+  max-width: 260px;
+  width: 75%;
+  object-fit: contain;
+}
+.cart__empty--btn {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
 .totals {
   display: flex;
   justify-content: flex-end;
@@ -165,7 +154,7 @@
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.totals__row:nth-child(3) {
+.totals__row.final {
   font-weight: 900;
 }
 .totals .btn {
@@ -201,19 +190,6 @@
   font-size: 1rem;
   background-color: #c14953;
 }
-
-.fade-in .confirm-remove-modal {
-  /* slide in animation */
-  transform: translateY(10%);
-  transition: transform 300ms ease-in-out;
-}
-
-.visible .confirm-remove-modal {
-  /* slide in animation */
-  transform: translateX(0);
-  transition: transform 300ms ease-in-out;
-}
-
 @media screen and (max-width: 576px) {
   .confirm-remove-modal h2 {
     font-size: 20px;
@@ -234,4 +210,16 @@
     font-size: 12px;
     padding: 8px 20px;
   }
+}
+
+.fade-in {
+  /* slide in animation */
+}
+.fade-in .confirm-remove-modal {
+  transform: translateY(10%);
+  transition: transform 300ms ease-in-out;
+}
+.fade-in.visible .confirm-remove-modal {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
 }

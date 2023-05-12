@@ -1,0 +1,25 @@
+.cart__empty {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  &--message {
+    margin: 48px 0 24px;
+    font-size: 1.25rem;
+  }
+
+  &--img {
+    max-width: 260px;
+    width: 75%;
+    object-fit: contain;
+  }
+
+  &--btn {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}

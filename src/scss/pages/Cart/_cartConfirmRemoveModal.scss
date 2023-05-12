@@ -1,4 +1,3 @@
-
 .confirm-remove-modal {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -16,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .btns {
     margin-top: 40px;
     display: flex;
@@ -26,47 +25,31 @@
       font-size: 1rem;
       background-color: gray;
     }
-    
+
     .remove-btn {
       font-size: 1rem;
       background-color: #c14953;
     }
   }
-}
 
-.fade-in .confirm-remove-modal {
-  /* slide in animation */
-  transform: translateY(10%);
-  transition: transform 300ms ease-in-out;
-}
-
-.visible .confirm-remove-modal {
-  /* slide in animation */
-  transform: translateX(0);
-  transition: transform 300ms ease-in-out;
-}
-
-@media screen and (max-width: 576px) {
-  .confirm-remove-modal {
+  @media screen and (max-width: 576px) {
     h2 {
       font-size: 20px;
     }
-
+  
     .btn {
       font-size: 14px;
       padding: 8px 24px;
     }
   }
-}
-
-@media screen and (max-width: 480px) {
-  .confirm-remove-modal {
+  
+  @media screen and (max-width: 480px) {
     padding: 16px;
-
+  
     h2 {
       font-size: 18px;
     }
-
+  
     .btn {
       font-size: 12px;
       padding: 8px 20px;
@@ -74,3 +57,15 @@
   }
 }
 
+.fade-in {
+  /* slide in animation */
+  .confirm-remove-modal {
+    transform: translateY(10%);
+    transition: transform 300ms ease-in-out;
+  }
+
+  &.visible .confirm-remove-modal {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+  }
+}

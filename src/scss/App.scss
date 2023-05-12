@@ -42,11 +42,20 @@ button {
   }
 }
 
-.section__title {
-  font-size: 2rem;
-  text-align: center;
-}
-
 .text--purple {
   color: variables.$purple-color;
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile {
+    display: block !important;
+  }
 }

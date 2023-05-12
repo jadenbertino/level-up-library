@@ -10,7 +10,7 @@ export default function CartTotals({ subtotal, tax, total, }) {
           <span>Tax</span>
           <span>${tax}</span>
         </div>
-        <div className='totals__row'>
+        <div className='totals__row final'>
           <span>Total</span>
           <span>${total}</span>
         </div>

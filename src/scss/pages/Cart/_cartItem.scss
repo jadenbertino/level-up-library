@@ -60,16 +60,12 @@
     align-items: center;
     font-weight: bold;
   }
-}
 
-@media screen and (max-width: 768px) {
-  .cart-item {
+  @media screen and (max-width: 768px) {
     grid-template-columns: 1fr 1.5fr 1fr;
   }
-}
 
-@media screen and (max-width: 576px) {
-  .cart-item {
+  @media screen and (max-width: 576px) {
     &__img {
       width: 75%;
       max-width: 160px;
@@ -96,10 +92,8 @@
       height: 32px;
     }
   }
-}
 
-@media screen and (max-width: 480px) {
-  .cart-item {
+  @media screen and (max-width: 480px) {
     &__title {
       font-size: 16px;
     }

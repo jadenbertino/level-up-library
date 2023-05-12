@@ -20,16 +20,16 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <h2>Cart</h2>
+              <h2 className='cart__section-title'>Cart</h2>
             </div>
           </div>
           <div className='row'>
             <div className='col'>
-            <div className='cart__header'>
-              <span>Books</span>
-              <span className='quantity'>Quantity</span>
-              <span className='price'>Price</span>
-            </div>
+              <div className='cart__header'>
+                <span>Books</span>
+                <span className='quantity'>Quantity</span>
+                <span className='price'>Price</span>
+              </div>
             </div>
           </div>
         </div>
