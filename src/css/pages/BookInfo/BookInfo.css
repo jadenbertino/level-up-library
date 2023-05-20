@@ -1,14 +1,14 @@
-.go-to-browse {
+.view-all {
   padding-bottom: 20px;
 }
-.go-to-browse__link-wrapper {
+.view-all__link-wrapper {
   display: flex;
   align-items: center;
 }
-.go-to-browse__link {
+.view-all__link {
   font-size: 1.5rem;
 }
-.go-to-browse__link:first-child {
+.view-all__link:first-child {
   margin-right: 12px;
 }
 

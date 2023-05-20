@@ -34,19 +34,19 @@ export default function BookInfo({ addItemToCart }) {
 
   return (
     <main id="info">
-      <section className='go-to-browse'>
+      <section className='view-all'>
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <Link to='/books' className='go-to-browse__link-wrapper'>
-                <FontAwesomeIcon icon={faArrowLeft} className='go-to-browse__link' />
-                <h2 className='header-link'>All Books</h2>
+              <Link to='/books' className='view-all__link-wrapper'>
+                <FontAwesomeIcon icon={faArrowLeft} className='view-all__link' />
+                <h2 className='view-all__link'>All Books</h2>
               </Link>
             </div>
           </div>
         </div>
       </section>
-      <section id='active'>
+      <section className='active'>
         <div className='container'>
           <div className='row'>
             <div className='col'>

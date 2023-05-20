@@ -37,32 +37,34 @@ export default function Books() {
   }
 
   return (
-    <main id="browse">
+    <main id='browse'>
       <header>
         <div className='container'>
           <div className='row'>
-            <div className='col books__header'>
-              <h2 className='books__header--title'>
-                All <span className='text--purple'>Books</span>
-              </h2>
-              <select
-                id='filter'
-                onChange={(e) => filterBooks(e.target.value)}
-                defaultValue={'DEFAULT'}
-                className='filter-books'
-              >
-                <option value='DEFAULT' disabled>
-                  Sort
-                </option>
-                <option value='LOW_TO_HIGH'>Price, Low to High</option>
-                <option value='HIGH_TO_LOW'>Price, High to Low</option>
-                <option value='RATING'>Top Rated</option>
-              </select>
+            <div className='col'>
+              <div className='browse-header'>
+                <h2 className='books__header__title'>
+                  All <span className='text--purple'>Books</span>
+                </h2>
+                <select 
+                  className='browse-header__select filter-books'
+                  id='filter'
+                  onChange={(e) => filterBooks(e.target.value)}
+                  defaultValue={'DEFAULT'}
+                >
+                  <option value='DEFAULT' disabled>
+                    Sort
+                  </option>
+                  <option value='LOW_TO_HIGH'>Price, Low to High</option>
+                  <option value='HIGH_TO_LOW'>Price, High to Low</option>
+                  <option value='RATING'>Top Rated</option>
+                </select>
+              </div>
             </div>
           </div>
         </div>
       </header>
-      <section id='books'>
+      <section className='browse-books'>
         <div className='container'>
           <div className='row'>
             <div className='col'></div>
