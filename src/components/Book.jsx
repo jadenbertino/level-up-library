@@ -27,11 +27,9 @@ export default function Book({ book }) {
   <>
     {bookImg ? (
       <div className='book'>
-        <div className='book__img--wrapper'>
-          <Link to={`/books/${book.id}`}>
-            <img src={book.url} alt='' />
-          </Link>
-        </div>
+        <Link to={`/books/${book.id}`} className='book__img--wrapper'>
+          <img src={book.url} alt='' className='book__cover-img' />
+        </Link>
         <Link to={`/books/${book.id}`} className='book__info'>
           <h3 className='book__title'>{book.title}</h3>
           <Rating rating={book.rating} />

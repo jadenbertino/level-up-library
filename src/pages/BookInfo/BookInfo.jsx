@@ -33,20 +33,20 @@ export default function BookInfo({ addItemToCart }) {
   }, [books, currentBookID]);
 
   return (
-    <main>
-      <section id='go-to-browse'>
+    <main id="info">
+      <header>
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <Link to='/books' className='home-links'>
-                <FontAwesomeIcon icon={faArrowLeft} className='home-link' />
-                <h2 className='home-link'>All Books</h2>
+              <Link to='/books' className='header-links'>
+                <FontAwesomeIcon icon={faArrowLeft} className='header-link' />
+                <h2 className='header-link'>All Books</h2>
               </Link>
             </div>
           </div>
         </div>
-      </section>
-      <section id='active-book'>
+      </header>
+      <section id='active'>
         <div className='container'>
           <div className='row'>
             <div className='col'>
@@ -55,7 +55,7 @@ export default function BookInfo({ addItemToCart }) {
           </div>
         </div>
       </section>
-      <section id='recc-books'>
+      <section id='recommended'>
         <div className='container'>
           <div className='row'>
             <div className='col'>

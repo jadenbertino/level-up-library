@@ -7,6 +7,11 @@
   padding: 24px;
   width: 25%;
 }
+@media screen and (max-width: 576px) {
+  .books-grid .book__wrapper {
+    width: 50%;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .books-grid {
@@ -14,10 +19,5 @@
   }
   .books-grid .book__wrapper {
     padding: 16px 8px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .books-grid .book__wrapper {
-    width: 50%;
   }
 }

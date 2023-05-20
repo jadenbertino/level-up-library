@@ -106,16 +106,3 @@ button {
 .text--purple {
   color: #7342d6;
 }
-
-.mobile {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .desktop {
-    display: none !important;
-  }
-  .mobile {
-    display: block !important;
-  }
-}

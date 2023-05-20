@@ -5,24 +5,20 @@
 
   .book__wrapper {
     padding: 24px;
-    width: calc(100% / 4); // defaults to 4 books per row
+    width: calc(100% / 4); // 4 books per row
+    
+    @media screen and (max-width: 576px) {
+      width: calc(100% / 2); // 2 books per row
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .books-grid {
     margin: -16px -8px;
-    
+
     .book__wrapper {
       padding: 16px 8px;
-    }
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .books-grid {
-    .book__wrapper {
-      width: calc(100% / 2); // 2 books per row
     }
   }
 }

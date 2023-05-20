@@ -45,17 +45,3 @@ button {
 .text--purple {
   color: variables.$purple-color;
 }
-
-.mobile {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .desktop {
-    display: none !important;
-  }
-
-  .mobile {
-    display: block !important;
-  }
-}

@@ -1,0 +1,16 @@
+#info header {
+  padding-bottom: 20px;
+
+  .header-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-link {
+    font-size: 1.5rem;
+
+    &:first-child {
+      margin-right: 12px;
+    }
+  }
+}
