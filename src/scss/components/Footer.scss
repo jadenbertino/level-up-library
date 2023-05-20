@@ -3,35 +3,36 @@
 #footer {
   background-color: #242424;
 
-  > .container {
+  .container {
     height: variables.$footer-height;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  
+  .col {
+    display: flex;
+    justify-content: center;
+  }
 
-    .col {
-      display: flex;
-      justify-content: center;
+  .footer__logo,
+  .footer__links,
+  .footer__link,
+  .footer__copyright {
+    color: #fff;
+  }
 
-      .footer__logo,
-      .footer__links,
-      .footer__link,
-      .footer__copyright {
-        color: #fff;
-      }
+  .footer__links {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
 
-      .footer__links {
-        margin: 24px 0;
-      }
+  .footer__link {
+    margin: 0 16px;
+  }
 
-      .footer__link {
-        margin: 0 16px;
-      }
-
-      .footer__logo {
-        width: 160px;
-        filter: grayscale(1) brightness(0) invert(1); // pure white
-      }
-    }
+  .footer__logo {
+    width: 160px;
+    filter: grayscale(1) brightness(0) invert(1); // pure white
   }
 }

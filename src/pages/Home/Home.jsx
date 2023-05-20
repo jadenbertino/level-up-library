@@ -8,7 +8,7 @@ import '../../css/pages/Home/Home.css';
 
 export default function Home() {
   return (
-    <>
+    <div id="home">
       <Landing />
       <main>
         <Highlights />
@@ -16,6 +16,6 @@ export default function Home() {
         <DiscountedBooks />
         <Explore />
       </main>
-    </>
+    </div>
   );
 }
