@@ -1,8 +1,8 @@
-#recommended {
+.recommended {
   padding-top: 48px;
   padding-bottom: 60px;
 
-  .recc-books__header {
+  &__header {
     margin-bottom: 32px;
     font-size: 2rem;
     text-align: center;
@@ -11,13 +11,13 @@
   @media screen and (max-width: 576px) {
     padding-top: 24px;
     
-    .recc-books__header {
+    &__header {
       margin-bottom: 24px;
     }
   }
 
   @media screen and (max-width: 480px) {
-    .recc-books__header {
+    &__header {
       margin-bottom: 20px;
     }
   }

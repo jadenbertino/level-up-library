@@ -21,7 +21,7 @@ export default function BookInfo({ addItemToCart }) {
 
   useEffect(() => {
     if (books.length < 1) return;
-    // scroll.scrollTo("recc-books", {
+    // scroll.scrollTo("info", {
     //   duration: 600,
     // });
     setFocusedBook(books.find((book) => book.id === currentBookID));
@@ -34,18 +34,18 @@ export default function BookInfo({ addItemToCart }) {
 
   return (
     <main id="info">
-      <header>
+      <section className='go-to-browse'>
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <Link to='/books' className='header-links'>
-                <FontAwesomeIcon icon={faArrowLeft} className='header-link' />
+              <Link to='/books' className='go-to-browse__link-wrapper'>
+                <FontAwesomeIcon icon={faArrowLeft} className='go-to-browse__link' />
                 <h2 className='header-link'>All Books</h2>
               </Link>
             </div>
           </div>
         </div>
-      </header>
+      </section>
       <section id='active'>
         <div className='container'>
           <div className='row'>
@@ -55,11 +55,11 @@ export default function BookInfo({ addItemToCart }) {
           </div>
         </div>
       </section>
-      <section id='recommended'>
+      <section className='recommended'>
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <h2 className='recc-books__header'>Recommended Books</h2>
+              <h2 className='recommended__header'>Recommended Books</h2>
             </div>
           </div>
           <div className='row'>

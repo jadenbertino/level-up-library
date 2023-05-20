@@ -1,14 +1,14 @@
-#info header {
+.go-to-browse {
   padding-bottom: 20px;
 }
-#info header .header-links {
+.go-to-browse__link-wrapper {
   display: flex;
   align-items: center;
 }
-#info header .header-link {
+.go-to-browse__link {
   font-size: 1.5rem;
 }
-#info header .header-link:first-child {
+.go-to-browse__link:first-child {
   margin-right: 12px;
 }
 
@@ -105,25 +105,25 @@
     justify-content: space-between;
   }
 }
-#recommended {
+.recommended {
   padding-top: 48px;
   padding-bottom: 60px;
 }
-#recommended .recc-books__header {
+.recommended__header {
   margin-bottom: 32px;
   font-size: 2rem;
   text-align: center;
 }
 @media screen and (max-width: 576px) {
-  #recommended {
+  .recommended {
     padding-top: 24px;
   }
-  #recommended .recc-books__header {
+  .recommended__header {
     margin-bottom: 24px;
   }
 }
 @media screen and (max-width: 480px) {
-  #recommended .recc-books__header {
+  .recommended__header {
     margin-bottom: 20px;
   }
 }
