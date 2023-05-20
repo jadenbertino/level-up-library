@@ -37,7 +37,7 @@ export default function Books() {
   }
 
   return (
-    <main>
+    <main id="browse">
       <header>
         <div className='container'>
           <div className='row'>
@@ -62,7 +62,7 @@ export default function Books() {
           </div>
         </div>
       </header>
-      <section id='browse-books'>
+      <section id='books'>
         <div className='container'>
           <div className='row'>
             <div className='col'></div>

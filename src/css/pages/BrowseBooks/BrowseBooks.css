@@ -1,16 +1,16 @@
-header {
+#browse header {
   padding-top: 20px;
   padding-bottom: 24px;
 }
-header .books__header {
+#browse header .books__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .books__header--title {
+#browse header .books__header--title {
   font-size: 40px;
 }
-header select {
+#browse header select {
   background-color: #fff;
   border-radius: 4px;
   border: 1px solid #dcdfe6;
@@ -21,30 +21,29 @@ header select {
   padding: 0 16px;
 }
 @media screen and (max-width: 768px) {
-  header {
+  #browse header {
     padding-top: 0;
     padding-bottom: 12px;
   }
-  header .books__header--title {
+  #browse header .books__header--title {
     font-size: 2rem;
   }
-  header select {
+  #browse header select {
     padding: 0 8px;
     line-height: 36px;
     height: 36px;
   }
 }
 @media screen and (max-width: 480px) {
-  header .books__header--title {
+  #browse header .books__header--title {
     font-size: 1.75rem;
   }
 }
-
-#browse-books {
+#browse #books {
   padding-bottom: 64px;
 }
 @media screen and (max-width: 768px) {
-  #browse-books {
+  #browse #books {
     padding-top: 8px;
     padding-bottom: 40px;
   }

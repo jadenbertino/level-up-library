@@ -1,18 +1,16 @@
 #cart {
   min-height: calc(100vh - 92px - 220px);
 }
-
-.cart__section-title {
+#cart .cart__section-title {
   text-align: left;
   font-size: 36px;
 }
 @media screen and (max-width: 576px) {
-  .cart__section-title {
+  #cart .cart__section-title {
     font-size: 28px;
   }
 }
-
-.cart__header {
+#cart .cart__section-title .cart__header {
   margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -21,67 +19,104 @@
   font-size: 1.1rem;
   padding: 12px 16px;
 }
-.cart__header .price {
+#cart .cart__section-title .cart__header .price {
   text-align: end;
 }
-.cart__header .quantity {
+#cart .cart__section-title .cart__header .quantity {
   text-align: center;
 }
-
-.cart__contents {
+#cart .cart__section-title .cart__contents {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
+#cart .cart__section-title .cart__empty {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+#cart .cart__section-title .cart__empty--message {
+  margin: 48px 0 24px;
+  font-size: 1.25rem;
+}
+#cart .cart__section-title .cart__empty--img {
+  max-width: 260px;
+  width: 75%;
+  object-fit: contain;
+}
+#cart .cart__section-title .cart__empty--btn {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+#cart .cart__section-title .mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #cart .cart__section-title .desktop {
+    display: none !important;
+  }
+  #cart .cart__section-title .mobile {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  #cart .cart__section-title h2 {
+    font-size: 28px;
+  }
+}
 
-.cart-item {
+#cart .cart-item {
   padding: 24px 0;
   border-bottom: 1px solid gray;
   display: grid;
   grid-template-columns: 2fr 1.25fr 2fr;
 }
-.cart-item__img {
+#cart .cart-item__img {
   grid-column: 2/3;
   object-fit: contain;
   width: 100px;
   border-radius: 8px;
   margin-right: 20px;
 }
-.cart-item__description.desktop {
+#cart .cart-item__description.desktop {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.cart-item__title {
+#cart .cart-item__title {
   font-size: 1.25rem;
 }
-.cart-item__title.mobile {
+#cart .cart-item__title.mobile {
   margin-bottom: 12px;
   text-align: center;
 }
-.cart-item__price {
+#cart .cart-item__price {
   margin-top: 12px;
   font-weight: bold;
 }
-.cart-item__quantity {
+#cart .cart-item__quantity {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.cart-item__quantity .btn.adjust-quantity {
+#cart .cart-item__quantity .btn.adjust-quantity {
   margin-bottom: 0;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   padding: 0;
 }
-.cart-item__quantity .current-quantity {
+#cart .cart-item__quantity .current-quantity {
   font-weight: bold;
   width: 50px;
   text-align: center;
 }
-.cart-item__total-price {
+#cart .cart-item__total-price {
   padding-right: 16px;
   display: flex;
   justify-content: flex-end;
@@ -89,34 +124,34 @@
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
-  .cart-item {
+  #cart .cart-item {
     grid-template-columns: 1fr 1.5fr 1fr;
   }
 }
 @media screen and (max-width: 576px) {
-  .cart-item__img {
+  #cart .cart-item__img {
     width: 75%;
     max-width: 160px;
   }
-  .cart-item__description {
+  #cart .cart-item__description {
     display: none;
   }
-  .cart-item__total-price {
+  #cart .cart-item__total-price {
     padding-right: 0;
   }
-  .cart-item__title.mobile {
+  #cart .cart-item__title.mobile {
     margin-bottom: 8px;
   }
-  .cart-item .current-quantity {
+  #cart .cart-item .current-quantity {
     width: 40px;
   }
-  .cart-item .btn.adjust-quantity {
+  #cart .cart-item .btn.adjust-quantity {
     width: 32px;
     height: 32px;
   }
 }
 @media screen and (max-width: 480px) {
-  .cart-item__title {
+  #cart .cart-item__title {
     font-size: 16px;
   }
 }
@@ -144,20 +179,20 @@
   padding-right: 48px;
 }
 
-.totals {
+#cart .totals {
   display: flex;
   justify-content: flex-end;
   margin-top: 32px;
 }
-.totals__row {
+#cart .totals__row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-.totals__row.final {
+#cart .totals__row:nth-child(3) {
   font-weight: 900;
 }
-.totals .btn {
+#cart .totals .btn {
   margin-bottom: 32px;
 }
 

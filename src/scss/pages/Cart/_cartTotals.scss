@@ -1,19 +1,21 @@
-.totals {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 32px;
-
-  &__row {
+#cart {
+  .totals {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    margin-top: 32px;
 
-    &.final {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    &__row:nth-child(3) {
       font-weight: 900;
     }
-  }
-  
-  .btn {
-    margin-bottom: 32px;
+
+    .btn {
+      margin-bottom: 32px;
+    }
   }
 }
