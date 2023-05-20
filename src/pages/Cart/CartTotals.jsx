@@ -1,20 +1,20 @@
 export default function CartTotals({ subtotal, tax, total, }) {
   return (
-    <div className='totals'>
-      <div className='totals--wrapper'>
-        <div className='totals__row'>
+    <div className='cart-totals'>
+      <div className='cart-totals__wrapper'>
+        <div className='cart-totals__row'>
           <span>Subtotal</span>
           <span>${subtotal}</span>
         </div>
-        <div className='totals__row'>
+        <div className='cart-totals__row'>
           <span>Tax</span>
           <span>${tax}</span>
         </div>
-        <div className='totals__row final'>
+        <div className='cart-totals__row final'>
           <span>Total</span>
           <span>${total}</span>
         </div>
-        <button className='btn'>Proceed to checkout</button>
+        <button className='btn cart-totals__checkout-btn'>Proceed to checkout</button>
       </div>
     </div>
   );

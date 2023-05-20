@@ -10,15 +10,15 @@ export default function ConfirmRemoveModal({ removeItem }) {
   }
 
   return (
-    <Modal className={'confirm-remove-modal'}>
-      <img src={modalContext.payload.url} alt='' />
-      <div className='text-content'>
-        <h2>Are You Sure You Want To Remove "{modalContext.payload.title}"?</h2>
-        <div className='btns'>
-          <button className='btn cancel-btn' onClick={fadeOutModal}>
+    <Modal className={'confirm-remove'}>
+      <img src={modalContext.payload.url} alt='' className='confirm-remove__img'/>
+      <div className='confirm-remove__text'>
+        <h2 className='confirm-remove__header'>Are You Sure You Want To Remove "{modalContext.payload.title}"?</h2>
+        <div className='confirm-remove__btns'>
+          <button className='btn confirm-remove__cancel-btn' onClick={fadeOutModal}>
             Cancel
           </button>
-          <button className='btn remove-btn' onClick={handleDelete}>
+          <button className='btn confirm-remove__remove-btn' onClick={handleDelete}>
             Remove
           </button>
         </div>

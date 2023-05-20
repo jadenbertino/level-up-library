@@ -24,29 +24,29 @@ export default function CartItem({ item, updateCartQuantity }) {
   }
 
   return (
-    <div className='cart-item'>
+    <div className='item'>
       <div className='df'>
-        <img src={item.url} alt='' className='cart-item__img' />
-        <div className='cart-item__description desktop'>
-          <h4 className='cart-item__title'>{item.title}</h4>
-          <div className='cart-item__price'>
+        <img src={item.url} alt='' className='item__img' />
+        <div className='item__description desktop'>
+          <h4 className='item__title'>{item.title}</h4>
+          <div className='item__price'>
             <Price originalPrice={item.originalPrice} salePrice={item.salePrice} />
           </div>
         </div>
       </div>
       <div className='dfa fc'>
-        <h4 className='cart-item__title mobile'>{item.title}</h4>
-        <div className='cart-item__quantity'>
-          <button className='btn adjust-quantity' onClick={decrementQuantity}>
+        <h4 className='item__title mobile'>{item.title}</h4>
+        <div className='item__quantity'>
+          <button className='btn item__adjust-quantity-btn' onClick={decrementQuantity}>
             -
           </button>
-          <span className='current-quantity'>{item.quantity}</span>
-          <button className='btn adjust-quantity' onClick={incrementQuantity}>
+          <span className='item__current-quantity'>{item.quantity}</span>
+          <button className='btn item__adjust-quantity-btn' onClick={incrementQuantity}>
             +
           </button>
         </div>
       </div>
-      <div className='cart-item__total-price'>
+      <div className='item__total-price'>
         <span>${formatPrice((item.salePrice || item.originalPrice) * item.quantity)}</span>
       </div>
     </div>
