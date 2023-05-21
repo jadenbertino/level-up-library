@@ -89,20 +89,3 @@ textarea,
 button {
   font-family: inherit;
 }
-
-.btn {
-  background-color: #7342d6;
-  padding: 12px 24px;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  transition: opacity 250ms ease;
-  font-size: 1rem;
-}
-.btn:hover {
-  opacity: 0.9;
-}
-
-.text--purple {
-  color: #7342d6;
-}
