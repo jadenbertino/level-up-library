@@ -1,6 +1,6 @@
 @use '../../utils';
 
-.cart-totals {
+#cart .totals {
   display: flex;
   justify-content: flex-end;
   margin-top: 32px;
@@ -9,11 +9,12 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    
+    &.final {
+      font-weight: 900;
+    }
   }
 
-  &__row.final {
-    font-weight: 900;
-  }
 
   &__checkout-btn {
     @include utils.btn;

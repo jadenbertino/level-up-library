@@ -64,12 +64,12 @@
 
 .fade-in {
   /* slide in animation */
-  .confirm-remove-modal {
+  .confirm-remove {
     transform: translateY(10%);
     transition: transform 300ms ease-in-out;
   }
 
-  &.visible .confirm-remove-modal {
+  &.visible .confirm-remove {
     transform: translateX(0);
     transition: transform 300ms ease-in-out;
   }

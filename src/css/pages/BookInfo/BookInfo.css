@@ -1,17 +1,3 @@
-.view-all {
-  padding-bottom: 20px;
-}
-.view-all__link-wrapper {
-  display: flex;
-  align-items: center;
-}
-.view-all__link {
-  font-size: 1.5rem;
-}
-.view-all__link:first-child {
-  margin-right: 12px;
-}
-
 .active-book {
   display: flex;
   align-items: flex-start;
@@ -115,6 +101,20 @@
     justify-content: space-between;
   }
 }
+.view-all {
+  padding-bottom: 20px;
+}
+.view-all__link-wrapper {
+  display: flex;
+  align-items: center;
+}
+.view-all__link {
+  font-size: 1.5rem;
+}
+.view-all__link:first-child {
+  margin-right: 12px;
+}
+
 .recommended {
   padding-top: 48px;
   padding-bottom: 60px;

@@ -15,7 +15,7 @@ export default function FeatureShowcase() {
         </div>
         <div className='row'>
           <div className='col'>
-            <div className='highlights-grid'>
+            <div className='highlights'>
               <div className='first-highlight highlight__icon--wrapper'>
                 <FontAwesomeIcon icon={faBolt} className='highlight__icon' />
               </div>

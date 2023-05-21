@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function CartContents({ cart, updateCartQuantity, removeItem }) {
   return (
-    <div className='cart-contents'>
+    <div className='contents'>
       {cart.length > 0 ? (
         cart.map((item) => (
           <CartItem
@@ -15,11 +15,11 @@ export default function CartContents({ cart, updateCartQuantity, removeItem }) {
           />
         ))
       ) : (
-        <div className='cart-empty'>
-          <img src={cartIcon} className='cart-empty__img' alt='' />
-          <p className='cart-empty__message'>Your cart is currently empty.</p>
+        <div className='empty'>
+          <img src={cartIcon} className='empty__img' alt='' />
+          <p className='empty__message'>Your cart is currently empty.</p>
           <Link to='/books'>
-            <button className='cart-empty__btn'>Continue Shopping</button>
+            <button className='empty__btn'>Continue Shopping</button>
           </Link>
         </div>
       )}

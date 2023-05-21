@@ -42,12 +42,12 @@ export default function Books() {
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <div className='browse-header'>
-                <h2 className='books__header__title'>
+              <div className='header'>
+                <h2 className='header__title'>
                   All <span className='text--purple'>Books</span>
                 </h2>
                 <select 
-                  className='browse-header__select filter-books'
+                  className='header__select'
                   id='filter'
                   onChange={(e) => filterBooks(e.target.value)}
                   defaultValue={'DEFAULT'}
@@ -64,7 +64,7 @@ export default function Books() {
           </div>
         </div>
       </header>
-      <section className='browse-books'>
+      <section className='books'>
         <div className='container'>
           <div className='row'>
             <div className='col'></div>

@@ -15,29 +15,29 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
   [subtotal, tax, total] = [subtotal, tax, total].map((amount) => formatPrice(amount));
 
   return (
-    <main className='cart expand-vertically'>
+    <main id='cart'>
       <header>
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <h2 className='cart-header'>Cart</h2>
+              <h2 className='header'>Cart</h2>
             </div>
           </div>
           <div className='row'>
             <div className='col'>
-              <div className='cart-categories'>
+              <div className='categories'>
                 <span>Books</span>
-                <span className='cart-categories__quantity'>Quantity</span>
-                <span className='cart-categories__price'>Price</span>
+                <span className='categories__quantity'>Quantity</span>
+                <span className='categories__price'>Price</span>
               </div>
             </div>
           </div>
         </div>
       </header>
       <section>
-        <div className='container expand-vertically'>
-          <div className='row expand-vertically'>
-            <div className='col expand-vertically'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'>
               <CartContents
                 cart={cart}
                 updateCartQuantity={updateCartQuantity}
