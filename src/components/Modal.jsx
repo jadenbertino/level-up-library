@@ -27,9 +27,8 @@ export default function Modal({ children, className }) {
   }, [modalContext.isFadingOut]);
 
   return createPortal(
-    <div className={`modal__backdrop fade-in${modalVisible ? ' visible' : ''}`}>
+    <div onClick={fadeOutModal} className={`modal__backdrop fade-in${modalVisible ? ' visible' : ''}`} >
       <div className={`modal ${className ? className : ''}`}>{children}</div>
-      <div className='close-modal-overlay' onClick={fadeOutModal}></div>
     </div>,
     root
   );

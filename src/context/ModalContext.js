@@ -19,11 +19,14 @@ export function ModalContextProvider({ children }) {
     }))
   }
 
-  function fadeOutModal() {
-    setModalContext(prev => ({...prev, isFadingOut: true}))
-    setTimeout(() => {
-      setModalContext(initialModalContext)
-    }, 300) // must match the transition time in Modal.css
+  function fadeOutModal(e) {
+    const backdropWasClicked = e.target.classList.contains('modal__backdrop');
+    if (backdropWasClicked) {
+      setModalContext(prev => ({...prev, isFadingOut: true}))
+      setTimeout(() => {
+        setModalContext(initialModalContext)
+      }, 300) // must match the transition time in Modal.css
+    }
   }
 
   return (
