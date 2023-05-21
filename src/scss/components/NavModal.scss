@@ -1,10 +1,5 @@
 @use '../variables';
 
-.modal-backdrop:has(.nav-modal) {
-  justify-content: flex-end;
-  padding: 0;
-}
-
 .nav-modal {
   background-color: variables.$purple-color;
   border-radius: 0;
@@ -13,7 +8,7 @@
   display: flex;
   align-items: center;
 
-  ul {
+  &__links {
     height: 100%;
     max-height: 260px;
     display: flex;
@@ -23,7 +18,16 @@
     color: #fff;
   }
 
-  .fa-x-wrapper {
+  &__link {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    padding: 12px;
+  }
+
+  &__x-icon {
     position: absolute;
     right: 40px;
     top: 40px;
@@ -35,19 +39,15 @@
     }
   }
 
-  a {
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid #fff;
-    padding: 12px;
-  }
-
-  .link-icon {
+  &__link-icon {
     font-size: 1.2rem;
     margin-right: 12px;
   }
+}
+
+.modal__backdrop:has(.nav-modal) {
+  justify-content: flex-end;
+  padding: 0;
 }
 
 // slide in / out transition
@@ -60,43 +60,5 @@
   &.visible .nav-modal {
     transform: translateX(0);
     transition: transform 300ms ease-in-out;
-  }
-}
-
-@media (max-width: 760px) {
-  nav {
-    li {
-      display: none;
-    }
-
-    .hamburger,
-    .shopping-cart {
-      display: block;
-    }
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .nav__logo {
-    width: 120px;
-  }
-}
-
-@media screen and (max-height: 480px) {
-  // landscape mobile
-  .nav-modal {
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-    ul {
-      max-height: none;
-    }
-
-    .fa-x-wrapper {
-      position: relative;
-      right: 0;
-      top: 0;
-      margin-left: auto;
-    }
   }
 }

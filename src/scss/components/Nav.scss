@@ -1,3 +1,109 @@
 @use '../variables';
-@use 'Navbar';
-@use 'NavMobile';
+
+.nav {
+  height: variables.$nav-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+
+  &__logo {
+    width: 160px;
+    margin-left: -20px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  &__link-wrapper {
+    margin-left: 24px;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  &__link {
+    padding: 8px;
+
+    &--primary {
+      border: 2px solid variables.$purple-color;
+      color: variables.$purple-color;
+      border-radius: 4px;
+    }
+  }
+
+  &__cart-icon {
+    position: relative;
+
+    .fa-cart-shopping {
+      font-size: 20px;
+      color: variables.$purple-color;
+    }
+
+    .cart-size-bubble {
+      background-color: red;
+      color: white;
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 10px;
+      right: -4px;
+    }
+  }
+
+  &__hamburger-icon {
+    display: none;
+
+    button {
+      border: none;
+      background-color: transparent;
+    }
+
+    .fa-bars {
+      font-size: 1.5rem;
+      color: variables.$purple-color;
+    }
+  }
+
+  @media (max-width: 760px) {
+    // hide all nav links except cart + hamburger
+    &__link-wrapper {
+      display: none;
+    }
+
+    &__hamburger-icon,
+    &__cart-icon {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__logo {
+      width: 120px;
+    }
+  }
+
+  @media screen and (max-height: 480px) {
+    // landscape mobile
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    &__links {
+      max-height: none;
+    }
+
+    &__x-icon {
+      position: relative;
+      right: 0;
+      top: 0;
+      margin-left: auto;
+    }
+  }
+}

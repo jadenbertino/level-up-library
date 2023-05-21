@@ -9,6 +9,7 @@ import Modal from './Modal';
 // styles
 import logo from '../assets/library-logo.png';
 import '../css/components/Nav.css';
+import '../css/components/NavModal.css'
 
 export default function Nav({ numBooks }) {
   const { modalContext, fadeInModal, fadeOutModal } = useModalContext();
@@ -24,53 +25,62 @@ export default function Nav({ numBooks }) {
     <>
       <nav>
         <div className='container'>
-          <Link to='/'>
-            <img src={logo} alt='' className='logo' />
-          </Link>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/books' className='primary'>
-                Books
-              </Link>
-            </li>
-            <li className='hamburger' onClick={openNavModal}>
-              <button className='hamburger'>
-                <i className='fa-solid fa-bars'></i>
-              </button>
-            </li>
-            <li className='shopping-cart'>
-              <Link to='/cart'>
-                <i className='fa-solid fa-cart-shopping'></i>
-                {numBooks > 0 ? <span className='cart-size-bubble'>{numBooks}</span> : null}
-              </Link>
-            </li>
-          </ul>
+          <div className='row'>
+            <div className='col'>
+              <div className='nav'>
+                <Link className='nav__link' to='/'>
+                  <img src={logo} alt='' className='nav__logo' />
+                </Link>
+                <ul className='nav__links'>
+                  <li className='nav__link-wrapper'>
+                    <Link className='nav__link' to='/'>
+                      Home
+                    </Link>
+                  </li>
+                  <li className='nav__link-wrapper'>
+                    <Link className='nav__link nav__link--primary' to='/books'>
+                      Books
+                    </Link>
+                  </li>
+                  <li className='nav__link-wrapper nav__hamburger-icon' onClick={openNavModal}>
+                    <button className='hamburger'>
+                      <i className='fa-solid fa-bars'></i>
+                    </button>
+                  </li>
+                  <li className='nav__link-wrapper nav__cart-icon'>
+                    <Link className='nav__link' to='/cart'>
+                      <i className='fa-solid fa-cart-shopping'></i>
+                      {numBooks > 0 ? <span className='cart-size-bubble'>{numBooks}</span> : null}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
+      
       {modalContext.type === 'nav' && (
         <Modal className={'nav-modal'}>
-          <ul>
-            <li className='fa-x-wrapper'>
+          <ul className='nav-modal__links'>
+            <li className='nav-modal__x-icon'>
               <i className='fa-solid fa-x' onClick={fadeOutModal}></i>
             </li>
             <li>
-              <Link to='/' onClick={fadeOutModal}>
-                <i className='link-icon fa-solid fa-house'></i>
+              <Link className='nav-modal__link' to='/' onClick={fadeOutModal}>
+                <i className='nav-modal__link-icon fa-solid fa-house'></i>
                 <span>Home</span>
               </Link>
             </li>
             <li>
-              <Link to='/books' onClick={fadeOutModal}>
-                <i className='link-icon fa-solid fa-book'></i>
+              <Link className='nav-modal__link' to='/books' onClick={fadeOutModal}>
+                <i className='nav-modal__link-icon fa-solid fa-book'></i>
                 <span>Books</span>
               </Link>
             </li>
             <li>
-              <Link to='/cart' onClick={fadeOutModal}>
-                <i className='link-icon fa-solid fa-cart-shopping'></i>
+              <Link className='nav-modal__link' to='/cart' onClick={fadeOutModal}>
+                <i className='nav-modal__link-icon fa-solid fa-cart-shopping'></i>
                 <span>Cart</span>
               </Link>
             </li>

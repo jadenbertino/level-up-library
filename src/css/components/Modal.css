@@ -1,14 +1,12 @@
-.fade-in {
-  opacity: 0;
-  transition: opacity 300ms ease-in-out;
+.modal {
+  border-radius: 8px;
+  background-color: #fff;
+  color: #7342d6;
+  padding: 24px;
+  position: relative;
+  z-index: 102;
 }
-
-.fade-in.visible {
-  opacity: 1;
-  transition: opacity 300ms ease-in-out;
-}
-
-.modal-backdrop {
+.modal__backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,15 +20,6 @@
   padding: 12px;
 }
 
-.modal {
-  border-radius: 8px;
-  background-color: #fff;
-  color: #7342d6;
-  padding: 24px;
-  position: relative;
-  z-index: 102;
-}
-
 .close-modal-overlay {
   position: absolute;
   top: 0;
@@ -38,6 +27,16 @@
   width: 100%;
   height: 100%;
   z-index: 101;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 
 body:has(.modal) {

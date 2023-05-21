@@ -1,5 +1,5 @@
 @mixin setBookImgHeight($height) {
-  .book__img--wrapper,
+  .book__img-wrapper,
   .book-skeleton__img {
     height: $height;
   }
@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
 
-  &__cover-img {
+  &__img {
     display: block;
     height: 100%;
     width: 100%;
@@ -100,7 +100,7 @@
   @include setBookImgHeight(55vw);
 
   .book {
-    &__cover-img {
+    &__img {
       object-position: center bottom;
     }
 

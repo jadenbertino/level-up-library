@@ -1,27 +1,10 @@
 @use '../variables';
 
-.fade-in {
-  opacity: 0;
-  transition: opacity 300ms ease-in-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transition: opacity 300ms ease-in-out;
-}
-
-.modal-backdrop {
-  position: fixed;
+@mixin fullscreen {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px) brightness(60%);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
 }
 
 .modal {
@@ -31,15 +14,33 @@
   padding: 24px;
   position: relative;
   z-index: 102;
+
+  &__backdrop {
+    position: fixed;
+    @include fullscreen;
+    backdrop-filter: blur(5px) brightness(60%);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+  }
 }
 
 .close-modal-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @include fullscreen;
   z-index: 101;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 
 body:has(.modal) {
