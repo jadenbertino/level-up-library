@@ -2,7 +2,7 @@
 import { faBolt, faBookOpen, faTags } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function FeatureShowcase() {
+export default function Highlights() {
   return (
     <section id='highlights'>
       <div className='container text--center'>
@@ -16,25 +16,26 @@ export default function FeatureShowcase() {
         <div className='row'>
           <div className='col'>
             <div className='highlights'>
-              <div className='first-highlight highlight__icon--wrapper'>
+              {/* weird html structure + display: grid  to ensure that paragraphs line up across highlights */}
+              <div className='first-highlight highlight__icon-wrapper'>
                 <FontAwesomeIcon icon={faBolt} className='highlight__icon' />
               </div>
               <h3 className='first-highlight highlight__title'>Easy And Quick</h3>
               <p className='first-highlight highlight__para'>
                 Get access to the book you purchased online instantly.
               </p>
-              <div className='access highlight__icon--wrapper'>
+              <div className='highlight__icon-wrapper'>
                 <FontAwesomeIcon icon={faBookOpen} className='highlight__icon' />
               </div>
-              <h3 className='access highlight__title'>10,000+ Books</h3>
-              <p className='access highlight__para'>
+              <h3 className='highlight__title'>10,000+ Books</h3>
+              <p className='highlight__para'>
                 Library has books in all your favorite categories.
               </p>
-              <div className='affordable highlight__icon--wrapper'>
+              <div className='highlight__icon-wrapper'>
                 <FontAwesomeIcon icon={faTags} className='highlight__icon' />
               </div>
-              <h3 className='affordable highlight__title'>Affordable</h3>
-              <p className='affordable highlight__para'>
+              <h3 className='highlight__title'>Affordable</h3>
+              <p className='highlight__para'>
                 Get your hands on popular books for as little as $10.
               </p>
             </div>
