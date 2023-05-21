@@ -37,7 +37,7 @@ export default function BookInfo({ addItemToCart }) {
           <div className='row'>
             <div className='col'>
               <Link to='/books' className='view-all__link-wrapper'>
-                <FontAwesomeIcon icon={faArrowLeft} className='view-all__link' />
+                <FontAwesomeIcon icon={faArrowLeft} className='view-all__link view-all__link--icon' />
                 <h2 className='view-all__link'>All Books</h2>
               </Link>
             </div>

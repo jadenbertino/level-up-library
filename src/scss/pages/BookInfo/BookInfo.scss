@@ -10,9 +10,9 @@
   }
 
   &__link {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 
-    &:first-child {
+    &--icon {
       margin-right: 12px;
     }
   }
@@ -24,21 +24,14 @@
 
   &__header {
     margin-bottom: 32px;
-    font-size: 2rem;
+    font-size: 28px;
     text-align: center;
   }
 
   @media screen and (max-width: 576px) {
-    padding-top: 24px;
-    
     &__header {
+      font-size: 28px;
       margin-bottom: 24px;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    &__header {
-      margin-bottom: 20px;
     }
   }
 }

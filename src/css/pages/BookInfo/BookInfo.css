@@ -109,9 +109,9 @@
   align-items: center;
 }
 .view-all__link {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
-.view-all__link:first-child {
+.view-all__link--icon {
   margin-right: 12px;
 }
 
@@ -121,19 +121,12 @@
 }
 .recommended__header {
   margin-bottom: 32px;
-  font-size: 2rem;
+  font-size: 28px;
   text-align: center;
 }
 @media screen and (max-width: 576px) {
-  .recommended {
-    padding-top: 24px;
-  }
   .recommended__header {
+    font-size: 28px;
     margin-bottom: 24px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .recommended__header {
-    margin-bottom: 20px;
   }
 }
