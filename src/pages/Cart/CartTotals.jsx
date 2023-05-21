@@ -1,4 +1,9 @@
 export default function CartTotals({ subtotal, tax, total, }) {
+  
+  function handleCheckout() {
+    alert("This is a mockup site, so it's not possible to purchase books at this time.")
+  }
+
   return (
     <div className='totals'>
       <div className='totals__wrapper'>
@@ -14,7 +19,7 @@ export default function CartTotals({ subtotal, tax, total, }) {
           <span>Total</span>
           <span>${total}</span>
         </div>
-        <button className='totals__checkout-btn'>Proceed to checkout</button>
+        <button className='totals__checkout-btn' onClick={handleCheckout}>Proceed to checkout</button>
       </div>
     </div>
   );

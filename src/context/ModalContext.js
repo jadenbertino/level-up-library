@@ -3,13 +3,13 @@ import { createContext, useState } from 'react';
 export const ModalContext = createContext();
 
 export function ModalContextProvider({ children }) {
-  const initialModalContext = {
+  const initialModalState = {
     type: '',
     payload: null,
     isFadingOut: false,
   }
 
-  const [modalContext, setModalContext] = useState(initialModalContext);
+  const [modalContext, setModalContext] = useState(initialModalState);
 
   function fadeInModal({ type, payload }) {
     setModalContext(prev => ({
@@ -24,7 +24,7 @@ export function ModalContextProvider({ children }) {
     if (backdropWasClicked) {
       setModalContext(prev => ({...prev, isFadingOut: true}))
       setTimeout(() => {
-        setModalContext(initialModalContext)
+        setModalContext(initialModalState)
       }, 300) // must match the transition time in Modal.css
     }
   }
