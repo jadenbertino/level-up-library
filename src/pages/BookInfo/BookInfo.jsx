@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-// import { animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll';
 
 // components & hooks
 import BooksGrid from '../../components/BooksGrid';
@@ -16,15 +16,13 @@ import '../../css/pages/BookInfo/BookInfo.css';
 export default function BookInfo({ addItemToCart }) {
   const { id: currentBookID } = useParams();
   const { books } = useBooksContext();
-  const [focusedBook, setFocusedBook] = useState(null);
+  const [activeBook, setActiveBook] = useState(null);
   const [topFourBooks, setTopFourBooks] = useState([]);
 
   useEffect(() => {
     if (books.length < 1) return;
-    // scroll.scrollTo("info", {
-    //   duration: 600,
-    // });
-    setFocusedBook(books.find((book) => book.id === currentBookID));
+    scroll.scrollToTop({ duration: 500 });
+    setActiveBook(books.find((book) => book.id === currentBookID));
     setTopFourBooks(
       books
         .filter((book) => book.rating === 5 && book.id !== currentBookID) // if they are on book info page then show only new books
@@ -33,7 +31,7 @@ export default function BookInfo({ addItemToCart }) {
   }, [books, currentBookID]);
 
   return (
-    <main id="info">
+    <main id='info'>
       <section className='view-all'>
         <div className='container'>
           <div className='row'>
@@ -50,7 +48,7 @@ export default function BookInfo({ addItemToCart }) {
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              {focusedBook && <BookSelected book={focusedBook} addItemToCart={addItemToCart} />}
+              {activeBook && <BookSelected book={activeBook} addItemToCart={addItemToCart} />}
             </div>
           </div>
         </div>
