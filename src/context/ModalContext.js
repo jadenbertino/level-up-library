@@ -19,18 +19,22 @@ export function ModalContextProvider({ children }) {
     }))
   }
 
-  function fadeOutModal(e) {
+  function handleBackdropClick(e) {
     const backdropWasClicked = e.target.classList.contains('modal__backdrop');
     if (backdropWasClicked) {
-      setModalContext(prev => ({...prev, isFadingOut: true}))
-      setTimeout(() => {
-        setModalContext(initialModalState)
-      }, 300) // must match the transition time in Modal.css
+      fadeOutModal()
     }
   }
 
+  function fadeOutModal() {
+    setModalContext(prev => ({...prev, isFadingOut: true}))
+    setTimeout(() => {
+      setModalContext(initialModalState)
+    }, 300) // must match the transition time in Modal.css
+  }
+
   return (
-    <ModalContext.Provider value={{ modalContext, setModalContext, fadeOutModal, fadeInModal }}>
+    <ModalContext.Provider value={{ modalContext, setModalContext, fadeOutModal, fadeInModal, handleBackdropClick }}>
       {children}
     </ModalContext.Provider>
   );

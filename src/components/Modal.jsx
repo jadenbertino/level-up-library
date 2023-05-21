@@ -9,7 +9,7 @@ import '../css/components/Modal.css';
 
 export default function Modal({ children, className }) {
   const root = document.querySelector('#root');
-  const { fadeOutModal, modalContext } = useModalContext();
+  const { handleBackdropClick, modalContext } = useModalContext();
   const [modalVisible, setModalVisible] = useState(false);
 
   // fade in modal
@@ -27,7 +27,7 @@ export default function Modal({ children, className }) {
   }, [modalContext.isFadingOut]);
 
   return createPortal(
-    <div onClick={fadeOutModal} className={`modal__backdrop fade-in${modalVisible ? ' visible' : ''}`} >
+    <div onClick={handleBackdropClick} className={`modal__backdrop fade-in${modalVisible ? ' visible' : ''}`} >
       <div className={`modal ${className ? className : ''}`}>{children}</div>
     </div>,
     root
