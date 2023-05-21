@@ -1,63 +1,62 @@
 @use '../../utils';
 
 .confirm-remove {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   max-width: 600px;
   column-gap: 20px;
 
   &__img {
-    width: 100%;
+    width: 25vw;
+    max-width: 200px;
     object-fit: contain;
   }
 
-  &__text {
-    height: 100%;
+  &__prompt {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
+  &__header {
+    text-align: center;
+  }
+
   &__btns {
-    margin-top: 40px;
+    margin-top: 24px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
-  &__cancel-btn {
+  &__btn {
     @include utils.btn;
     font-size: 1rem;
-    background-color: gray;
-  }
 
-  &__remove-btn {
-    @include utils.btn;
-    font-size: 1rem;
-    background-color: #c14953;
-  }
-
-  @media screen and (max-width: 576px) {
-    &__header {
-      font-size: 20px;
+    &--cancel {
+      background-color: gray;
     }
-  
-    &__btns {
-      font-size: 14px;
-      padding: 8px 24px;
+
+    &--remove {
+      background-color: #c14953;
     }
   }
-  
+
   @media screen and (max-width: 480px) {
     padding: 16px;
-  
+    
     &__header {
       font-size: 18px;
     }
-  
-    &__cancel-btn,
-    &__remove-btn {
-      font-size: 12px;
-      padding: 8px 20px;
+    
+    &__btns {
+      flex-direction: column-reverse;
+      row-gap: 8px;
+      margin-top: 20px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      padding: 8px 24px;
+      margin: 0;
     }
   }
 }
