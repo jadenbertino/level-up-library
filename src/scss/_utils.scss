@@ -1,6 +1,6 @@
 @use 'variables';
 
-.btn {
+@mixin btn {
   background-color: variables.$purple-color;
   padding: 12px 24px;
   color: white;
@@ -12,8 +12,4 @@
   &:hover {
     opacity: 0.9;
   }
-}
-
-.text--purple {
-  color: variables.$purple-color;
 }

@@ -37,11 +37,11 @@ export default function CartItem({ item, updateCartQuantity }) {
       <div className='dfa fc'>
         <h4 className='item__title mobile'>{item.title}</h4>
         <div className='item__quantity'>
-          <button className='btn item__adjust-quantity-btn' onClick={decrementQuantity}>
+          <button className='item__adjust-quantity-btn' onClick={decrementQuantity}>
             -
           </button>
           <span className='item__current-quantity'>{item.quantity}</span>
-          <button className='btn item__adjust-quantity-btn' onClick={incrementQuantity}>
+          <button className='item__adjust-quantity-btn' onClick={incrementQuantity}>
             +
           </button>
         </div>

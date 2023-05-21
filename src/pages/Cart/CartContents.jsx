@@ -19,7 +19,7 @@ export default function CartContents({ cart, updateCartQuantity, removeItem }) {
           <img src={cartIcon} className='cart-empty__img' alt='' />
           <p className='cart-empty__message'>Your cart is currently empty.</p>
           <Link to='/books'>
-            <button className='btn cart-empty__btn'>Continue Shopping</button>
+            <button className='cart-empty__btn'>Continue Shopping</button>
           </Link>
         </div>
       )}

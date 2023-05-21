@@ -38,7 +38,7 @@ export default function BookSelected({ book, addItemToCart }) {
             dignissimos quia velit aperiam dolor quisquam pariatur?
           </p>
           <button
-            className={`btn cart-btn${confirmCart ? 'active' : ''}`}
+            className={`cart-btn${confirmCart ? 'active' : ''}`}
             onClick={handleAddToCart}
             disabled={confirmCart}
           >

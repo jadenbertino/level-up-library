@@ -25,11 +25,13 @@
   }
 
   &__cancel-btn {
+    @include utils.btn;
     font-size: 1rem;
     background-color: gray;
   }
 
   &__remove-btn {
+    @include utils.btn;
     font-size: 1rem;
     background-color: #c14953;
   }
