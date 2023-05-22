@@ -46,6 +46,19 @@
   }
 }
 
+@media screen and (max-width: 576px) {
+  .highlight {
+    &__icon-wrapper {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__icon {
+      font-size: 24px;
+    }
+  }
+}
+
 @media screen and (max-width: 480px) {
   .highlights {
     column-gap: 16px;
@@ -58,15 +71,6 @@
 
     &__para {
       font-size: 14px;
-    }
-
-    &__icon--wrapper {
-      width: 80px;
-      height: 80px;
-    }
-
-    &__icon {
-      font-size: 28px;
     }
   }
 }
