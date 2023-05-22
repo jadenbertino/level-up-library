@@ -22,6 +22,7 @@
     margin-left: 24px;
     font-size: 1.25rem;
     font-weight: bold;
+    color: variables.$purple-color;
   }
 
   &__link {
@@ -29,7 +30,6 @@
 
     &--primary {
       border: 2px solid variables.$purple-color;
-      color: variables.$purple-color;
       border-radius: 4px;
     }
   }
