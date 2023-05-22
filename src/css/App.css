@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.df {
+  display: flex;
+}
+
+.dfa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fc {
+  flex-direction: column;
+}
+
+.aic {
+  align-items: center;
+}
+
+.jcsb {
+  justify-content: space-between;
+}
+
+.text--left {
+  text-align: left !important;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.row--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.expand-vertically {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+}
+
+.text--purple {
+  color: #7342d6;
+}

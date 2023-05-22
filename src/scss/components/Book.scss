@@ -1,0 +1,116 @@
+@mixin setBookImgHeight($height) {
+  .book__img-wrapper,
+  .book-skeleton__img {
+    height: $height;
+  }
+}
+
+@include setBookImgHeight(280px);
+
+.book {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: left bottom;
+    transition: transform 300ms ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  &__info {
+    margin-top: 12px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 18px;
+  }
+
+  &__rating {
+    color: #fabf2a;
+    margin-top: 4px;
+    margin-bottom: 8px;
+  }
+
+  &__price--strikethrough {
+    text-decoration: line-through;
+    color: #bfbfbf;
+    margin-right: 6px;
+  }
+}
+
+.book-skeleton {
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    background-color: rgb(204, 204, 204);
+    border-radius: 2px;
+  }
+
+  &__title {
+    height: 22px;
+  }
+
+  &__rating {
+    width: 40%;
+    height: 18px;
+  }
+
+  &__price {
+    width: 70%;
+    height: 18px;
+  }
+
+  &__title,
+  &__rating,
+  &__price {
+    background-color: rgb(223, 223, 223);
+    margin-top: 8px;
+    border-radius: 1px;
+  }
+}
+
+/* 
+
+    MOBILE OPS
+
+*/
+
+@media screen and (max-width: 1200px) {
+  @include setBookImgHeight(25vw);
+}
+
+@media screen and (max-width: 768px) {
+  .book__title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  @include setBookImgHeight(55vw);
+
+  .book {
+    &__img {
+      object-position: center bottom;
+    }
+
+    &__info {
+      text-align: center;
+      align-items: center;
+    }
+
+    &__title {
+      max-width: 200px;
+    }
+  }
+}

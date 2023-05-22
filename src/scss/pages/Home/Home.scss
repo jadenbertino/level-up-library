@@ -1,0 +1,14 @@
+@use '../../utils';
+@use 'Layout';
+@use 'Landing';
+@use 'Highlights';
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__btn {
+    @include utils.btn;
+  }
+}

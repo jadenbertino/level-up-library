@@ -1,0 +1,75 @@
+@use '../../utils';
+
+.confirm-remove {
+  display: flex;
+  max-width: 600px;
+  column-gap: 20px;
+
+  &__img {
+    width: 25vw;
+    max-width: 200px;
+    object-fit: contain;
+  }
+
+  &__prompt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__btns {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__btn {
+    @include utils.btn;
+    font-size: 1rem;
+
+    &--cancel {
+      background-color: gray;
+    }
+
+    &--remove {
+      background-color: #c14953;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 16px;
+    
+    &__header {
+      font-size: 18px;
+    }
+    
+    &__btns {
+      flex-direction: column-reverse;
+      row-gap: 8px;
+      margin-top: 20px;
+    }
+
+    &__btn {
+      font-size: 14px;
+      padding: 8px 24px;
+      margin: 0;
+    }
+  }
+}
+
+.fade-in {
+  /* slide in animation */
+  .confirm-remove {
+    transform: translateY(10%);
+    transition: transform 300ms ease-in-out;
+  }
+
+  &.visible .confirm-remove {
+    transform: translateX(0);
+    transition: transform 300ms ease-in-out;
+  }
+}

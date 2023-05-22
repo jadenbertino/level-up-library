@@ -1,0 +1,15 @@
+@use 'variables';
+
+@mixin btn {
+  background-color: variables.$purple-color;
+  padding: 12px 24px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: opacity 250ms ease;
+  font-size: 1rem;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

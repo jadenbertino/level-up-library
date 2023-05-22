@@ -1,30 +1,32 @@
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '../utils/utils';
 
 // styles
-import logo from 'assets/library-logo.png';
-import './Footer.css';
+import logo from '../assets/library-logo.png';
+import '../css/components/Footer.css'
 
 export default function Footer() {
+
   return (
     <section id='footer'>
       <div className='container'>
         <div className='row'>
           <div className='col'>
-            <figure className='footer__logo--wrapper'>
+            <Link to='/' onClick={scrollToTop}>
               <img src={logo} alt='' className='footer__logo' />
-            </figure>
+            </Link>
           </div>
         </div>
         <div className='row'>
           <div className='col'>
             <div className='footer__links'>
-              <Link to='/' className='footer__link'>
+              <Link to='/' className='footer__link' onClick={scrollToTop}>
                 Home
               </Link>
-              <Link to='/books' className='footer__link'>
+              <Link to='/books' className='footer__link'  onClick={scrollToTop}>
                 Books
               </Link>
-              <Link to='/cart' className='footer__link no-cursor'>
+              <Link to='/cart' className='footer__link'  onClick={scrollToTop}>
                 Cart
               </Link>
             </div>

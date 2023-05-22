@@ -1,0 +1,37 @@
+@use '../../utils';
+@use 'Active';
+
+.view-all {
+  padding-bottom: 20px;
+
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: 1.25rem;
+
+    &--icon {
+      margin-right: 12px;
+    }
+  }
+}
+
+.recommended {
+  padding-top: 48px;
+  padding-bottom: 60px;
+
+  &__header {
+    margin-bottom: 32px;
+    font-size: 28px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 576px) {
+    &__header {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+  }
+}

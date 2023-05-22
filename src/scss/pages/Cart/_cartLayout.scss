@@ -1,0 +1,51 @@
+@use '../../variables';
+
+#cart {
+  min-height: calc(100vh - variables.$nav-height - variables.$footer-height);
+
+  .header {
+    text-align: left;
+    font-size: 36px;
+  
+    @media screen and (max-width: 576px) {
+      font-size: 28px;
+    }
+  }
+
+  .categories {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #7342d6;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 16px;
+  
+    &__price {
+      text-align: end;
+    }
+  
+    &__quantity {
+      text-align: center;
+    }
+  }
+  
+  .contents {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .desktop {
+      display: none !important;
+    }
+  
+    .mobile {
+      display: block !important;
+    }
+  }
+}

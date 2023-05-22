@@ -1,4 +1,4 @@
-import useLocalStorage from 'hooks/useLocalStorage';
+import useLocalStorage from './useLocalStorage';
 
 export default function useCart() {
   const [cart, setCart] = useLocalStorage('cartLocalStorage', []);

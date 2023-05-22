@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
-import { useBooksContext } from 'hooks/useBooksContext';
+
+// hooks
+import { useBooksContext } from '../../hooks/useBooksContext';
 
 // styles
-import BooksGrid from 'components/BooksGrid';
-import './BrowseBooks.css';
+import BooksGrid from '../../components/BooksGrid';
+import '../../css/pages/BrowseBooks/BrowseBooks.css';
 
 export default function Books() {
-  const { books } = useBooksContext()
+  const { books } = useBooksContext();
   const [filteredBooks, setFilteredBooks] = useState([]);
 
   useEffect(() => {
@@ -35,20 +37,20 @@ export default function Books() {
   }
 
   return (
-    <main>
-      <section id='browse-books'>
+    <main id='browse'>
+      <header>
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <div className='section__title'>
-                <h2 className='books__header--title'>
+              <div className='header'>
+                <h2 className='header__title'>
                   All <span className='text--purple'>Books</span>
                 </h2>
-                <select
+                <select 
+                  className='header__select'
                   id='filter'
                   onChange={(e) => filterBooks(e.target.value)}
                   defaultValue={'DEFAULT'}
-                  className='filter-books'
                 >
                   <option value='DEFAULT' disabled>
                     Sort
@@ -59,6 +61,13 @@ export default function Books() {
                 </select>
               </div>
             </div>
+          </div>
+        </div>
+      </header>
+      <section className='books'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col'></div>
           </div>
           <div className='row'>
             <div className='col'>
