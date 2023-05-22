@@ -1,15 +1,11 @@
 import { Link } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
+import { scrollToTop } from '../utils/utils';
 
 // styles
 import logo from '../assets/library-logo.png';
 import '../css/components/Footer.css'
 
 export default function Footer() {
-
-  function scrollToTop() {
-    scroll.scrollToTop({ duration: 500 });
-  }
 
   return (
     <section id='footer'>

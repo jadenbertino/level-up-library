@@ -1,3 +1,5 @@
+import { animateScroll as scroll } from 'react-scroll';
+
 export function formatPrice(price) {
   if (Number.isInteger(price)) {
     return price;
@@ -6,4 +8,10 @@ export function formatPrice(price) {
   } else {
     return null;
   }
+}
+
+export function scrollToTop() {
+  scroll.scrollToTop({
+    duration: 500
+  })
 }

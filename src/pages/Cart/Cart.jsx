@@ -1,6 +1,6 @@
 // components, hooks, utils
 import { useModalContext } from '../../hooks/useModalContext';
-import { formatPrice } from '../../utils/BookUtils';
+import { formatPrice } from '../../utils/utils';
 
 // styles
 import '../../css/pages/Cart/Cart.css';

@@ -1,5 +1,5 @@
 // utils
-import { formatPrice } from '../utils/BookUtils';
+import { formatPrice } from '../utils/utils';
 
 export default function Price({ originalPrice, salePrice }) {
   const originalPriceFormatted = formatPrice(originalPrice);

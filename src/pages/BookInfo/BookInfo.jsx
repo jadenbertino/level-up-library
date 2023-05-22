@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
-import { animateScroll as scroll } from 'react-scroll';
 
-// components & hooks
-import BooksGrid from '../../components/BooksGrid';
+// utils
+import { scrollToTop } from '../../utils/utils';
 import { useBooksContext } from '../../hooks/useBooksContext';
+
+// components
+import BooksGrid from '../../components/BooksGrid';
 import BookSelected from './BookSelected';
 
 // styles
@@ -21,7 +23,7 @@ export default function BookInfo({ addItemToCart }) {
 
   useEffect(() => {
     if (books.length < 1) return;
-    scroll.scrollToTop({ duration: 500 });
+    scrollToTop()
     setActiveBook(books.find((book) => book.id === currentBookID));
     setTopFourBooks(
       books

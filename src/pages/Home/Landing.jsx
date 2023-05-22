@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
+import { scrollToTop } from '../../utils/utils';
 
 // styles
 import landingImg from '../../assets/undraw-books.svg';
 
 export default function Landing() {
+  
   return (
     <section id='landing'>
       <div className='container'>
@@ -15,7 +17,7 @@ export default function Landing() {
                 <h2 className='landing__subtitle'>
                   Find your dream book with <span className='text--purple'>Library</span>
                 </h2>
-                <Link to='/books'>
+                <Link to='/books' onClick={scrollToTop}>
                   <button className='landing__btn'>Browse Books Now</button>
                 </Link>
               </header>
