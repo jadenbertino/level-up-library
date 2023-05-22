@@ -7,7 +7,7 @@ import landingImg from '../../assets/undraw-books.svg';
 export default function Landing() {
   
   return (
-    <section id='landing'>
+    <header id='landing'>
       <div className='container'>
         <div className='row'>
           <div className='col'>
@@ -26,6 +26,6 @@ export default function Landing() {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
