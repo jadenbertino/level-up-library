@@ -1,25 +1,25 @@
-section {
+#home section {
   padding-top: 48px;
   padding-bottom: 48px;
 }
-section .section__title {
+#home section .section__title {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 40px;
 }
-section#explore {
+#home section#explore {
   padding-bottom: 96px;
 }
 @media screen and (max-width: 576px) {
-  section {
+  #home section {
     padding-top: 32px;
     padding-bottom: 32px;
   }
-  section .section__title {
+  #home section .section__title {
     font-size: 1.75rem;
     margin-bottom: 24px;
   }
-  section#explore {
+  #home section#explore {
     padding-bottom: 60px;
   }
 }
