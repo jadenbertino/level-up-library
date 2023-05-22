@@ -26,7 +26,7 @@ export default function Cart({ cart, updateCartQuantity, removeItem, totals }) {
           <div className='row'>
             <div className='col'>
               <div className='categories'>
-                <span>Books</span>
+                <span>Book</span>
                 <span className='categories__quantity'>Quantity</span>
                 <span className='categories__price'>Price</span>
               </div>
