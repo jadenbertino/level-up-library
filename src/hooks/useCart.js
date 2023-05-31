@@ -46,5 +46,5 @@ export default function useCart() {
     };
   }
   
-  return { cart, setCart, addItemToCart, updateCartQuantity, removeItem, getNumBooks, calcPrices}
+  return { cart, setCart, addItemToCart, updateCartQuantity, removeItem, getNumBooks, calcPrices }
 }
